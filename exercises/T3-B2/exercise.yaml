@@ -1,0 +1,61 @@
+id: T3-B2
+topic: 3
+level: basic
+slot: B2
+core: true
+sector: services
+setting: Liftunternehmen
+time_limit_minutes: 10
+elements: none, message and timer events (start, intermediate, end), throw vs catch
+skills: choose the trigger, model waiting as an event
+title:
+  de: Störung an einem Lift beheben
+  en: Fixing a lift breakdown
+learning_goal:
+  de: Senden und Empfangen von Nachrichten mit Start-, Zwischen- und Endereignissen unterscheiden; Warten
+    als Ereignis modellieren.
+  en: Tell sending from receiving with start, intermediate and end events; model waiting as an event.
+text:
+  de: 'Die Leitstelle eines Liftunternehmens erhält eine Störungsmeldung von einer Liegenschaftsverwaltung.
+
+    Ein Servicetechniker diagnostiziert den Fehler vor Ort und bestellt das nötige Ersatzteil beim Zentrallager.
+
+    Er wartet, bis das Zentrallager das Ersatzteil geliefert hat. Dann baut er das Ersatzteil ein und
+    testet
+
+    den Lift. Zum Schluss meldet das Liftunternehmen der Liegenschaftsverwaltung, dass der Lift wieder
+    in Betrieb ist.
+
+    Modellieren Sie den Ablauf des Liftunternehmens in einem Pool. Liegenschaftsverwaltung und Zentrallager
+
+    sind zugeklappte Pools.'
+  en: 'The control centre of a lift company receives a breakdown report from a property management firm.
+
+    A service technician diagnoses the fault on site and orders the required spare part from the central
+    warehouse.
+
+    He waits until the central warehouse has delivered the spare part. He then installs the spare part
+    and tests
+
+    the lift. Finally the lift company tells the property management firm that the lift is back in operation.
+
+    Model the lift company''s process in a pool. The property management firm and the central warehouse
+
+    are collapsed pools.'
+expected_mistakes:
+- de: Warten als Aktivität ("Auf Ersatzteil warten") statt als empfangendes Zwischenereignis.
+  en: Waiting modelled as an activity instead of a catching intermediate event.
+- de: Bestellung als empfangendes statt sendendes Ereignis.
+  en: Ordering modelled as a catching instead of a throwing event.
+- de: Sequenzfluss statt Nachrichtenfluss zwischen den Pools.
+  en: Sequence flow instead of message flow between pools.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

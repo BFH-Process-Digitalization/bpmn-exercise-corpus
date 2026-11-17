@@ -1,0 +1,63 @@
+id: T5-A3
+topic: 5
+level: advanced
+slot: A3
+core: false
+sector: machinery
+setting: Hersteller von Messgeräten
+time_limit_minutes: 15
+elements: data input and output, data collection
+skills: data flow across subprocesses, lists of items with multi-instance
+title:
+  de: Lieferung von Messgeräten kalibrieren
+  en: Calibrating a delivery of measuring instruments
+learning_goal:
+  de: Einen Teilprozess für jedes Element einer Liste ausführen und die Ergebnisse als Sammlung weitergeben.
+  en: Run a subprocess for each item of a list and pass the results on as a collection.
+text:
+  de: 'Ein Hersteller von Messgeräten kalibriert jedes Gerät vor der Auslieferung. Erhält die Kalibrierstelle
+    einen
+
+    Kalibrierauftrag, erstellt sie die Geräteliste. Für jedes Gerät auf der Liste misst ein Techniker
+    das Gerät und stellt
+
+    das Kalibrierzertifikat aus; die Geräte werden gleichzeitig an mehreren Messplätzen bearbeitet. Alle
+    Zertifikate
+
+    zusammen bilden die Zertifikatsammlung. Mit der Zertifikatsammlung stellt der Versand die Lieferdokumentation
+    zusammen
+
+    und liefert die Geräte aus. Modellieren Sie den Ablauf mit einem aufgeklappten Teilprozess.'
+  en: 'A measuring instrument manufacturer calibrates every instrument before delivery. When the calibration
+    lab
+
+    receives a calibration order, it creates the instrument list. For each instrument on the list, a technician
+    measures
+
+    the instrument and issues the calibration certificate; the instruments are handled at the same time
+    at several
+
+    measuring stations. All certificates together form the certificate collection. Using the certificate
+    collection,
+
+    shipping compiles the delivery documentation and delivers the instruments. Model the process with
+    an expanded
+
+    subprocess.'
+expected_mistakes:
+- de: Teilprozess ohne Mehrfachinstanz-Marker.
+  en: Subprocess without a multi-instance marker.
+- de: Sequenzieller statt paralleler Marker, obwohl mehrere Messplätze gleichzeitig arbeiten.
+  en: Sequential instead of parallel marker although several stations work at the same time.
+- de: Geräteliste und Zertifikate ohne Sammlungsmarker.
+  en: Instrument list and certificates without the collection marker.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

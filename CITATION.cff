@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this corpus, please cite it as below."
+title: "Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an entry assessment (German and English)"
+type: dataset
+authors:
+  - family-names: Maier
+    given-names: Moritz
+    affiliation: Bern University of Applied Sciences (BFH)
+  - family-names: Tekle Hailu
+    given-names: Selamawit
+    affiliation: Bern University of Applied Sciences (BFH)
+version: 1.0.0
+date-released: 2026-11-17
+license: CC-BY-4.0
+keywords:
+  - BPMN
+  - business process modelling
+  - process modelling education
+  - exercises
+  - sample solutions
+  - assessment

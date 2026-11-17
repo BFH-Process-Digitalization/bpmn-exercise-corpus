@@ -1,0 +1,63 @@
+id: T6-A2
+topic: 6
+level: advanced
+slot: A2
+core: false
+sector: production
+setting: Hersteller von Etikettendruckmaschinen
+time_limit_minutes: 15
+elements: escalation, compensation (boundary event, compensation activity), transaction subprocess, cancel
+  event
+skills: error vs escalation, undo completed work, all-or-nothing transactions
+title:
+  de: Stornierten Fertigungsauftrag rückgängig machen
+  en: Undoing a cancelled production order
+learning_goal:
+  de: Bereits erledigte Arbeit mit Kompensation rückgängig machen.
+  en: Undo completed work with compensation.
+text:
+  de: 'Ein Hersteller von Etikettendruckmaschinen fertigt Maschinen auf Bestellung. Nach der Auftragsfreigabe
+
+    reserviert die Disposition das Material und bucht danach die Maschinenkapazität. Vor dem Fertigungsstart
+    lässt der
+
+    Verkauf den Auftrag vom Kunden bestätigen. Storniert der Kunde den Auftrag, werden alle bereits erledigten
+    Buchungen
+
+    rückgängig gemacht: Die Materialreservierung wird aufgehoben und die Kapazitätsbuchung wird freigegeben.
+    Damit ist
+
+    der Auftrag storniert. Bleibt der Auftrag bestehen, fertigt die Werkstatt die Maschine. Modellieren
+    Sie den Ablauf
+
+    mit Kompensation.'
+  en: 'A label printing machine manufacturer builds machines to order. After the order has been released,
+    material
+
+    planning reserves the material and then books the machine capacity. Before production starts, sales
+    has the customer
+
+    confirm the order. If the customer cancels the order, all bookings already made are undone: the material
+    reservation
+
+    is cancelled and the capacity booking is released. The order is then cancelled. If the order stands,
+    the workshop
+
+    builds the machine. Model the process with compensation.'
+expected_mistakes:
+- de: Rückgängigmachen als normale Aktivitäten im Hauptablauf statt Kompensation.
+  en: Undoing as ordinary activities in the main flow instead of compensation.
+- de: Kompensationsaktivität mit Sequenzfluss angeschlossen.
+  en: Compensation activity connected with sequence flow.
+- de: Kompensation ausgelöst, ohne dass ein Kompensations-Randereignis vorhanden ist.
+  en: Compensation thrown without any compensation boundary event.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

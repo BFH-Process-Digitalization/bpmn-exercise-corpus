@@ -1,0 +1,56 @@
+id: T2-B3
+topic: 2
+level: basic
+slot: B3
+core: false
+sector: machinery
+setting: Hersteller von Verpackungsmaschinen
+time_limit_minutes: 10
+elements: XOR split and merge, AND split and join
+skills: question labels, close every split, tell exclusive from parallel
+title:
+  de: Ersatzteil ins Ausland liefern
+  en: Shipping a spare part abroad
+learning_goal:
+  de: XOR und AND im selben Ablauf unterscheiden und jedes Gateway mit dem passenden Gegenstück schliessen.
+  en: Tell XOR from AND in one process and close every gateway with its matching counterpart.
+text:
+  de: 'Ein Hersteller von Verpackungsmaschinen erhält eine Bestellung für ein Ersatzteil
+
+    von einem Kunden im Ausland. Das Lager prüft zuerst die Verfügbarkeit. Ist das Ersatzteil an Lager,
+
+    kommissioniert das Lager es. Andernfalls lässt das Lager das Ersatzteil in der eigenen Fertigung herstellen.
+
+    Danach verpackt das Lager das Ersatzteil, während die Exportabteilung gleichzeitig die Ausfuhrdokumente
+
+    erstellt. Sind beide Arbeiten erledigt, übergibt das Lager die Sendung dem Transporteur.
+
+    Der Ablauf endet, wenn das Ersatzteil versandt ist. Modellieren Sie den Ablauf.'
+  en: 'A packaging machine manufacturer receives an order for a spare part
+
+    from a customer abroad. The warehouse first checks availability. If the spare part is in stock,
+
+    the warehouse picks it. Otherwise the warehouse has the spare part made in the company''s own production.
+
+    The warehouse then packs the spare part while the export department prepares the export documents
+
+    at the same time. When both are done, the warehouse hands the shipment over to the carrier.
+
+    The process ends when the spare part has been shipped. Model the process.'
+expected_mistakes:
+- de: XOR-Pfade nicht zusammengeführt, bevor das AND-Gateway öffnet.
+  en: XOR paths not merged before the AND split.
+- de: XOR-Gateway mit AND-Gateway geschlossen (oder umgekehrt).
+  en: XOR split closed with an AND join (or the other way round).
+- de: Ausfuhrdokumente nach dem Verpacken statt parallel dazu modelliert.
+  en: Export documents modelled after packing instead of in parallel.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

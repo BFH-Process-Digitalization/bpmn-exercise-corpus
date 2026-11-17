@@ -1,0 +1,65 @@
+id: T5-A
+topic: 5
+level: advanced
+slot: A
+core: false
+sector: production
+setting: Hersteller von Präzisionswerkzeugen
+time_limit_minutes: 15
+elements: data input and output, data collection
+skills: data flow across subprocesses, lists of items with multi-instance
+title:
+  de: Jahresinventur
+  en: Annual stocktaking
+learning_goal:
+  de: Dateneingang und Datenausgang eines Prozesses sowie Datensammlungen darstellen.
+  en: Show the data input and output of a process and data collections.
+text:
+  de: 'Ein Hersteller von Präzisionswerkzeugen führt jedes Jahr am 31. Dezember eine Inventur durch. Der
+    Prozess
+
+    erhält als Eingabe die Artikelliste mit allen Lagerartikeln. Für jeden Artikel zählt das Lager den
+    Bestand und trägt
+
+    ihn in die Zählliste ein; die Zählungen laufen gleichzeitig. Danach gleicht die Buchhaltung die Zählliste
+    mit dem
+
+    Buchbestand im Warenwirtschaftssystem ab und bucht die Inventurdifferenzen im Warenwirtschaftssystem.
+    Zum Schluss
+
+    erstellt sie den Inventurbericht, das Ergebnis des Prozesses. Modellieren Sie den Ablauf mit Dateneingang,
+
+    Datenausgang, Datensammlungen und dem Datenspeicher.'
+  en: 'A precision tool manufacturer carries out a stocktaking every year on 31 December. The process
+    receives the
+
+    article list with all stock articles as input. For each article, the warehouse counts the stock and
+    enters it in the
+
+    count list; the counts run at the same time. Accounting then reconciles the count list with the book
+    stock in the
+
+    inventory management system and posts the stock differences in the inventory management system. Finally
+    it creates
+
+    the stocktaking report, the result of the process. Model the process with data input, data output,
+    data collections
+
+    and the data store.'
+expected_mistakes:
+- de: Artikelliste als normales Datenobjekt statt Dateneingang.
+  en: Article list as an ordinary data object instead of a data input.
+- de: Listen ohne Sammlungsmarker.
+  en: Lists without the collection marker.
+- de: Zählen als Schleife statt Mehrfachinstanz.
+  en: Counting as a loop instead of multi-instance.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

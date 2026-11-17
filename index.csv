@@ -1,0 +1,38 @@
+id,topic,level,slot,core,time_limit_minutes,sector,title_de,title_en,elements,folder
+T1-B,1,basic,B,True,10,services,Reifenwechsel in der Garage,Tyre change at a garage,"task, sequence flow, start and end event",exercises/T1-B
+T1-B2,1,basic,B2,True,10,supply chain,Wareneingang im Verteilzentrum,Goods receipt at a distribution centre,"task, sequence flow, start and end event",exercises/T1-B2
+T1-B3,1,basic,B3,False,10,machinery,Wartung einer CNC-Fräsmaschine,Maintenance of a CNC milling machine,"task, sequence flow, start and end event",exercises/T1-B3
+T1-A,1,advanced,A,False,15,machinery,Kalibrierauftrag für eine Industriewaage,Calibration order for an industrial scale,"task types (user, service, manual, script, business rule, send, receive), subprocess, call activity, ad-hoc subprocess, loop and multi-instance markers (parallel, sequential)",exercises/T1-A
+T1-A2,1,advanced,A2,False,15,machinery,Abfüllanlage beim Kunden in Betrieb nehmen,Commissioning a filling line at the customer,"task types (user, service, manual, script, business rule, send, receive), subprocess, call activity, ad-hoc subprocess, loop and multi-instance markers (parallel, sequential)",exercises/T1-A2
+T1-A3,1,advanced,A3,False,15,health,Markteinführung einer neuen Hörgerätegeneration,Launching a new generation of hearing aids,"task types (user, service, manual, script, business rule, send, receive), subprocess, call activity, ad-hoc subprocess, loop and multi-instance markers (parallel, sequential)",exercises/T1-A3
+T2-B,2,basic,B,True,10,services,Serviceeinsatz an einer Wärmepumpe,Service visit to a heat pump,"XOR split and merge, AND split and join",exercises/T2-B
+T2-B2,2,basic,B2,True,10,production,Fertigungsauftrag vorbereiten,Preparing a production order,"XOR split and merge, AND split and join",exercises/T2-B2
+T2-B3,2,basic,B3,False,10,machinery,Ersatzteil ins Ausland liefern,Shipping a spare part abroad,"XOR split and merge, AND split and join",exercises/T2-B3
+T2-A,2,advanced,A,False,15,services,Mängel nach der Bauabnahme beheben,Fixing defects after a building inspection,"OR, complex gateway, event-based gateway (racing, first event wins), parallel event-based gateway, default flow, conditional flow",exercises/T2-A
+T2-A2,2,advanced,A2,False,15,machinery,Auf eine Offerte reagieren,Reacting to a quote,"OR, complex gateway, event-based gateway (racing, first event wins), parallel event-based gateway, default flow, conditional flow",exercises/T2-A2
+T2-A3,2,advanced,A3,False,15,supply chain,Kühlkettensendung abwickeln,Handling a cold chain shipment,"OR, complex gateway, event-based gateway (racing, first event wins), parallel event-based gateway, default flow, conditional flow",exercises/T2-A3
+T3-B,3,basic,B,True,10,services,Monatliche Lohnabrechnung,Monthly payroll,"none, message and timer events (start, intermediate, end), throw vs catch",exercises/T3-B
+T3-B2,3,basic,B2,True,10,services,Störung an einem Lift beheben,Fixing a lift breakdown,"none, message and timer events (start, intermediate, end), throw vs catch",exercises/T3-B2
+T3-B3,3,basic,B3,False,10,production,Betonfertigteile herstellen,Producing precast concrete elements,"none, message and timer events (start, intermediate, end), throw vs catch",exercises/T3-B3
+T3-A,3,advanced,A,False,15,machinery,Störung an einer Seilbahn,Breakdown of a cable car,"signal, conditional, link, terminate, multiple, parallel multiple; interrupting and non-interrupting boundary events; event subprocess",exercises/T3-A
+T3-A2,3,advanced,A2,False,15,production,Charge prüfen und freigeben,Testing and releasing a batch,"signal, conditional, link, terminate, multiple, parallel multiple; interrupting and non-interrupting boundary events; event subprocess",exercises/T3-A2
+T3-A3,3,advanced,A3,False,15,machinery,Instandsetzung eines Triebzugs,Overhaul of a train,"signal, conditional, link, terminate, multiple, parallel multiple; interrupting and non-interrupting boundary events; event subprocess",exercises/T3-A3
+T4-B,4,basic,B,True,10,health,Ambulante Behandlung im Spital,Outpatient treatment at a hospital,"pool, lanes",exercises/T4-B
+T4-B2,4,basic,B2,True,10,machinery,Kundenanfrage beantworten,Answering a customer enquiry,"pool, lanes",exercises/T4-B2
+T4-B3,4,basic,B3,False,10,public administration,Baugesuch bearbeiten,Processing a building application,"pool, lanes",exercises/T4-B3
+T4-A,4,advanced,A,False,15,production,Lüftungsanlage bestellen und liefern,Ordering and delivering a ventilation unit,"several pools, message flow, black-box pool, multi-instance pool",exercises/T4-A
+T4-A2,4,advanced,A2,False,15,machinery,Komponenten bei mehreren Lieferanten anfragen,Requesting components from several suppliers,"several pools, message flow, black-box pool, multi-instance pool",exercises/T4-A2
+T4-A3,4,advanced,A3,False,15,supply chain,Seefracht exportieren,Exporting sea freight,"several pools, message flow, black-box pool, multi-instance pool",exercises/T4-A3
+T5-B,5,basic,B,True,10,production,Werkzeug ausgeben,Issuing a tool,"data object, data store, data association, data states, text annotation, group",exercises/T5-B
+T5-B2,5,basic,B2,True,10,production,Fertigungslos prüfen,Inspecting a production batch,"data object, data store, data association, data states, text annotation, group",exercises/T5-B2
+T5-B3,5,basic,B3,False,10,public administration,Störung im IT-Servicedesk,Incident at an IT service desk,"data object, data store, data association, data states, text annotation, group",exercises/T5-B3
+T5-A,5,advanced,A,False,15,production,Jahresinventur,Annual stocktaking,"data input and output, data collection",exercises/T5-A
+T5-A2,5,advanced,A2,False,15,health,Reklamation eines Medizinprodukts,Complaint about a medical device,"data input and output, data collection",exercises/T5-A2
+T5-A3,5,advanced,A3,False,15,machinery,Lieferung von Messgeräten kalibrieren,Calibrating a delivery of measuring instruments,"data input and output, data collection",exercises/T5-A3
+T6-B,6,basic,B,True,10,health,Laborprobe analysieren,Analysing a laboratory sample,"error end event, error boundary event",exercises/T6-B
+T6-B2,6,basic,B2,True,10,machinery,Messmaschine kalibrieren,Calibrating a measuring machine,"error end event, error boundary event",exercises/T6-B2
+T6-B3,6,basic,B3,False,10,supply chain,Antriebe beim Lieferanten abrufen,Calling off drive units from a supplier,"error end event, error boundary event",exercises/T6-B3
+T6-A,6,advanced,A,False,15,production,Sonderventil fertigen,Manufacturing a special valve,"escalation, compensation (boundary event, compensation activity), transaction subprocess, cancel event",exercises/T6-A
+T6-A2,6,advanced,A2,False,15,production,Stornierten Fertigungsauftrag rückgängig machen,Undoing a cancelled production order,"escalation, compensation (boundary event, compensation activity), transaction subprocess, cancel event",exercises/T6-A2
+T6-A3,6,advanced,A3,False,15,supply chain,Schwertransport als Transaktion buchen,Booking a heavy transport as a transaction,"escalation, compensation (boundary event, compensation activity), transaction subprocess, cancel event",exercises/T6-A3
+PRE,,,,True,15,services,Vortest: Veloservice,Pre-test: bicycle service,"start and end event, task, XOR, AND",assessment/PRE

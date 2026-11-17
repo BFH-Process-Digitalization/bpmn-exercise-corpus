@@ -1,0 +1,60 @@
+id: T2-A
+topic: 2
+level: advanced
+slot: A
+core: false
+sector: services
+setting: Anbieter von Gebäudetechnik
+time_limit_minutes: 15
+elements: OR, complex gateway, event-based gateway (racing, first event wins), parallel event-based gateway,
+  default flow, conditional flow
+skills: synchronisation, avoid deadlocks and missing synchronisation, choose the matching join
+title:
+  de: Mängel nach der Bauabnahme beheben
+  en: Fixing defects after a building inspection
+learning_goal:
+  de: Eine Auswahl aus mehreren Pfaden mit einem OR-Gateway und einem Standardfluss modellieren und passend
+    zusammenführen.
+  en: Model a choice of one or more paths with an OR gateway and a default flow, and join it correctly.
+text:
+  de: 'Ein Anbieter von Gebäudetechnik hat in einem Bürogebäude Elektro-, Lüftungs- und Sanitäranlagen
+
+    eingebaut. Bei der Abnahme prüft die Bauleiterin das Gebäude. Mängel können bei der Elektrik, der
+    Lüftung und dem
+
+    Sanitär auftreten, in jeder Kombination. Jedes betroffene Gewerk behebt seine Mängel; die Gewerke
+    arbeiten
+
+    gleichzeitig. Gibt es keine Mängel, entfällt dieser Schritt. Sobald alle beauftragten Gewerke fertig
+    sind, schliesst
+
+    die Bauleiterin das Abnahmeprotokoll ab. Damit ist das Gebäude übergeben. Modellieren Sie den Ablauf.'
+  en: 'A building services provider has installed electrical, ventilation and plumbing systems in an office
+
+    building. At acceptance, the site manager inspects the building. Defects can occur in the electrics,
+    the ventilation
+
+    and the plumbing, in any combination. Each affected trade fixes its defects; the trades work at the
+    same time. If
+
+    there are no defects, this step is skipped. As soon as all commissioned trades are done, the site
+    manager completes
+
+    the acceptance report. The building is then handed over. Model the process.'
+expected_mistakes:
+- de: 'XOR-Gateway: nur ein Gewerk könnte Mängel beheben.'
+  en: 'XOR gateway: only one trade could fix defects.'
+- de: 'AND-Gateway: alle drei Gewerke würden immer arbeiten.'
+  en: 'AND gateway: all three trades would always work.'
+- de: OR-Split mit AND- oder XOR-Join geschlossen (Deadlock oder doppelte Ausführung).
+  en: OR split closed with an AND or XOR join (deadlock or duplicate execution).
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

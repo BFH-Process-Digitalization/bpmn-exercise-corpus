@@ -1,0 +1,52 @@
+id: T1-B2
+topic: 1
+level: basic
+slot: B2
+core: true
+sector: supply chain
+setting: Verteilzentrum eines Detailhändlers
+time_limit_minutes: 10
+elements: task, sequence flow, start and end event
+skills: linear process, verb-object labels, events named as states
+title:
+  de: Wareneingang im Verteilzentrum
+  en: Goods receipt at a distribution centre
+learning_goal:
+  de: Einen linearen Ablauf vom auslösenden Ereignis bis zum Ergebnis modellieren.
+  en: Model a linear process from the triggering event to the result.
+text:
+  de: 'Im Verteilzentrum eines Detailhändlers treffen täglich Lieferungen ein.
+
+    Sobald ein Lastwagen an der Rampe steht, prüft ein Lagermitarbeiter den Lieferschein.
+
+    Danach entlädt er die Paletten und kontrolliert die Ware stichprobenweise.
+
+    Anschliessend bucht er den Wareneingang im Lagerverwaltungssystem und lagert die Ware ein.
+
+    Der Ablauf endet, wenn die Ware eingelagert ist. Modellieren Sie den Ablauf.'
+  en: 'At a retailer''s distribution centre, deliveries arrive every day.
+
+    As soon as a truck is at the loading dock, a warehouse employee checks the delivery note.
+
+    He then unloads the pallets and inspects a sample of the goods.
+
+    Next he posts the goods receipt in the warehouse management system and puts the goods away.
+
+    The process ends when the goods are stored. Model the process.'
+expected_mistakes:
+- de: Startereignis als Aktivität ("Lastwagen kommt an") statt als Zustand benannt.
+  en: Start event named as an activity instead of a state.
+- de: Zwei Tätigkeiten in einer Aktivität zusammengefasst ("Paletten entladen und kontrollieren").
+  en: Two steps merged into one activity ("Unload and inspect pallets").
+- de: Reihenfolge von Buchen und Einlagern vertauscht.
+  en: Order of posting and storing swapped.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

@@ -1,0 +1,56 @@
+id: T4-A2
+topic: 4
+level: advanced
+slot: A2
+core: false
+sector: machinery
+setting: Hersteller von Industrierobotern
+time_limit_minutes: 15
+elements: several pools, message flow, black-box pool, multi-instance pool
+skills: separate participants, message flow only between pools, model several partners of the same type
+title:
+  de: Komponenten bei mehreren Lieferanten anfragen
+  en: Requesting components from several suppliers
+learning_goal:
+  de: Mehrere Partner desselben Typs mit einem Mehrfachinstanz-Pool und mehrfach ausgeführten Sende- und
+    Empfangsaufgaben modellieren.
+  en: Model several partners of the same type with a multi-instance pool and multi-instance send and receive
+    tasks.
+text:
+  de: 'Ein Hersteller von Industrierobotern erhält von einem Kunden den Auftrag für eine Roboterzelle.
+    Für die
+
+    Greifer fragt der Einkauf gleichzeitig bei mehreren Lieferanten (mindestens drei) Preise an und empfängt
+    deren
+
+    Offerten. Danach wählt er einen Lieferanten aus und sendet ihm die Bestellung. Zum Schluss sendet
+    der Hersteller dem
+
+    Kunden die Auftragsbestätigung. Modellieren Sie den Ablauf des Herstellers; Kunde und Lieferanten
+    sind zugeklappte Pools.'
+  en: 'An industrial robot manufacturer receives an order for a robot cell from a customer. For the grippers,
+
+    purchasing asks several suppliers (at least three) for prices at the same time and receives their
+    quotes. It then
+
+    selects a supplier and sends the order to it. Finally the manufacturer sends the order confirmation
+    to the customer.
+
+    Model the manufacturer''s process; the customer and the suppliers are collapsed pools.'
+expected_mistakes:
+- de: Ein Pool pro Lieferant statt Mehrfachinstanz-Pool.
+  en: One pool per supplier instead of a multi-instance pool.
+- de: Anfragen als Schleife statt parallele Mehrfachinstanz.
+  en: Requests as a loop instead of parallel multi-instance.
+- de: Lieferanten als Lanes im eigenen Pool.
+  en: Suppliers as lanes in the own pool.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

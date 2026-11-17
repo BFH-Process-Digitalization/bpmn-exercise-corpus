@@ -1,0 +1,60 @@
+id: T5-B3
+topic: 5
+level: basic
+slot: B3
+core: false
+sector: public administration
+setting: Regionalverwaltung
+time_limit_minutes: 10
+elements: data object, data store, data association, data states, text annotation, group
+skills: show what tasks read and write, document vs database
+title:
+  de: Störung im IT-Servicedesk
+  en: Incident at an IT service desk
+learning_goal:
+  de: Zustandswechsel eines Datenobjekts darstellen und eine Vorgabe als Textanmerkung ergänzen.
+  en: Show state changes of a data object and add a rule as a text annotation.
+text:
+  de: 'Der IT-Servicedesk einer Regionalverwaltung bearbeitet Störungen. Meldet eine Mitarbeiterin eine
+    Störung,
+
+    erfasst der Servicedesk ein Ticket; das Ticket ist dann offen. Ein Supporter analysiert die Störung
+    anhand
+
+    des Tickets und der Konfigurationsdatenbank. Danach behebt er die Störung; das Ticket ist damit gelöst.
+
+    Für das Beheben gilt eine Reaktionszeit von höchstens 4 Stunden. Zum Schluss schliesst der Servicedesk
+    das
+
+    gelöste Ticket. Modellieren Sie den Ablauf mit den Zuständen des Tickets, der Datenbank und der Vorgabe
+
+    als Textanmerkung.'
+  en: 'The IT service desk of a regional administration handles incidents. When an employee reports an
+    incident,
+
+    the service desk records a ticket; the ticket is then open. A support specialist analyses the incident
+    using
+
+    the ticket and the configuration database. He then resolves the incident; the ticket is now resolved.
+
+    Resolving the incident has a response time of 4 hours at most. Finally the service desk closes the
+    resolved
+
+    ticket. Model the process with the states of the ticket, the database and the rule as a text annotation.'
+expected_mistakes:
+- de: Nur ein Ticket ohne Zustände modelliert.
+  en: Only one ticket without states modelled.
+- de: Reaktionszeit als Zeitereignis statt als Textanmerkung.
+  en: Response time modelled as a timer event instead of an annotation.
+- de: Konfigurationsdatenbank als Datenobjekt modelliert.
+  en: Configuration database modelled as a data object.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

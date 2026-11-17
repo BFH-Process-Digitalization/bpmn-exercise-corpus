@@ -1,0 +1,53 @@
+id: T5-B
+topic: 5
+level: basic
+slot: B
+core: true
+sector: production
+setting: Zulieferbetrieb der Uhrenindustrie
+time_limit_minutes: 10
+elements: data object, data store, data association, data states, text annotation, group
+skills: show what tasks read and write, document vs database
+title:
+  de: Werkzeug ausgeben
+  en: Issuing a tool
+learning_goal:
+  de: Zeigen, welche Aktivität einen Datenspeicher liest und schreibt und welche ein Dokument erzeugt.
+  en: Show which activity reads and writes a data store and which one creates a document.
+text:
+  de: 'Im Werkzeuglager eines Zulieferbetriebs der Uhrenindustrie holen Maschinenbedienende Werkzeuge
+    ab.
+
+    Geht eine Werkzeuganforderung ein, sucht die Lagermitarbeiterin das Werkzeug in der Werkzeugdatenbank.
+
+    Sie gibt das Werkzeug aus und lässt sich den Empfang auf einem Ausgabebeleg unterschreiben.
+
+    Anhand des unterschriebenen Ausgabebelegs bucht sie die Ausgabe in der Werkzeugdatenbank.
+
+    Modellieren Sie den Ablauf mit dem Datenspeicher und dem Datenobjekt samt Zustand.'
+  en: 'In the tool store of a watch industry supplier, machine operators collect tools.
+
+    When a tool request comes in, the store employee looks up the tool in the tool database.
+
+    She issues the tool and has the receipt signed on an issue slip.
+
+    Using the signed issue slip she books the issue in the tool database.
+
+    Model the process with the data store and the data object including its state.'
+expected_mistakes:
+- de: Datenbank als Datenobjekt statt als Datenspeicher.
+  en: Database modelled as a data object instead of a data store.
+- de: Richtung der Datenassoziation falsch (lesen statt schreiben).
+  en: Wrong direction of the data association (read instead of write).
+- de: Datenobjekt mit Sequenzfluss verbunden.
+  en: Data object connected with sequence flow.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

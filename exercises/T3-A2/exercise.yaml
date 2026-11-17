@@ -1,0 +1,62 @@
+id: T3-A2
+topic: 3
+level: advanced
+slot: A2
+core: false
+sector: production
+setting: Lebensmittelhersteller
+time_limit_minutes: 15
+elements: signal, conditional, link, terminate, multiple, parallel multiple; interrupting and non-interrupting
+  boundary events; event subprocess
+skills: broadcast vs addressed messages, time limits, interruptions, terminating all paths
+title:
+  de: Charge prüfen und freigeben
+  en: Testing and releasing a batch
+learning_goal:
+  de: Ein Signal an alle Empfänger senden und mit einem Terminierungs-Endereignis alle laufenden Pfade
+    beenden.
+  en: Broadcast a signal to all receivers and end all running paths with a terminate end event.
+text:
+  de: 'Ein Lebensmittelhersteller füllt Säuglingsnahrung ab. Nach dem Abfüllen einer Charge prüft das
+    Labor die
+
+    Charge mikrobiologisch, während gleichzeitig die Qualitätssicherung die Etiketten prüft. Werden Keime
+    nachgewiesen,
+
+    meldet das Labor die Chargensperre an alle Verteillager gleichzeitig, ohne einen bestimmten Empfänger
+    anzusprechen,
+
+    und verwirft die Charge. Damit wird der gesamte Ablauf sofort beendet, auch eine noch laufende Etikettenprüfung.
+
+    Sind beide Prüfungen ohne Befund abgeschlossen, gibt die Qualitätssicherung die Charge frei. Modellieren
+    Sie den Ablauf.'
+  en: 'A food manufacturer fills infant formula. After a batch has been filled, the laboratory tests the
+    batch
+
+    microbiologically while quality assurance checks the labels at the same time. If germs are found,
+    the laboratory
+
+    announces the batch block to all distribution warehouses at once, without addressing a particular
+    receiver, and
+
+    discards the batch. This ends the whole process immediately, including a label check that is still
+    running. If both
+
+    checks have been completed without findings, quality assurance releases the batch. Model the process.'
+expected_mistakes:
+- de: Nachricht an ein Verteillager statt Signal an alle.
+  en: Message to one warehouse instead of a signal to all.
+- de: 'Normales Endereignis: die Etikettenprüfung liefe weiter und das AND-Gateway würde nie fertig.'
+  en: 'None end event: the label check would continue and the AND join would never complete.'
+- de: AND-Join erhält den Pfad mit Keimbefund ebenfalls.
+  en: AND join also receives the path with germs found.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

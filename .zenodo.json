@@ -1,0 +1,14 @@
+{
+  "title": "Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an entry assessment (German and English)",
+  "upload_type": "dataset",
+  "description": "36 BPMN 2.0 modelling exercises in German and English, organised by six topics (activities, gateways, events, collaboration, data, exceptions) and two levels (basic, advanced). Each exercise has a task text, a learning goal, typical mistakes and a sample solution as BPMN 2.0 XML with diagram and SVG. Sample solutions follow a written modelling guideline based on the Seven Process Modeling Guidelines, Silver's BPMN Method and Style and eCH-0158, and are checked automatically. Includes an entry assessment (14 multiple-choice items and a modelling task with rubric) and PDF exercise booklets.",
+  "creators": [
+    {"name": "Maier, Moritz", "affiliation": "Bern University of Applied Sciences (BFH)"},
+    {"name": "Tekle Hailu, Selamawit", "affiliation": "Bern University of Applied Sciences (BFH)"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "deu",
+  "keywords": ["BPMN", "business process modelling", "process modelling education", "exercises", "sample solutions", "assessment"],
+  "version": "1.0.0"
+}

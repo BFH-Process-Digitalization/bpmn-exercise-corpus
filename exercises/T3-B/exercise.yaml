@@ -1,0 +1,52 @@
+id: T3-B
+topic: 3
+level: basic
+slot: B
+core: true
+sector: services
+setting: Treuhandbüro
+time_limit_minutes: 10
+elements: none, message and timer events (start, intermediate, end), throw vs catch
+skills: choose the trigger, model waiting as an event
+title:
+  de: Monatliche Lohnabrechnung
+  en: Monthly payroll
+learning_goal:
+  de: Einen zeitgesteuerten Start und ein sendendes Nachrichten-Endereignis modellieren.
+  en: Model a timer start and a throwing message end event.
+text:
+  de: 'Ein Treuhandbüro führt die Lohnbuchhaltung für ein Gewerbeunternehmen.
+
+    Am 20. jedes Monats übernimmt die Lohnbuchhalterin die erfassten Arbeitszeiten,
+
+    berechnet die Löhne und löst die Lohnzahlungen aus. Zum Schluss versendet das Treuhandbüro
+
+    die Lohnabrechnungen an die Mitarbeitenden. Modellieren Sie den Ablauf des Treuhandbüros
+
+    in einem Pool und die Mitarbeitenden als zugeklappten Pool.'
+  en: 'An accounting firm runs payroll for a small business.
+
+    On the 20th of every month the payroll accountant imports the recorded working hours,
+
+    calculates the salaries and initiates the salary payments. Finally the accounting firm sends
+
+    the payslips to the employees. Model the accounting firm''s process in a pool and the employees
+
+    as a collapsed pool.'
+expected_mistakes:
+- de: Normales Startereignis statt Zeit-Startereignis.
+  en: None start event instead of a timer start event.
+- de: Zeit-Startereignis ohne Zeitregel beschriftet ("Start").
+  en: Timer start event labelled without the time rule ("Start").
+- de: Versand als empfangendes statt sendendes Ereignis oder ohne Nachrichtenfluss modelliert.
+  en: Sending modelled as a catching event or without message flow.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

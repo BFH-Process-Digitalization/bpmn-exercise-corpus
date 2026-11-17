@@ -1,0 +1,52 @@
+id: T4-B
+topic: 4
+level: basic
+slot: B
+core: true
+sector: health
+setting: Regionalspital
+time_limit_minutes: 10
+elements: pool, lanes
+skills: assign tasks to roles, order lanes, avoid crossing flows
+title:
+  de: Ambulante Behandlung im Spital
+  en: Outpatient treatment at a hospital
+learning_goal:
+  de: Aktivitäten den zuständigen Rollen in Lanes zuordnen.
+  en: Assign activities to the responsible roles in lanes.
+text:
+  de: 'In der Notfallstation eines Regionalspitals trifft eine Patientin ein.
+
+    Der Empfang erfasst ihre Personalien. Danach misst die Pflege die Vitalwerte.
+
+    Eine Ärztin untersucht die Patientin und legt die Behandlung fest. Die Pflege führt die
+
+    Behandlung durch. Zum Schluss erfasst der Empfang die erbrachten Leistungen und entlässt die Patientin.
+
+    Modellieren Sie den Ablauf im Pool "Regionalspital" mit einer Lane pro Rolle.'
+  en: 'A patient arrives at the emergency department of a regional hospital.
+
+    Reception records her personal details. Nursing then measures her vital signs.
+
+    A doctor examines the patient and decides on the treatment. Nursing carries out the treatment.
+
+    Finally reception records the services provided and discharges the patient.
+
+    Model the process in the pool "Regional hospital" with one lane per role.'
+expected_mistakes:
+- de: Für jede Rolle ein eigener Pool statt Lanes im selben Pool.
+  en: A separate pool per role instead of lanes in one pool.
+- de: Aktivität in der falschen Lane (z. B. Behandlung festlegen bei der Pflege).
+  en: Activity in the wrong lane (e.g. deciding the treatment in nursing).
+- de: Lanes mit Personennamen statt Rollen beschriftet.
+  en: Lanes labelled with names of people instead of roles.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

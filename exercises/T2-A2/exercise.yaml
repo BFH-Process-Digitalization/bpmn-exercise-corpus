@@ -1,0 +1,58 @@
+id: T2-A2
+topic: 2
+level: advanced
+slot: A2
+core: false
+sector: machinery
+setting: Anbieter von Laborautomation
+time_limit_minutes: 15
+elements: OR, complex gateway, event-based gateway (racing, first event wins), parallel event-based gateway,
+  default flow, conditional flow
+skills: synchronisation, avoid deadlocks and missing synchronisation, choose the matching join
+title:
+  de: Auf eine Offerte reagieren
+  en: Reacting to a quote
+learning_goal:
+  de: Mit einem ereignisbasierten Gateway auf das zuerst eintretende Ereignis reagieren.
+  en: React to the first event that occurs with an event-based gateway.
+text:
+  de: 'Ein Anbieter von Laborautomation sendet einem Kunden eine Offerte für ein Probenhandlingsystem.
+    Danach
+
+    wartet er auf die Reaktion. Erteilt der Kunde den Auftrag, erfasst der Verkauf den Auftrag. Sagt der
+    Kunde ab, erfasst
+
+    der Verkauf den Absagegrund. Kommt nach 30 Tagen keine Antwort, schliesst der Verkauf die Offerte
+    als verfallen ab.
+
+    Es zählt immer das Ereignis, das zuerst eintritt. Modellieren Sie den Ablauf des Anbieters; der Kunde
+    ist ein
+
+    zugeklappter Pool.'
+  en: 'A laboratory automation provider sends a customer a quote for a sample handling system. It then
+    waits for
+
+    the reaction. If the customer places the order, sales records the order. If the customer declines,
+    sales records the
+
+    reason. If there is no answer after 30 days, sales closes the quote as expired. Whichever event occurs
+    first counts.
+
+    Model the provider''s process; the customer is a collapsed pool.'
+expected_mistakes:
+- de: XOR-Gateway mit Bedingungen statt ereignisbasiertem Gateway.
+  en: XOR gateway with conditions instead of an event-based gateway.
+- de: Zeitereignis fehlt, der Ablauf würde ewig warten.
+  en: Timer event missing, the process would wait forever.
+- de: Gateway beschriftet oder Ausgänge mit ja/nein beschriftet.
+  en: Gateway labelled or its outgoing flows labelled yes/no.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

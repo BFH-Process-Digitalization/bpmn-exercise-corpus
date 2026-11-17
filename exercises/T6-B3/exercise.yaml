@@ -1,0 +1,62 @@
+id: T6-B3
+topic: 6
+level: basic
+slot: B3
+core: false
+sector: supply chain
+setting: E-Bike-Hersteller
+time_limit_minutes: 10
+elements: error end event, error boundary event
+skills: handle a failure inside a subprocess
+title:
+  de: Antriebe beim Lieferanten abrufen
+  en: Calling off drive units from a supplier
+learning_goal:
+  de: Eine Ausnahme in der Beschaffung als Fehler modellieren und einen alternativen Weg anschliessen.
+  en: Model an exception in procurement as an error and attach an alternative path.
+text:
+  de: 'Ein E-Bike-Hersteller bezieht Antriebseinheiten von einem Lieferanten. Sobald die Disposition
+
+    den Materialbedarf ermittelt hat, ruft sie die Antriebe im Teilprozess "Antriebe abrufen" ab: Sie
+    fragt den
+
+    Lagerbestand beim Lieferanten ab. Sind die Antriebe lieferbar, löst sie den Lieferabruf aus. Sind
+    sie nicht
+
+    lieferbar, endet der Teilprozess mit dem Fehler "Antriebe nicht lieferbar"; die Disposition fragt
+    dann
+
+    Ersatzlieferanten an. Nach einem ausgelösten Lieferabruf plant die Disposition die Produktion ein.
+
+    Modellieren Sie den Ablauf des E-Bike-Herstellers mit einem aufgeklappten Teilprozess.'
+  en: 'An e-bike manufacturer sources drive units from a supplier. As soon as material planning
+
+    has determined the requirement, it calls off the drive units in the subprocess "Call off drive units":
+    it
+
+    queries the supplier''s stock. If the drive units are available, it triggers the call-off. If they
+    are not
+
+    available, the subprocess ends with the error "Drive units not available"; material planning then
+    requests
+
+    quotes from alternative suppliers. After a triggered call-off, material planning schedules production.
+
+    Model the e-bike manufacturer''s process with an expanded subprocess.'
+expected_mistakes:
+- de: Fehlerfall als zweiter Ausgang nach dem Teilprozess statt als Fehler-Randereignis.
+  en: Error case as a second path after the subprocess instead of an error boundary event.
+- de: Fehler-Endereignis ausserhalb des Teilprozesses.
+  en: Error end event placed outside the subprocess.
+- de: Normaler Pfad und Fehlerpfad wieder zusammengeführt, obwohl sie verschieden enden.
+  en: Normal and error path merged although they end differently.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

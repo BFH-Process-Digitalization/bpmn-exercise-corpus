@@ -1,0 +1,56 @@
+id: T4-A
+topic: 4
+level: advanced
+slot: A
+core: false
+sector: production
+setting: Generalunternehmer und Hersteller von Lüftungsanlagen
+time_limit_minutes: 15
+elements: several pools, message flow, black-box pool, multi-instance pool
+skills: separate participants, message flow only between pools, model several partners of the same type
+title:
+  de: Lüftungsanlage bestellen und liefern
+  en: Ordering and delivering a ventilation unit
+learning_goal:
+  de: Zwei Beteiligte in zwei aufgeklappten Pools modellieren und nur über Nachrichtenflüsse verbinden.
+  en: Model two participants in two expanded pools and connect them only by message flows.
+text:
+  de: 'Ein Generalunternehmer braucht für einen Neubau eine Lüftungsanlage. Stellt die Bauleitung den
+    Bedarf
+
+    fest, sendet der Einkauf eine Bestellung an einen Hersteller von Lüftungsanlagen und wartet auf die
+
+    Auftragsbestätigung. Der Hersteller bestätigt den Auftrag, fertigt die Anlage und liefert sie. Nach
+    der Lieferung
+
+    prüft die Bauleitung die Anlage, und die Lieferung ist abgenommen. Modellieren Sie die Abläufe beider
+    Unternehmen
+
+    in je einem aufgeklappten Pool.'
+  en: 'A general contractor needs a ventilation unit for a new building. When site management identifies
+    the
+
+    need, purchasing sends an order to a ventilation unit manufacturer and waits for the order confirmation.
+    The
+
+    manufacturer confirms the order, manufactures the unit and delivers it. After delivery, site management
+    inspects the
+
+    unit, and the delivery is accepted. Model the processes of both companies in one expanded pool each.'
+expected_mistakes:
+- de: Sequenzfluss zwischen den Pools.
+  en: Sequence flow between the pools.
+- de: Beide Unternehmen als Lanes eines Pools.
+  en: Both companies as lanes of one pool.
+- de: Warten auf die Bestätigung fehlt beim Generalunternehmer.
+  en: Waiting for the confirmation missing at the general contractor.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

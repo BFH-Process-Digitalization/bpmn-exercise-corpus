@@ -1,0 +1,80 @@
+id: T1-A
+topic: 1
+level: advanced
+slot: A
+core: false
+sector: machinery
+setting: Hersteller von Industriewaagen
+time_limit_minutes: 15
+elements: task types (user, service, manual, script, business rule, send, receive), subprocess, call activity,
+  ad-hoc subprocess, loop and multi-instance markers (parallel, sequential)
+skills: choose a task type, decompose and reuse, repeat for each item
+title:
+  de: Kalibrierauftrag für eine Industriewaage
+  en: Calibration order for an industrial scale
+learning_goal:
+  de: 'Den passenden Aufgabentyp wählen: Benutzer-, Service-, Geschäftsregel-, Sende-, Empfangs-, manuelle
+    und Skriptaufgabe.'
+  en: 'Choose the matching task type: user, service, business rule, send, receive, manual and script task.'
+text:
+  de: 'Ein Hersteller von Industriewaagen kalibriert Waagen bei seinen Kunden. Der Ablauf beginnt, wenn
+    ein Kunde
+
+    einen Kalibrierauftrag sendet. Das CRM-System lädt automatisch die Kundendaten. Der Preis ergibt sich
+    aus der
+
+    Tariftabelle nach Waagentyp und Messbereich. Eine Disponentin legt im Planungssystem einen Termin
+    fest; danach
+
+    sendet der Hersteller dem Kunden die Terminbestätigung. Ein Servicetechniker kalibriert die Waage
+    vor Ort von Hand,
+
+    ohne IT-Unterstützung. Aus den Messwerten erzeugt ein Skript automatisch das Kalibrierzertifikat.
+    Der Hersteller
+
+    sendet dem Kunden Zertifikat und Rechnung und wartet dann auf die Zahlung. Mit dem Zahlungseingang
+    ist der Auftrag
+
+    abgeschlossen. Modellieren Sie den Ablauf des Herstellers mit den passenden Aufgabentypen; der Kunde
+    ist ein
+
+    zugeklappter Pool.'
+  en: 'A manufacturer of industrial scales calibrates scales at its customers'' sites. The process starts
+    when a
+
+    customer sends a calibration order. The CRM system loads the customer data automatically. The price
+    follows from
+
+    the rate table by scale type and measuring range. A dispatcher sets an appointment in the planning
+    system; the
+
+    manufacturer then sends the appointment confirmation to the customer. A service technician calibrates
+    the scale on
+
+    site by hand, without IT support. A script creates the calibration certificate automatically from
+    the measurements.
+
+    The manufacturer sends the certificate and invoice to the customer and then waits for the payment.
+    When the payment
+
+    has arrived, the order is closed. Model the manufacturer''s process with the matching task types;
+    the customer is a
+
+    collapsed pool.'
+expected_mistakes:
+- de: Alle Aktivitäten als einfache Aufgaben ohne Typ.
+  en: All activities as plain tasks without a type.
+- de: Tarif bestimmen als Benutzeraufgabe statt Geschäftsregelaufgabe.
+  en: Determining the price as a user task instead of a business rule task.
+- de: Warten auf die Zahlung als Benutzeraufgabe statt Empfangsaufgabe.
+  en: Waiting for payment as a user task instead of a receive task.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

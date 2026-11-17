@@ -1,0 +1,65 @@
+id: T6-B2
+topic: 6
+level: basic
+slot: B2
+core: true
+sector: machinery
+setting: Hersteller von Präzisionsteilen
+time_limit_minutes: 10
+elements: error end event, error boundary event
+skills: handle a failure inside a subprocess
+title:
+  de: Messmaschine kalibrieren
+  en: Calibrating a measuring machine
+learning_goal:
+  de: Einen Fehler bei überschrittener Toleranz auslösen und die Ausnahme ausserhalb des Teilprozesses
+    behandeln.
+  en: Throw an error when a tolerance is exceeded and handle the exception outside the subprocess.
+text:
+  de: 'Ein Hersteller von Präzisionsteilen kalibriert alle 6 Monate seine Koordinatenmessmaschine.
+
+    Im Teilprozess "Messmaschine kalibrieren" misst ein Messtechniker einen Referenzkörper und berechnet
+    die
+
+    Abweichung. Liegt die Abweichung innerhalb der Toleranz, ist die Kalibrierung bestanden. Andernfalls
+    endet der
+
+    Teilprozess mit dem Fehler "Toleranz überschritten". Dann sperrt der Messtechniker die Maschine und
+    bietet
+
+    den Servicetechniker des Herstellers auf. Bei bestandener Kalibrierung erstellt er das Kalibrierzertifikat
+    und
+
+    gibt die Messmaschine frei. Modellieren Sie den Ablauf mit einem aufgeklappten Teilprozess.'
+  en: 'A precision parts manufacturer calibrates its coordinate measuring machine every 6 months.
+
+    In the subprocess "Calibrate measuring machine" a metrology technician measures a reference artefact
+    and
+
+    calculates the deviation. If the deviation is within tolerance, the calibration is passed. Otherwise
+    the
+
+    subprocess ends with the error "Tolerance exceeded". The technician then locks the machine and calls
+    the
+
+    manufacturer''s service technician. If the calibration is passed, he creates the calibration certificate
+    and
+
+    releases the measuring machine. Model the process with an expanded subprocess.'
+expected_mistakes:
+- de: Normales Startereignis statt Zeit-Startereignis "Alle 6 Monate".
+  en: None start event instead of the timer start "Every 6 months".
+- de: Beide Ergebnisse im Teilprozess mit normalen Endereignissen und einem XOR danach.
+  en: Both results as none end events with an XOR after the subprocess.
+- de: Fehler-Randereignis ohne Fehlerbezeichnung.
+  en: Error boundary event without an error name.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

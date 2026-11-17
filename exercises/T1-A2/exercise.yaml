@@ -1,0 +1,69 @@
+id: T1-A2
+topic: 1
+level: advanced
+slot: A2
+core: false
+sector: machinery
+setting: Hersteller von Abfüllanlagen
+time_limit_minutes: 15
+elements: task types (user, service, manual, script, business rule, send, receive), subprocess, call activity,
+  ad-hoc subprocess, loop and multi-instance markers (parallel, sequential)
+skills: choose a task type, decompose and reuse, repeat for each item
+title:
+  de: Abfüllanlage beim Kunden in Betrieb nehmen
+  en: Commissioning a filling line at the customer
+learning_goal:
+  de: Einen Ablauf mit einem Teilprozess gliedern und einen wiederverwendeten Prozess als Aufrufaktivität
+    einbinden.
+  en: Structure a process with a subprocess and include a reused process as a call activity.
+text:
+  de: 'Ein Hersteller von Abfüllanlagen nimmt seine Anlagen beim Kunden in Betrieb. Der Ablauf beginnt,
+    wenn die
+
+    Anlage beim Kunden angeliefert ist. Zuerst montiert das Montageteam die Anlage: Es baut die Mechanik
+    auf, schliesst
+
+    die Elektrik an und parametriert die Steuerung. Danach führt ein Sicherheitsingenieur die Sicherheitsprüfung
+    durch.
+
+    Die Sicherheitsprüfung ist ein eigener, firmenweit einheitlicher Prozess, den auch andere Abläufe
+    verwenden; ihre
+
+    Schritte werden hier nicht modelliert. Anschliessend schult das Team das Bedienpersonal und lässt
+    das Abnahmeprotokoll
+
+    vom Kunden unterzeichnen. Damit ist die Anlage übergeben. Modellieren Sie die Montage als aufgeklappten
+    Teilprozess.'
+  en: 'A manufacturer of filling lines commissions its lines at the customer''s plant. The process starts
+    when the
+
+    line has been delivered to the customer. First the assembly team assembles the line: it builds the
+    mechanics,
+
+    connects the electrics and configures the control system. A safety engineer then carries out the safety
+    check.
+
+    The safety check is a separate company-wide process that other processes use as well; its steps are
+    not modelled
+
+    here. The team then trains the operators and has the customer sign the acceptance report. The line
+    is then handed
+
+    over. Model the assembly as an expanded subprocess.'
+expected_mistakes:
+- de: Sicherheitsprüfung als normaler Teilprozess statt Aufrufaktivität.
+  en: Safety check as an ordinary subprocess instead of a call activity.
+- de: Montageschritte ohne Teilprozess direkt im Hauptablauf.
+  en: Assembly steps put directly into the main process without a subprocess.
+- de: Teilprozess ohne eigenes Start- und Endereignis.
+  en: Subprocess without its own start and end event.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

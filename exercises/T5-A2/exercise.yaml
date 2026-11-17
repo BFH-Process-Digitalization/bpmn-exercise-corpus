@@ -1,0 +1,68 @@
+id: T5-A2
+topic: 5
+level: advanced
+slot: A2
+core: false
+sector: health
+setting: Medizintechnikhersteller
+time_limit_minutes: 15
+elements: data input and output, data collection
+skills: data flow across subprocesses, lists of items with multi-instance
+title:
+  de: Reklamation eines Medizinprodukts
+  en: Complaint about a medical device
+learning_goal:
+  de: Daten in einen Teilprozess hinein und wieder heraus führen.
+  en: Pass data into a subprocess and out again.
+text:
+  de: 'Ein Medizintechnikhersteller bearbeitet Reklamationen zu Infusionspumpen. Geht eine Reklamation
+    ein,
+
+    erfasst der Kundendienst sie; die Reklamation ist dann erfasst. Im Teilprozess "Ursache analysieren"
+    untersucht ein
+
+    Ingenieur anhand der Reklamation das zurückgesandte Gerät und hält das Ergebnis in einem Prüfbefund
+    fest. Mit dem
+
+    Prüfbefund bestimmt er die Ursache und trägt sie in den 8D-Bericht ein. Ausserhalb des Teilprozesses
+    legt die
+
+    Qualitätssicherung anhand des 8D-Berichts die Korrekturmassnahme fest; der 8D-Bericht ist dann abgeschlossen.
+
+    Zum Schluss informiert der Kundendienst den Kunden. Modellieren Sie den Ablauf mit aufgeklapptem Teilprozess
+    und
+
+    den Datenobjekten samt Zuständen.'
+  en: 'A medical device manufacturer handles complaints about infusion pumps. When a complaint comes in,
+    customer
+
+    service records it; the complaint is then recorded. In the subprocess "Analyse cause" an engineer
+    examines the
+
+    returned device using the complaint and documents the result in an inspection finding. Using the inspection
+    finding
+
+    he determines the cause and enters it in the 8D report. Outside the subprocess, quality assurance
+    defines the
+
+    corrective action using the 8D report; the 8D report is then completed. Finally customer service informs
+    the
+
+    customer. Model the process with an expanded subprocess and the data objects including their states.'
+expected_mistakes:
+- de: Prüfbefund ausserhalb des Teilprozesses, obwohl er nur dort verwendet wird.
+  en: Inspection finding outside the subprocess although only used inside.
+- de: Reklamation im Teilprozess neu erzeugt statt von aussen gelesen.
+  en: Complaint created again inside the subprocess instead of read from outside.
+- de: Zustände des 8D-Berichts fehlen.
+  en: States of the 8D report missing.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

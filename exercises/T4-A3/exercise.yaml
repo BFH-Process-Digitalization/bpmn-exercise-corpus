@@ -1,0 +1,60 @@
+id: T4-A3
+topic: 4
+level: advanced
+slot: A3
+core: false
+sector: supply chain
+setting: Spedition
+time_limit_minutes: 15
+elements: several pools, message flow, black-box pool, multi-instance pool
+skills: separate participants, message flow only between pools, model several partners of the same type
+title:
+  de: Seefracht exportieren
+  en: Exporting sea freight
+learning_goal:
+  de: Den eigenen Ablauf mit Lanes von externen Partnern als zugeklappte Pools trennen.
+  en: Separate the own process with lanes from external partners as collapsed pools.
+text:
+  de: 'Eine Spedition organisiert Seefracht für Versender. Erhält die Disposition einen Transportauftrag
+    von einem
+
+    Versender, disponiert sie den Transport. Danach reicht die Zollabteilung die Ausfuhranmeldung bei
+    der Zollbehörde ein
+
+    und wartet auf die Ausfuhrbewilligung. Ist die Ausfuhr bewilligt, lässt die Disposition den Container
+    verladen und
+
+    sendet dem Versender die Versandbestätigung. Modellieren Sie den Ablauf der Spedition mit Lanes für
+    Disposition und
+
+    Zollabteilung; Versender und Zollbehörde sind zugeklappte Pools.'
+  en: 'A freight forwarder organises sea freight for shippers. When dispatch receives a transport order
+    from a
+
+    shipper, it plans the transport. The customs department then submits the export declaration to the
+    customs
+
+    authority and waits for the export approval. Once the export is approved, dispatch has the container
+    loaded and
+
+    sends the shipping confirmation to the shipper. Model the forwarder''s process with lanes for dispatch
+    and customs
+
+    department; the shipper and the customs authority are collapsed pools.'
+expected_mistakes:
+- de: Zollbehörde als Lane der Spedition.
+  en: Customs authority as a lane of the forwarder.
+- de: Nachrichtenfluss zwischen den Lanes der Spedition.
+  en: Message flow between the forwarder's lanes.
+- de: Warten auf die Bewilligung fehlt.
+  en: Waiting for the approval missing.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

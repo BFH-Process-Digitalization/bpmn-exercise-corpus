@@ -1,0 +1,54 @@
+id: T4-B2
+topic: 4
+level: basic
+slot: B2
+core: true
+sector: machinery
+setting: Werkzeugmaschinenhersteller
+time_limit_minutes: 10
+elements: pool, lanes
+skills: assign tasks to roles, order lanes, avoid crossing flows
+title:
+  de: Kundenanfrage beantworten
+  en: Answering a customer enquiry
+learning_goal:
+  de: Lanes und eine Entscheidung kombinieren; Endzustände pro Ausgang benennen.
+  en: Combine lanes with a decision; name an end state for each outcome.
+text:
+  de: 'Ein Werkzeugmaschinenhersteller erhält eine Kundenanfrage für eine Sondermaschine.
+
+    Der Verkauf erfasst die Anfrage. Die Konstruktion prüft danach die technische Machbarkeit.
+
+    Ist die Maschine nicht machbar, sendet der Verkauf eine Absage und die Anfrage ist abgelehnt.
+
+    Ist sie machbar, kalkuliert die Kalkulation die Kosten. Danach erstellt der Verkauf das Angebot
+
+    und versendet es. Modellieren Sie den Ablauf im Pool des Herstellers mit Lanes für Verkauf,
+
+    Konstruktion und Kalkulation.'
+  en: 'A machine tool manufacturer receives a customer enquiry for a custom machine.
+
+    Sales records the enquiry. Engineering then checks technical feasibility.
+
+    If the machine is not feasible, sales sends a rejection and the enquiry is rejected.
+
+    If it is feasible, costing calculates the costs. Sales then prepares the quote and sends it.
+
+    Model the process in the manufacturer''s pool with lanes for sales, engineering and costing.'
+expected_mistakes:
+- de: Nur ein Endereignis für zwei verschiedene Ergebnisse.
+  en: One end event for two different results.
+- de: Gateway in einer anderen Lane als die Prüfung, ohne dass jemand entscheidet.
+  en: Gateway placed away from the check that decides it.
+- de: Lanes als eigene Pools mit Nachrichtenflüssen modelliert.
+  en: Lanes modelled as separate pools with message flows.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

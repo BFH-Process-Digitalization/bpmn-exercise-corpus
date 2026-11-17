@@ -1,0 +1,68 @@
+id: T3-A3
+topic: 3
+level: advanced
+slot: A3
+core: false
+sector: machinery
+setting: Hersteller von Schienenfahrzeugen
+time_limit_minutes: 15
+elements: signal, conditional, link, terminate, multiple, parallel multiple; interrupting and non-interrupting
+  boundary events; event subprocess
+skills: broadcast vs addressed messages, time limits, interruptions, terminating all paths
+title:
+  de: Instandsetzung eines Triebzugs
+  en: Overhaul of a train
+learning_goal:
+  de: Auf ein Bedingungsereignis warten und Anfragen jederzeit mit einem nicht unterbrechenden Ereignis-Teilprozess
+    beantworten.
+  en: Wait for a conditional event and answer requests at any time with a non-interrupting event subprocess.
+text:
+  de: 'Ein Hersteller von Schienenfahrzeugen setzt in seiner Werkstatt Triebzüge eines Bahnbetreibers
+    instand.
+
+    Ist ein Zug in der Werkstatt eingetroffen, diagnostiziert ein Techniker die Schäden. Danach wartet
+    die Werkstatt, bis
+
+    alle benötigten Ersatzteile verfügbar sind. Dann setzt sie den Zug instand und führt eine Probefahrt
+    durch.
+
+    Zum Schluss meldet sie dem Betreiber die Übergabe. Während der ganzen Instandsetzung kann der Betreiber
+    jederzeit
+
+    eine Statusanfrage senden; die Werkstatt ermittelt dann den Reparaturstand und teilt ihn mit, ohne
+    die Instandsetzung
+
+    zu unterbrechen. Modellieren Sie den Ablauf der Werkstatt; der Betreiber ist ein zugeklappter Pool.'
+  en: 'A rolling stock manufacturer overhauls a rail operator''s trains in its workshop. When a train
+    has arrived
+
+    at the workshop, a technician diagnoses the damage. The workshop then waits until all required spare
+    parts are
+
+    available. It then overhauls the train and carries out a test run. Finally it reports the handover
+    to the operator.
+
+    During the whole overhaul, the operator can send a status request at any time; the workshop then determines
+    the
+
+    repair status and reports it without interrupting the overhaul. Model the workshop''s process; the
+    operator is a
+
+    collapsed pool.'
+expected_mistakes:
+- de: Statusanfrage als Teil des Hauptablaufs statt Ereignis-Teilprozess.
+  en: Status request as part of the main flow instead of an event subprocess.
+- de: 'Ereignis-Teilprozess unterbrechend: die Instandsetzung würde abgebrochen.'
+  en: 'Event subprocess interrupting: the overhaul would be stopped.'
+- de: Warten auf Ersatzteile als Zeitereignis statt Bedingungsereignis.
+  en: Waiting for spare parts as a timer instead of a conditional event.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

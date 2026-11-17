@@ -1,0 +1,56 @@
+id: T2-B
+topic: 2
+level: basic
+slot: B
+core: true
+sector: services
+setting: Haustechnikfirma
+time_limit_minutes: 10
+elements: XOR split and merge, AND split and join
+skills: question labels, close every split, tell exclusive from parallel
+title:
+  de: Serviceeinsatz an einer Wärmepumpe
+  en: Service visit to a heat pump
+learning_goal:
+  de: Eine exklusive Entscheidung als XOR-Gateway mit Frage und beschrifteten Ausgängen modellieren und
+    wieder zusammenführen.
+  en: Model an exclusive decision as an XOR gateway with a question and labelled outgoing flows, and merge
+    it again.
+text:
+  de: 'Eine Haustechnikfirma wartet Wärmepumpen in Einfamilienhäusern.
+
+    Nach einem Serviceeinsatz erfasst der Servicetechniker den Arbeitsrapport.
+
+    Die Disposition prüft danach den Garantieanspruch. Handelt es sich um einen Garantiefall,
+
+    meldet die Disposition die Arbeit beim Hersteller zur Vergütung an. Andernfalls stellt sie
+
+    die Arbeit der Kundschaft in Rechnung. In beiden Fällen schliesst die Disposition den Auftrag
+
+    anschliessend ab. Modellieren Sie den Ablauf.'
+  en: 'A building services company maintains heat pumps in private homes.
+
+    After a service visit, the service technician records the work report.
+
+    Dispatch then checks the warranty claim. If it is a warranty case, dispatch registers the
+
+    work with the manufacturer for reimbursement. Otherwise it invoices the customer.
+
+    In both cases dispatch then closes the order. Model the process.'
+expected_mistakes:
+- de: 'AND-Gateway statt XOR-Gateway: beide Wege würden ausgeführt.'
+  en: 'AND gateway instead of XOR: both paths would run.'
+- de: Ausgänge des XOR-Gateways nicht beschriftet.
+  en: Outgoing flows of the XOR gateway not labelled.
+- de: Pfade nicht zusammengeführt; "Auftrag abschliessen" doppelt modelliert.
+  en: Paths not merged; "Close order" modelled twice.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

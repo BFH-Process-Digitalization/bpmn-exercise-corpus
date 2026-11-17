@@ -1,0 +1,63 @@
+id: T1-A3
+topic: 1
+level: advanced
+slot: A3
+core: false
+sector: health
+setting: Hersteller von Hörsystemen
+time_limit_minutes: 15
+elements: task types (user, service, manual, script, business rule, send, receive), subprocess, call activity,
+  ad-hoc subprocess, loop and multi-instance markers (parallel, sequential)
+skills: choose a task type, decompose and reuse, repeat for each item
+title:
+  de: Markteinführung einer neuen Hörgerätegeneration
+  en: Launching a new generation of hearing aids
+learning_goal:
+  de: Ad-hoc-Teilprozess, Schleife sowie parallele und sequenzielle Mehrfachinstanz unterscheiden.
+  en: Tell an ad-hoc subprocess, a loop and parallel and sequential multi-instance apart.
+text:
+  de: 'Ein Hersteller von Hörsystemen führt eine neue Gerätegeneration ein. Nach dem Entscheid zur Markteinführung
+
+    erstellt das Marketing das Werbematerial: Es textet die Broschüre, erstellt Produktfotos und dreht
+    ein Produktvideo,
+
+    in beliebiger Reihenfolge und nach Bedarf. Danach schult der Vertrieb alle Vertriebspartner; die Schulungen
+    in den
+
+    einzelnen Ländern laufen gleichzeitig. Anschliessend testet die Entwicklung die Anpassungssoftware
+    so lange, bis keine
+
+    Fehler mehr auftreten. Zum Schluss beliefert die Logistik die Pilotkliniken, eine nach der anderen.
+    Damit ist das
+
+    Produkt eingeführt. Modellieren Sie den Ablauf.'
+  en: 'A hearing system manufacturer launches a new generation of devices. After the launch decision,
+    marketing
+
+    creates the promotional material: it writes the brochure, takes product photos and shoots a product
+    video, in any
+
+    order and as needed. Sales then trains all distribution partners; the trainings in the individual
+    countries run at
+
+    the same time. Development then tests the fitting software until no more errors occur. Finally logistics
+    supplies
+
+    the pilot clinics, one after the other. The product is then launched. Model the process.'
+expected_mistakes:
+- de: Werbematerial als normaler Teilprozess mit fester Reihenfolge.
+  en: Promotional material as an ordinary subprocess with a fixed order.
+- de: Schulungen als Schleife statt parallele Mehrfachinstanz.
+  en: Trainings as a loop instead of parallel multi-instance.
+- de: Software-Test als Mehrfachinstanz statt Schleife (Anzahl Durchläufe ist vorher nicht bekannt).
+  en: Software test as multi-instance instead of a loop (the number of runs is not known in advance).
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

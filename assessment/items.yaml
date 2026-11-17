@@ -1,0 +1,257 @@
+# Entry assessment items, see README.md in this folder. One correct option per item (key).
+# DE and EN have the same options in the same order.
+version: 0.1-draft
+licence: CC-BY-4.0
+items:
+- id: Q1-1
+  topic: 1
+  difficulty: basic
+  de:
+    stem: Welche Bezeichnung passt nach üblichen Modellierungsregeln zu einer Aktivität?
+    options:
+    - Rechnung
+    - Rechnung erstellt
+    - Rechnung erstellen
+    - Rechnungsstellung?
+  en:
+    stem: Which label fits an activity according to common modelling guidelines?
+    options:
+    - Invoice
+    - Invoice created
+    - Create invoice
+    - Invoicing?
+  key: 2
+- id: Q1-2
+  topic: 1
+  difficulty: advanced
+  de:
+    stem: Ein Mitarbeiter prüft jede Position eines Lieferscheins einzeln, die Anzahl Positionen ist erst zur Laufzeit bekannt. Wie modellieren Sie das am besten?
+    options:
+    - Eine Aktivität mit Mehrfachinstanz-Marker
+    - Eine Aktivität mit Schleifenmarker
+    - Eine Aktivität pro Position
+    - Ein XOR-Gateway mit Rückfluss pro Position
+  en:
+    stem: An employee checks each line of a delivery note separately; the number of lines is only known at run time. How do you model this best?
+    options:
+    - One activity with a multi-instance marker
+    - One activity with a loop marker
+    - One activity per line
+    - An XOR gateway with a backward flow per line
+  key: 0
+- id: Q2-1
+  topic: 2
+  difficulty: basic
+  de:
+    stem: Nach einer Prüfung wird ein Auftrag entweder angenommen oder abgelehnt. Welches Gateway verzweigt den Ablauf?
+    options:
+    - AND-Gateway
+    - Ereignisbasiertes Gateway
+    - Kein Gateway, zwei Sequenzflüsse aus der Aktivität
+    - XOR-Gateway
+  en:
+    stem: After a check an order is either accepted or rejected. Which gateway splits the flow?
+    options:
+    - AND gateway
+    - Event-based gateway
+    - No gateway, two sequence flows out of the activity
+    - XOR gateway
+  key: 3
+- id: Q2-2
+  topic: 2
+  difficulty: advanced
+  de:
+    stem: Ein AND-Gateway teilt in zwei Pfade, ein XOR-Gateway führt sie wieder zusammen. Was passiert, wenn der Prozess ausgeführt wird?
+    options:
+    - Nichts Besonderes, der Ablauf ist korrekt
+    - Die Aktivitäten nach dem XOR-Gateway laufen zweimal
+    - Der Ablauf blockiert (Deadlock)
+    - Nur der schnellere Pfad wird ausgeführt
+  en:
+    stem: An AND gateway splits into two paths and an XOR gateway merges them again. What happens when the process runs?
+    options:
+    - Nothing special, the flow is correct
+    - The activities after the XOR gateway run twice
+    - The flow blocks (deadlock)
+    - Only the faster path runs
+  key: 1
+- id: Q3-1
+  topic: 3
+  difficulty: basic
+  de:
+    stem: Nach dem Giessen muss Beton 24 Stunden aushärten, bevor es weitergeht. Wie modellieren Sie die Wartezeit?
+    options:
+    - Aktivität "Beton aushärten lassen"
+    - Zeit-Startereignis "24 Stunden"
+    - Zeit-Zwischenereignis "24 Stunden"
+    - Textanmerkung "24 Stunden warten"
+  en:
+    stem: After pouring, concrete has to cure for 24 hours before work continues. How do you model the wait?
+    options:
+    - Activity "Let concrete cure"
+    - Timer start event "24 hours"
+    - Timer intermediate event "24 hours"
+    - Text annotation "Wait 24 hours"
+  key: 2
+- id: Q3-2
+  topic: 3
+  difficulty: advanced
+  de:
+    stem: Während eine Offerte erstellt wird, soll nach 2 Tagen ohne die Aktivität abzubrechen eine Erinnerung an den Verkauf gehen. Welches Element passt?
+    options:
+    - Unterbrechendes Zeit-Randereignis
+    - Nicht unterbrechendes Zeit-Randereignis
+    - Zeit-Zwischenereignis nach der Aktivität
+    - Ereignisbasiertes Gateway
+  en:
+    stem: While a quote is being prepared, a reminder should go to sales after 2 days without stopping the activity. Which element fits?
+    options:
+    - Interrupting timer boundary event
+    - Non-interrupting timer boundary event
+    - Timer intermediate event after the activity
+    - Event-based gateway
+  key: 1
+- id: Q4-1
+  topic: 4
+  difficulty: basic
+  de:
+    stem: Empfang, Pflege und Ärztin arbeiten im selben Spital zusammen. Wie stellen Sie die drei Rollen dar?
+    options:
+    - Ein Pool mit drei Lanes
+    - Drei Pools mit Nachrichtenflüssen
+    - Drei Gruppen
+    - Drei Datenobjekte
+  en:
+    stem: Reception, nursing and a doctor work together in the same hospital. How do you show the three roles?
+    options:
+    - One pool with three lanes
+    - Three pools with message flows
+    - Three groups
+    - Three data objects
+  key: 0
+- id: Q4-2
+  topic: 4
+  difficulty: advanced
+  de:
+    stem: Ihr Unternehmen bestellt bei einem Lieferanten, dessen interne Abläufe Sie nicht kennen. Wie modellieren Sie den Lieferanten?
+    options:
+    - Als Lane im eigenen Pool
+    - Als aufgeklappter Pool mit erfundenen Aktivitäten
+    - Gar nicht, nur als Datenobjekt
+    - Als zugeklappter Pool, verbunden mit Nachrichtenflüssen
+  en:
+    stem: Your company orders from a supplier whose internal process you do not know. How do you model the supplier?
+    options:
+    - As a lane in your own pool
+    - As an expanded pool with invented activities
+    - Not at all, only as a data object
+    - As a collapsed pool connected by message flows
+  key: 3
+- id: Q5-1
+  topic: 5
+  difficulty: basic
+  de:
+    stem: Eine Aktivität speichert Messwerte in der Qualitätsdatenbank, die auch nach dem Prozess bestehen bleibt. Welches Element stellt die Datenbank dar?
+    options:
+    - Datenobjekt
+    - Datenspeicher
+    - Nachricht
+    - Textanmerkung
+  en:
+    stem: An activity saves measurements in the quality database, which persists after the process. Which element represents the database?
+    options:
+    - Data object
+    - Data store
+    - Message
+    - Text annotation
+  key: 1
+- id: Q5-2
+  topic: 5
+  difficulty: advanced
+  de:
+    stem: Ein Ticket ist erst "offen", später "gelöst" und am Ende "geschlossen". Wie zeigen Sie das im Modell?
+    options:
+    - Drei Datenspeicher
+    - Drei XOR-Gateways
+    - Datenobjekt "Ticket" mit dem jeweiligen Zustand bei den Aktivitäten
+    - Sequenzflüsse mit den Zuständen beschriften
+  en:
+    stem: A ticket is first "open", later "resolved" and finally "closed". How do you show this in the model?
+    options:
+    - Three data stores
+    - Three XOR gateways
+    - Data object "Ticket" with the respective state at the activities
+    - Label sequence flows with the states
+  key: 2
+- id: Q6-1
+  topic: 6
+  difficulty: basic
+  de:
+    stem: Im Teilprozess "Probe analysieren" kann sich zeigen, dass die Probe unbrauchbar ist. Danach soll ausserhalb des Teilprozesses eine neue Probe angefordert werden. Was modellieren Sie?
+    options:
+    - Fehler-Endereignis im Teilprozess und Fehler-Randereignis am Teilprozess
+    - Normales Endereignis im Teilprozess und XOR-Gateway danach
+    - Terminierendes Endereignis
+    - Nachrichten-Endereignis an die Arztpraxis
+  en:
+    stem: In the subprocess "Analyse sample" it may turn out that the sample is unusable. A new sample should then be requested outside the subprocess. What do you model?
+    options:
+    - Error end event in the subprocess and error boundary event on the subprocess
+    - None end event in the subprocess and an XOR gateway afterwards
+    - Terminate end event
+    - Message end event to the practice
+  key: 0
+- id: Q6-2
+  topic: 6
+  difficulty: advanced
+  de:
+    stem: Eine bereits erfolgte Zimmerreservation soll rückgängig gemacht werden, wenn die Reise später storniert wird. Welches Konzept passt?
+    options:
+    - Fehler-Randereignis
+    - Eskalation
+    - Schleifenmarker
+    - Kompensation
+  en:
+    stem: A room booking that has already been made must be undone if the trip is cancelled later. Which concept fits?
+    options:
+    - Error boundary event
+    - Escalation
+    - Loop marker
+    - Compensation
+  key: 3
+- id: Q7-1
+  topic: 7
+  difficulty: basic
+  de:
+    stem: Sie möchten nur zeigen, welche Partner (Kunde, Spediteur, Zoll) miteinander kommunizieren, ohne Abläufe. Welcher Diagrammtyp passt?
+    options:
+    - Prozessdiagramm mit Lanes
+    - Datenflussdiagramm
+    - Konversationsdiagramm
+    - Choreographiediagramm mit allen Aktivitäten
+  en:
+    stem: You only want to show which partners (customer, forwarder, customs) communicate with each other, without processes. Which diagram type fits?
+    options:
+    - Process diagram with lanes
+    - Data flow diagram
+    - Conversation diagram
+    - Choreography diagram with all activities
+  key: 2
+- id: Q7-2
+  topic: 7
+  difficulty: advanced
+  de:
+    stem: Was stellt eine Choreographie-Aufgabe dar?
+    options:
+    - Einen Nachrichtenaustausch zwischen zwei Partnern
+    - Eine Aktivität im eigenen Pool
+    - Eine Gruppe von Lanes
+    - Ein Ereignis, das alle Partner gleichzeitig auslöst
+  en:
+    stem: What does a choreography task represent?
+    options:
+    - A message exchange between two participants
+    - An activity in your own pool
+    - A group of lanes
+    - An event that all participants trigger at once
+  key: 0

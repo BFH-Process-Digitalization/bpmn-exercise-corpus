@@ -1,0 +1,59 @@
+id: T6-A3
+topic: 6
+level: advanced
+slot: A3
+core: false
+sector: supply chain
+setting: Schwerlastlogistiker
+time_limit_minutes: 15
+elements: escalation, compensation (boundary event, compensation activity), transaction subprocess, cancel
+  event
+skills: error vs escalation, undo completed work, all-or-nothing transactions
+title:
+  de: Schwertransport als Transaktion buchen
+  en: Booking a heavy transport as a transaction
+learning_goal:
+  de: Zusammengehörige Buchungen als Transaktion modellieren, die bei einem Abbruch als Ganzes scheitert.
+  en: Model related bookings as a transaction that fails as a whole when cancelled.
+text:
+  de: 'Ein Schwerlastlogistiker transportiert eine Turbine. Ist der Transportauftrag erteilt, bucht die
+
+    Disposition in einer Transaktion gleichzeitig einen Kran, einen Spezialtransporter und die Polizeibegleitung.
+
+    Danach prüft sie, ob alle Buchungen bestätigt sind. Fehlt eine Bestätigung, bricht sie die Transaktion
+    ab; alle
+
+    Buchungen gelten dann als nicht erfolgt, und die Disposition terminiert den Transport neu. Sind alle
+    Buchungen
+
+    bestätigt, führt das Transportteam den Transport durch. Modellieren Sie den Ablauf mit einem Transaktions-Teilprozess.'
+  en: 'A heavy-haul logistics company transports a turbine. Once the transport order has been placed,
+    dispatch
+
+    books a crane, a special transporter and the police escort at the same time in a transaction. It then
+    checks whether
+
+    all bookings have been confirmed. If a confirmation is missing, it cancels the transaction; all bookings
+    are then
+
+    treated as not made, and dispatch reschedules the transport. If all bookings are confirmed, the transport
+    team
+
+    carries out the transport. Model the process with a transaction subprocess.'
+expected_mistakes:
+- de: Normaler Teilprozess mit Fehler statt Transaktion mit Abbruch.
+  en: Ordinary subprocess with an error instead of a transaction with cancel.
+- de: Abbruch-Endereignis ausserhalb der Transaktion.
+  en: Cancel end event outside the transaction.
+- de: Abbruch-Randereignis fehlt, der Ablauf endet ohne Neuterminierung.
+  en: Cancel boundary event missing, the process ends without rescheduling.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

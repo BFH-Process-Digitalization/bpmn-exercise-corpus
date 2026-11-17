@@ -1,0 +1,58 @@
+id: T5-B2
+topic: 5
+level: basic
+slot: B2
+core: true
+sector: production
+setting: Hersteller von Hydraulikzylindern
+time_limit_minutes: 10
+elements: data object, data store, data association, data states, text annotation, group
+skills: show what tasks read and write, document vs database
+title:
+  de: Fertigungslos prüfen
+  en: Inspecting a production batch
+learning_goal:
+  de: Dokumente mit Zuständen durch den Ablauf verfolgen und Dokument von Datenbank unterscheiden.
+  en: Trace documents and their states through the process and tell a document from a database.
+text:
+  de: 'Ein Hersteller von Hydraulikzylindern prüft jedes Fertigungslos. Erhält die Qualitätssicherung
+
+    einen Prüfauftrag, ruft eine Prüferin den Prüfplan aus der Qualitätsdatenbank ab und druckt ihn aus.
+
+    Nach dem gedruckten Prüfplan misst sie die Teile und füllt dabei das Messprotokoll aus.
+
+    Die Werte aus dem ausgefüllten Messprotokoll speichert sie in der Qualitätsdatenbank.
+
+    Zum Schluss erstellt sie den Prüfbericht und gibt ihn frei. Damit ist das Los geprüft.
+
+    Modellieren Sie den Ablauf mit Datenobjekten, Zuständen und dem Datenspeicher.'
+  en: 'A hydraulic cylinder manufacturer inspects every production batch. When quality assurance
+
+    receives an inspection order, an inspector retrieves the inspection plan from the quality database
+    and prints it.
+
+    Following the printed inspection plan she measures the parts and completes the measurement record.
+
+    She saves the values from the completed measurement record in the quality database.
+
+    Finally she prepares the inspection report and approves it. The batch is then inspected.
+
+    Model the process with data objects, states and the data store.'
+expected_mistakes:
+- de: Zustände der Dokumente fehlen.
+  en: States of the documents missing.
+- de: Qualitätsdatenbank zweimal als getrennte Speicher modelliert, ohne dass klar ist, dass es derselbe
+    ist.
+  en: Quality database drawn as two unrelated stores.
+- de: Lesende und schreibende Assoziation verwechselt.
+  en: Reading and writing associations mixed up.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

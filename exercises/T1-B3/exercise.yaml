@@ -1,0 +1,52 @@
+id: T1-B3
+topic: 1
+level: basic
+slot: B3
+core: false
+sector: machinery
+setting: Zulieferbetrieb der Uhrenindustrie
+time_limit_minutes: 10
+elements: task, sequence flow, start and end event
+skills: linear process, verb-object labels, events named as states
+title:
+  de: Wartung einer CNC-Fräsmaschine
+  en: Maintenance of a CNC milling machine
+learning_goal:
+  de: Einen technischen Ablauf in klar benannte Einzelschritte zerlegen.
+  en: Break a technical procedure into clearly named single steps.
+text:
+  de: 'Ein Zulieferbetrieb der Uhrenindustrie wartet seine CNC-Fräsmaschinen selbst.
+
+    Wenn die Instandhaltung einen Wartungsauftrag erhält, setzt eine Technikerin die Maschine still.
+
+    Sie wechselt den Kühlschmierstoff und schmiert danach die Führungen.
+
+    Anschliessend lässt sie einen Probelauf laufen und gibt die Maschine danach für die Produktion frei.
+
+    Der Ablauf endet, wenn die Maschine wieder betriebsbereit ist. Modellieren Sie den Ablauf.'
+  en: 'A supplier to the watch industry maintains its CNC milling machines itself.
+
+    When the maintenance team receives a maintenance order, a technician shuts down the machine.
+
+    She changes the coolant and then lubricates the guideways.
+
+    After that she runs a test cycle and then releases the machine for production.
+
+    The process ends when the machine is ready for operation again. Model the process.'
+expected_mistakes:
+- de: Ergebnis als Aktivität statt als Endereignis modelliert ("Maschine betriebsbereit" als Aufgabe).
+  en: Result modelled as an activity instead of an end event.
+- de: Fachbegriffe uneinheitlich benannt ("Maschine stoppen" und "Anlage stillsetzen").
+  en: Inconsistent terms for the same thing ("stop machine", "shut down plant").
+- de: Startereignis fehlt.
+  en: Start event missing.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

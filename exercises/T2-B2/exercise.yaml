@@ -1,0 +1,56 @@
+id: T2-B2
+topic: 2
+level: basic
+slot: B2
+core: true
+sector: production
+setting: Maschinenbauunternehmen
+time_limit_minutes: 10
+elements: XOR split and merge, AND split and join
+skills: question labels, close every split, tell exclusive from parallel
+title:
+  de: Fertigungsauftrag vorbereiten
+  en: Preparing a production order
+learning_goal:
+  de: Gleichzeitige Arbeiten mit einem AND-Gateway aufteilen und synchronisieren.
+  en: Split and synchronise concurrent work with AND gateways.
+text:
+  de: 'In einem Maschinenbauunternehmen gibt die Arbeitsvorbereitung einen Fertigungsauftrag frei.
+
+    Danach laufen drei Vorbereitungen gleichzeitig: Das Lager kommissioniert das Rohmaterial,
+
+    die Werkstatt rüstet die Maschine und die Qualitätssicherung stellt den Prüfplan bereit.
+
+    Erst wenn alle drei Vorbereitungen erledigt sind, fertigt die Werkstatt die Teile.
+
+    Danach prüft die Qualitätssicherung die Teile. Damit ist der Fertigungsauftrag erledigt.
+
+    Modellieren Sie den Ablauf. Rollen müssen nicht dargestellt werden.'
+  en: 'In an engineering company, production planning releases a production order.
+
+    Three preparations then run at the same time: the warehouse picks the raw material,
+
+    the workshop sets up the machine and quality assurance provides the inspection plan.
+
+    Only when all three preparations are done does the workshop manufacture the parts.
+
+    Quality assurance then inspects the parts. This completes the production order.
+
+    Model the process. Roles do not need to be shown.'
+expected_mistakes:
+- de: 'XOR-Gateway statt AND-Gateway: nur eine Vorbereitung würde ausgeführt.'
+  en: 'XOR gateway instead of AND: only one preparation would run.'
+- de: Paralleler Pfad ohne AND-Join direkt zu "Teile fertigen" geführt.
+  en: Parallel paths joined without an AND join.
+- de: Vorbereitungen hintereinander statt parallel modelliert.
+  en: Preparations modelled in sequence instead of in parallel.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null

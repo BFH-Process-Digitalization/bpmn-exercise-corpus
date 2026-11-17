@@ -1,0 +1,62 @@
+id: T4-B3
+topic: 4
+level: basic
+slot: B3
+core: false
+sector: public administration
+setting: Gemeinde
+time_limit_minutes: 10
+elements: pool, lanes
+skills: assign tasks to roles, order lanes, avoid crossing flows
+title:
+  de: Baugesuch bearbeiten
+  en: Processing a building application
+learning_goal:
+  de: Einen Verwaltungsablauf mit zwei Rollen, einer Entscheidung und einer Frist modellieren.
+  en: Model an administrative process with two roles, a decision and a deadline.
+text:
+  de: 'Bei der Bauverwaltung einer Gemeinde geht ein Baugesuch ein. Die Bauverwaltung prüft das
+
+    Gesuch auf Vollständigkeit. Fehlen Unterlagen, fordert sie diese bei der Bauherrschaft nach; damit
+    endet
+
+    dieser Ablauf. Ist das Gesuch vollständig, publiziert die Bauverwaltung es. Das Gesuch liegt danach
+    in
+
+    dieser Gemeinde 30 Tage öffentlich auf. Nach Ablauf der Frist beurteilt die Baukommission das Gesuch
+    und
+
+    fällt den Bauentscheid. Die Bauverwaltung eröffnet den Entscheid der Bauherrschaft.
+
+    Modellieren Sie den Ablauf im Pool "Gemeinde" mit Lanes für Bauverwaltung und Baukommission.'
+  en: 'The building administration of a municipality receives a building application.
+
+    The building administration checks whether the application is complete. If documents are missing,
+    it requests
+
+    them from the applicant; this ends the process. If the application is complete, the building administration
+
+    publishes it. In this municipality the application is then open for public inspection for 30 days.
+
+    After the deadline the building commission assesses the application and decides on it. The building
+
+    administration notifies the applicant of the decision.
+
+    Model the process in the pool "Municipality" with lanes for building administration and building commission.'
+expected_mistakes:
+- de: Frist als Aktivität ("30 Tage warten") statt als Zeit-Zwischenereignis.
+  en: Deadline modelled as an activity instead of a timer intermediate event.
+- de: Bauherrschaft als Lane in der Gemeinde modelliert.
+  en: Applicant modelled as a lane of the municipality.
+- de: Nein-Pfad ohne eigenes Endereignis.
+  en: No-path without its own end event.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
+licence: CC-BY-4.0
+status: released
+authors:
+- Moritz Maier
+review:
+  reviewer: null
+  date: null
