@@ -1,5 +1,7 @@
 # Open BPMN exercise corpus
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24315290.svg)](https://doi.org/10.5281/zenodo.24315290)
+
 Exercises for learning BPMN 2.0, each with a task text in German and English, a sample solution and the
 mistakes students typically make. Developed for the BPMN Tutor at Bern University of Applied Sciences (BFH) and published under CC BY 4.0 (`LICENSE`).
 
@@ -84,3 +86,10 @@ Prints every rule violation and exits with 1 if there is one.
 Released (`status: released`). All 36 exercises and the entry assessment pass the check, load without warnings in
 bpmn-moddle and render in bpmn-js. The second-person review (`REVIEW.md`) is still open and is recorded under
 `review:` in each `exercise.yaml` when done.
+
+## Citation
+
+Maier, M., & Tekle Hailu, S. (2026). *Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an
+entry assessment (German and English)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24315290
+
+Machine-readable citation metadata is in `CITATION.cff`.
