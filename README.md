@@ -1,7 +1,5 @@
 # Open BPMN exercise corpus
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24315290.svg)](https://doi.org/10.5281/zenodo.24315290)
-
 36 BPMN 2.0 exercises in German and English, with sample solutions and an entry assessment. Six topics, each with
 three Basic and three Advanced exercises. Developed for the BPMN Tutor at Bern University of Applied Sciences (BFH).
 
@@ -84,4 +82,4 @@ Content CC BY 4.0, tools MIT (`LICENSE`).
 ## Citation
 
 Maier, M., & Tekle Hailu, S. (2026). *Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an
-entry assessment (German and English)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24315290
+entry assessment (German and English)* (Version 1.0.0) [Data set]. Zenodo.
