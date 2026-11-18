@@ -2,40 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24315290.svg)](https://doi.org/10.5281/zenodo.24315290)
 
-Exercises for learning BPMN 2.0, each with a task text in German and English, a sample solution and the
-mistakes students typically make. Developed for the BPMN Tutor at Bern University of Applied Sciences (BFH) and published under CC BY 4.0 (`LICENSE`).
-
-- Cases come from services, machinery, production, supply chain, health and public administration; no place names.
-- Texts and solutions are written by the team, not generated and not copied from textbooks or other corpora.
-- Every solution follows `GUIDELINES.md` (7PMG, Silver's Method and Style, eCH-0158) and passes
-  `tools/check.py`. Each exercise is reviewed by a second person (`REVIEW.md`).
-
-## Structure
-
-```
-exercises/T<topic>-<slot>/   exercise.yaml (source), exercise.de.md / exercise.en.md (readable),
-                     solution.de.bpmn / solution.en.bpmn, solution.de.svg / solution.en.svg
-assessment/                  entry assessment: items.yaml, PRE/ (modelling task), README.md
-booklet/                     exercises-de.pdf, exercises-en.pdf (task page, then solution page)
-index.csv                    one row per exercise
-tools/                       check.py, render_svg.py, build_release.py
-GUIDELINES.md  REVIEW.md  LICENSE  CITATION.cff  .zenodo.json
-```
-
-`exercise.yaml` is the source. The Markdown pages, SVGs, CSV index and booklets are generated from it:
-
-```
-python tools/check.py
-python tools/render_svg.py      # needs playwright
-python tools/build_release.py --pdf
-```
-
-Slots: `B`, `B2`, `B3` (Basic, 10 min) and `A`, `A2`, `A3`
-(Advanced, 15 min). The core set is `B` and `B2` of topics 1 to 6.
-
-`exercise.yaml` fields: `id`, `topic`, `level`, `slot`, `core`, `sector`, `setting`, `time_limit_minutes`,
-`elements`, `skills`, `title`, `learning_goal`, `text` (each with `de` and `en`), `expected_mistakes`, `solution`,
-`licence`, `status` (draft, reviewed, released), `authors`, `review`.
+36 BPMN 2.0 exercises in German and English, with sample solutions and an entry assessment. Six topics, each with
+three Basic and three Advanced exercises. Developed for the BPMN Tutor at Bern University of Applied Sciences (BFH).
 
 ## Exercises
 
@@ -57,39 +25,30 @@ Slots: `B`, `B2`, `B3` (Basic, 10 min) and `A`, `A2`, `A3`
 | 5 Data | Annual stocktaking (data input and output, collections) | Complaint about a medical device (data across a subprocess) | Calibrating instruments (multi-instance subprocess over a list) |
 | 6 Exceptions | Special valve (escalation vs error) | Cancelled production order (compensation) | Heavy transport (transaction, cancel) |
 
-Topic 7 (conversation and choreography) is not included: the BPMN Tutor's web editor (bpmn-js) cannot draw these diagrams.
+## Structure
 
-## How this differs from existing corpora
+```
+exercises/T<topic>-<slot>/   exercise.yaml, exercise.de.md / .en.md, solution.de.bpmn / .en.bpmn, solution.de.svg / .en.svg
+assessment/                  entry assessment: multiple-choice items, modelling task, levelling rule
+booklet/                     exercises-de.pdf, exercises-en.pdf
+index.csv                    one row per exercise
+tools/                       check.py, render_svg.py, build_release.py
+GUIDELINES.md                modelling guideline for the sample solutions
+```
 
-We use other corpora to compare, not to copy:
-
-| Corpus | Their cases | Our choice |
-|---|---|---|
-| Camunda bpmn-for-research | Warenversand (shipping with carrier choice), Regressnahme, Schufascoring, Selbstbedienungsrestaurant | No shipping-mode, credit-scoring or restaurant cases; our dispatch case (T2-B3) decides on stock vs. production, not on the carrier |
-| hdBPMN | 11 general exercises for hand-drawn models | Each exercise targets one topic and level, with expected mistakes |
-| Friedrich / PET / Mangler | Process descriptions from many domains, mostly English, no levels | German and English, one learning goal per exercise |
-| Textbooks (Dumas et al., Freund and Rücker, Silver) | Order-to-cash, insurance claim, loan application, pizza ordering | None of these cases; services, industry and public administration instead |
-
-What we add: graded topics and levels, two languages with identical solutions, expected
-mistakes per exercise, and an automated guideline check.
-
-## Check
+`exercise.yaml` is the source; the other files are generated from it:
 
 ```
 python tools/check.py
+python tools/render_svg.py
+python tools/build_release.py --pdf
 ```
 
-Prints every rule violation and exits with 1 if there is one.
+## Licence
 
-## Status
-
-Released (`status: released`). All 36 exercises and the entry assessment pass the check, load without warnings in
-bpmn-moddle and render in bpmn-js. The second-person review (`REVIEW.md`) is still open and is recorded under
-`review:` in each `exercise.yaml` when done.
+Content CC BY 4.0, tools MIT (`LICENSE`).
 
 ## Citation
 
 Maier, M., & Tekle Hailu, S. (2026). *Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an
 entry assessment (German and English)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24315290
-
-Machine-readable citation metadata is in `CITATION.cff`.
