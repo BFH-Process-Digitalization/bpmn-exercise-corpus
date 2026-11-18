@@ -7,23 +7,44 @@ three Basic and three Advanced exercises. Developed for the BPMN Tutor at Bern U
 
 ## Exercises
 
-| Topic | Basic 1 (core) | Basic 2 (core) | Basic 3 |
-|---|---|---|---|
-| 1 Activities | Tyre change at a garage | Goods receipt at a distribution centre | Maintenance of a CNC milling machine |
-| 2 Gateways | Service visit to a heat pump (XOR) | Preparing a production order (AND) | Shipping a spare part abroad (XOR + AND) |
-| 3 Events | Monthly payroll (timer start, message end) | Fixing a lift breakdown (message throw and catch) | Precast concrete elements (timer intermediate) |
-| 4 Pools and lanes | Outpatient treatment at a hospital | Answering a customer enquiry | Building application in a municipality |
-| 5 Data | Issuing a tool | Inspecting a production batch | Incident at an IT service desk, regional administration |
-| 6 Exceptions | Analysing a laboratory sample | Calibrating a measuring machine | Calling off drive units |
-
-| Topic | Advanced 1 | Advanced 2 | Advanced 3 |
-|---|---|---|---|
-| 1 Activities | Calibration order for an industrial scale (task types) | Commissioning a filling line (subprocess, call activity) | Launching hearing aids (ad-hoc, loop, multi-instance) |
-| 2 Gateways | Fixing defects after inspection (OR, default flow) | Reacting to a quote (event-based gateway) | Cold chain shipment (AND sync, conditional flow) |
-| 3 Events | Cable car breakdown (interrupting and non-interrupting timers) | Testing a food batch (signal, terminate) | Train overhaul (conditional event, event subprocess) |
-| 4 Collaboration | Ordering a ventilation unit (two expanded pools) | Requesting components (multi-instance pool) | Exporting sea freight (lanes and two partners) |
-| 5 Data | Annual stocktaking (data input and output, collections) | Complaint about a medical device (data across a subprocess) | Calibrating instruments (multi-instance subprocess over a list) |
-| 6 Exceptions | Special valve (escalation vs error) | Cancelled production order (compensation) | Heavy transport (transaction, cancel) |
+| ID | Topic | Level | Industry | Case |
+|---|---|---|---|---|
+| [T1-B](exercises/T1-B/) | 1 Activities | Basic (core) | Services | Tyre change at a garage |
+| [T1-B2](exercises/T1-B2/) | 1 Activities | Basic (core) | Supply chain | Goods receipt at a distribution centre |
+| [T1-B3](exercises/T1-B3/) | 1 Activities | Basic | Machinery | Maintenance of a CNC milling machine |
+| [T1-A](exercises/T1-A/) | 1 Activities | Advanced | Machinery | Calibration order for an industrial scale (task types) |
+| [T1-A2](exercises/T1-A2/) | 1 Activities | Advanced | Machinery | Commissioning a filling line (subprocess, call activity) |
+| [T1-A3](exercises/T1-A3/) | 1 Activities | Advanced | Health | Launching hearing aids (ad-hoc, loop, multi-instance) |
+| [T2-B](exercises/T2-B/) | 2 Gateways | Basic (core) | Services | Service visit to a heat pump (XOR) |
+| [T2-B2](exercises/T2-B2/) | 2 Gateways | Basic (core) | Production | Preparing a production order (AND) |
+| [T2-B3](exercises/T2-B3/) | 2 Gateways | Basic | Machinery | Shipping a spare part abroad (XOR + AND) |
+| [T2-A](exercises/T2-A/) | 2 Gateways | Advanced | Services | Fixing defects after inspection (OR, default flow) |
+| [T2-A2](exercises/T2-A2/) | 2 Gateways | Advanced | Machinery | Reacting to a quote (event-based gateway) |
+| [T2-A3](exercises/T2-A3/) | 2 Gateways | Advanced | Supply chain | Cold chain shipment (AND sync, conditional flow) |
+| [T3-B](exercises/T3-B/) | 3 Events | Basic (core) | Services | Monthly payroll (timer start, message end) |
+| [T3-B2](exercises/T3-B2/) | 3 Events | Basic (core) | Services | Fixing a lift breakdown (message throw and catch) |
+| [T3-B3](exercises/T3-B3/) | 3 Events | Basic | Production | Precast concrete elements (timer intermediate) |
+| [T3-A](exercises/T3-A/) | 3 Events | Advanced | Machinery | Cable car breakdown (interrupting and non-interrupting timers) |
+| [T3-A2](exercises/T3-A2/) | 3 Events | Advanced | Production | Testing a food batch (signal, terminate) |
+| [T3-A3](exercises/T3-A3/) | 3 Events | Advanced | Machinery | Train overhaul (conditional event, event subprocess) |
+| [T4-B](exercises/T4-B/) | 4 Pools and lanes | Basic (core) | Health | Outpatient treatment at a hospital |
+| [T4-B2](exercises/T4-B2/) | 4 Pools and lanes | Basic (core) | Machinery | Answering a customer enquiry |
+| [T4-B3](exercises/T4-B3/) | 4 Pools and lanes | Basic | Public administration | Building application in a municipality |
+| [T4-A](exercises/T4-A/) | 4 Pools and lanes | Advanced | Production | Ordering a ventilation unit (two expanded pools) |
+| [T4-A2](exercises/T4-A2/) | 4 Pools and lanes | Advanced | Machinery | Requesting components (multi-instance pool) |
+| [T4-A3](exercises/T4-A3/) | 4 Pools and lanes | Advanced | Supply chain | Exporting sea freight (lanes and two partners) |
+| [T5-B](exercises/T5-B/) | 5 Data | Basic (core) | Production | Issuing a tool |
+| [T5-B2](exercises/T5-B2/) | 5 Data | Basic (core) | Production | Inspecting a production batch |
+| [T5-B3](exercises/T5-B3/) | 5 Data | Basic | Public administration | Incident at an IT service desk, regional administration |
+| [T5-A](exercises/T5-A/) | 5 Data | Advanced | Production | Annual stocktaking (data input and output, collections) |
+| [T5-A2](exercises/T5-A2/) | 5 Data | Advanced | Health | Complaint about a medical device (data across a subprocess) |
+| [T5-A3](exercises/T5-A3/) | 5 Data | Advanced | Machinery | Calibrating instruments (multi-instance subprocess over a list) |
+| [T6-B](exercises/T6-B/) | 6 Exceptions | Basic (core) | Health | Analysing a laboratory sample |
+| [T6-B2](exercises/T6-B2/) | 6 Exceptions | Basic (core) | Machinery | Calibrating a measuring machine |
+| [T6-B3](exercises/T6-B3/) | 6 Exceptions | Basic | Supply chain | Calling off drive units |
+| [T6-A](exercises/T6-A/) | 6 Exceptions | Advanced | Production | Special valve (escalation vs error) |
+| [T6-A2](exercises/T6-A2/) | 6 Exceptions | Advanced | Production | Cancelled production order (compensation) |
+| [T6-A3](exercises/T6-A3/) | 6 Exceptions | Advanced | Supply chain | Heavy transport (transaction, cancel) |
 
 ## Structure
 
