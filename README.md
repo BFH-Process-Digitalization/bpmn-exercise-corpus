@@ -7,44 +7,29 @@ three Basic and three Advanced exercises. Developed for the BPMN Tutor at Bern U
 
 ## Exercises
 
-| ID | Topic | Level | Industry | Case |
-|---|---|---|---|---|
-| [T1-B](exercises/T1-B/) | 1 Activities | Basic (core) | Services | Tyre change at a garage |
-| [T1-B2](exercises/T1-B2/) | 1 Activities | Basic (core) | Supply chain | Goods receipt at a distribution centre |
-| [T1-B3](exercises/T1-B3/) | 1 Activities | Basic | Machinery | Maintenance of a CNC milling machine |
-| [T1-A](exercises/T1-A/) | 1 Activities | Advanced | Machinery | Calibration order for an industrial scale (task types) |
-| [T1-A2](exercises/T1-A2/) | 1 Activities | Advanced | Machinery | Commissioning a filling line (subprocess, call activity) |
-| [T1-A3](exercises/T1-A3/) | 1 Activities | Advanced | Health | Launching hearing aids (ad-hoc, loop, multi-instance) |
-| [T2-B](exercises/T2-B/) | 2 Gateways | Basic (core) | Services | Service visit to a heat pump (XOR) |
-| [T2-B2](exercises/T2-B2/) | 2 Gateways | Basic (core) | Production | Preparing a production order (AND) |
-| [T2-B3](exercises/T2-B3/) | 2 Gateways | Basic | Machinery | Shipping a spare part abroad (XOR + AND) |
-| [T2-A](exercises/T2-A/) | 2 Gateways | Advanced | Services | Fixing defects after inspection (OR, default flow) |
-| [T2-A2](exercises/T2-A2/) | 2 Gateways | Advanced | Machinery | Reacting to a quote (event-based gateway) |
-| [T2-A3](exercises/T2-A3/) | 2 Gateways | Advanced | Supply chain | Cold chain shipment (AND sync, conditional flow) |
-| [T3-B](exercises/T3-B/) | 3 Events | Basic (core) | Services | Monthly payroll (timer start, message end) |
-| [T3-B2](exercises/T3-B2/) | 3 Events | Basic (core) | Services | Fixing a lift breakdown (message throw and catch) |
-| [T3-B3](exercises/T3-B3/) | 3 Events | Basic | Production | Precast concrete elements (timer intermediate) |
-| [T3-A](exercises/T3-A/) | 3 Events | Advanced | Machinery | Cable car breakdown (interrupting and non-interrupting timers) |
-| [T3-A2](exercises/T3-A2/) | 3 Events | Advanced | Production | Testing a food batch (signal, terminate) |
-| [T3-A3](exercises/T3-A3/) | 3 Events | Advanced | Machinery | Train overhaul (conditional event, event subprocess) |
-| [T4-B](exercises/T4-B/) | 4 Pools and lanes | Basic (core) | Health | Outpatient treatment at a hospital |
-| [T4-B2](exercises/T4-B2/) | 4 Pools and lanes | Basic (core) | Machinery | Answering a customer enquiry |
-| [T4-B3](exercises/T4-B3/) | 4 Pools and lanes | Basic | Public administration | Building application in a municipality |
-| [T4-A](exercises/T4-A/) | 4 Pools and lanes | Advanced | Production | Ordering a ventilation unit (two expanded pools) |
-| [T4-A2](exercises/T4-A2/) | 4 Pools and lanes | Advanced | Machinery | Requesting components (multi-instance pool) |
-| [T4-A3](exercises/T4-A3/) | 4 Pools and lanes | Advanced | Supply chain | Exporting sea freight (lanes and two partners) |
-| [T5-B](exercises/T5-B/) | 5 Data | Basic (core) | Production | Issuing a tool |
-| [T5-B2](exercises/T5-B2/) | 5 Data | Basic (core) | Production | Inspecting a production batch |
-| [T5-B3](exercises/T5-B3/) | 5 Data | Basic | Public administration | Incident at an IT service desk, regional administration |
-| [T5-A](exercises/T5-A/) | 5 Data | Advanced | Production | Annual stocktaking (data input and output, collections) |
-| [T5-A2](exercises/T5-A2/) | 5 Data | Advanced | Health | Complaint about a medical device (data across a subprocess) |
-| [T5-A3](exercises/T5-A3/) | 5 Data | Advanced | Machinery | Calibrating instruments (multi-instance subprocess over a list) |
-| [T6-B](exercises/T6-B/) | 6 Exceptions | Basic (core) | Health | Analysing a laboratory sample |
-| [T6-B2](exercises/T6-B2/) | 6 Exceptions | Basic (core) | Machinery | Calibrating a measuring machine |
-| [T6-B3](exercises/T6-B3/) | 6 Exceptions | Basic | Supply chain | Calling off drive units |
-| [T6-A](exercises/T6-A/) | 6 Exceptions | Advanced | Production | Special valve (escalation vs error) |
-| [T6-A2](exercises/T6-A2/) | 6 Exceptions | Advanced | Production | Cancelled production order (compensation) |
-| [T6-A3](exercises/T6-A3/) | 6 Exceptions | Advanced | Supply chain | Heavy transport (transaction, cancel) |
+Industry: ⚙️ machinery, 🏭 production, 🚚 supply chain, 🛠️ services, 🏥 health, 🏛️ public administration. The BPMN icons show the main elements of each solution (hover for the name).
+
+### Basic (10 min)
+
+| Topic | Basic 1 (core) | Basic 2 (core) | Basic 3 |
+|---|---|---|---|
+| 1 Activities | 🛠️ [Tyre change at a garage](exercises/T1-B/)<br><img src="icons/task.svg" width="20" alt="Task" title="Task"> | 🚚 [Goods receipt at a distribution centre](exercises/T1-B2/)<br><img src="icons/task.svg" width="20" alt="Task" title="Task"> | ⚙️ [Maintenance of a CNC milling machine](exercises/T1-B3/)<br><img src="icons/task.svg" width="20" alt="Task" title="Task"> |
+| 2 Gateways | 🛠️ [Service visit to a heat pump](exercises/T2-B/)<br><img src="icons/xor.svg" width="20" alt="Exclusive gateway (XOR)" title="Exclusive gateway (XOR)"> | 🏭 [Preparing a production order](exercises/T2-B2/)<br><img src="icons/and.svg" width="20" alt="Parallel gateway (AND)" title="Parallel gateway (AND)"> | ⚙️ [Shipping a spare part abroad](exercises/T2-B3/)<br><img src="icons/xor.svg" width="20" alt="Exclusive gateway (XOR)" title="Exclusive gateway (XOR)"> <img src="icons/and.svg" width="20" alt="Parallel gateway (AND)" title="Parallel gateway (AND)"> |
+| 3 Events | 🛠️ [Monthly payroll](exercises/T3-B/)<br><img src="icons/timer-start.svg" width="20" alt="Timer start event" title="Timer start event"> <img src="icons/message-end.svg" width="20" alt="Message end event" title="Message end event"> | 🛠️ [Fixing a lift breakdown](exercises/T3-B2/)<br><img src="icons/message-throw.svg" width="20" alt="Message throw event" title="Message throw event"> <img src="icons/message-catch.svg" width="20" alt="Message catch event" title="Message catch event"> | 🏭 [Precast concrete elements](exercises/T3-B3/)<br><img src="icons/timer-catch.svg" width="20" alt="Timer intermediate event" title="Timer intermediate event"> |
+| 4 Pools and lanes | 🏥 [Outpatient treatment at a hospital](exercises/T4-B/)<br><img src="icons/pool-lanes.svg" width="20" alt="Pool with lanes" title="Pool with lanes"> | ⚙️ [Answering a customer enquiry](exercises/T4-B2/)<br><img src="icons/pool-lanes.svg" width="20" alt="Pool with lanes" title="Pool with lanes"> <img src="icons/xor.svg" width="20" alt="Exclusive gateway (XOR)" title="Exclusive gateway (XOR)"> | 🏛️ [Building application in a municipality](exercises/T4-B3/)<br><img src="icons/pool-lanes.svg" width="20" alt="Pool with lanes" title="Pool with lanes"> <img src="icons/timer-catch.svg" width="20" alt="Timer intermediate event" title="Timer intermediate event"> |
+| 5 Data | 🏭 [Issuing a tool](exercises/T5-B/)<br><img src="icons/data-object.svg" width="20" alt="Data object" title="Data object"> <img src="icons/data-store.svg" width="20" alt="Data store" title="Data store"> | 🏭 [Inspecting a production batch](exercises/T5-B2/)<br><img src="icons/data-object.svg" width="20" alt="Data object" title="Data object"> <img src="icons/data-store.svg" width="20" alt="Data store" title="Data store"> | 🏛️ [Incident at an IT service desk](exercises/T5-B3/)<br><img src="icons/data-object.svg" width="20" alt="Data object" title="Data object"> <img src="icons/data-store.svg" width="20" alt="Data store" title="Data store"> <img src="icons/annotation.svg" width="20" alt="Text annotation" title="Text annotation"> |
+| 6 Exceptions | 🏥 [Analysing a laboratory sample](exercises/T6-B/)<br><img src="icons/error-end.svg" width="20" alt="Error end event" title="Error end event"> <img src="icons/error-boundary.svg" width="20" alt="Error boundary event" title="Error boundary event"> | ⚙️ [Calibrating a measuring machine](exercises/T6-B2/)<br><img src="icons/error-end.svg" width="20" alt="Error end event" title="Error end event"> <img src="icons/error-boundary.svg" width="20" alt="Error boundary event" title="Error boundary event"> | 🚚 [Calling off drive units](exercises/T6-B3/)<br><img src="icons/error-end.svg" width="20" alt="Error end event" title="Error end event"> <img src="icons/error-boundary.svg" width="20" alt="Error boundary event" title="Error boundary event"> |
+
+### Advanced (15 min)
+
+| Topic | Advanced 1 | Advanced 2 | Advanced 3 |
+|---|---|---|---|
+| 1 Activities | ⚙️ [Calibration order for an industrial scale](exercises/T1-A/)<br><img src="icons/user-task.svg" width="20" alt="User task" title="User task"> <img src="icons/service-task.svg" width="20" alt="Service task" title="Service task"> <img src="icons/script-task.svg" width="20" alt="Script task" title="Script task"> | ⚙️ [Commissioning a filling line](exercises/T1-A2/)<br><img src="icons/subprocess.svg" width="20" alt="Subprocess" title="Subprocess"> <img src="icons/call-activity.svg" width="20" alt="Call activity" title="Call activity"> | 🏥 [Launching hearing aids](exercises/T1-A3/)<br><img src="icons/adhoc.svg" width="20" alt="Ad-hoc subprocess" title="Ad-hoc subprocess"> <img src="icons/loop.svg" width="20" alt="Loop" title="Loop"> <img src="icons/mi-parallel.svg" width="20" alt="Multi-instance" title="Multi-instance"> |
+| 2 Gateways | 🛠️ [Fixing defects after inspection](exercises/T2-A/)<br><img src="icons/or.svg" width="20" alt="Inclusive gateway (OR)" title="Inclusive gateway (OR)"> | ⚙️ [Reacting to a quote](exercises/T2-A2/)<br><img src="icons/event-based.svg" width="20" alt="Event-based gateway" title="Event-based gateway"> <img src="icons/message-catch.svg" width="20" alt="Message catch event" title="Message catch event"> <img src="icons/timer-catch.svg" width="20" alt="Timer intermediate event" title="Timer intermediate event"> | 🚚 [Cold chain shipment](exercises/T2-A3/)<br><img src="icons/and.svg" width="20" alt="Parallel gateway (AND)" title="Parallel gateway (AND)"> |
+| 3 Events | ⚙️ [Cable car breakdown](exercises/T3-A/)<br><img src="icons/timer-boundary.svg" width="20" alt="Interrupting timer boundary event" title="Interrupting timer boundary event"> <img src="icons/timer-boundary-nonint.svg" width="20" alt="Non-interrupting timer boundary event" title="Non-interrupting timer boundary event"> | 🏭 [Testing a food batch](exercises/T3-A2/)<br><img src="icons/signal-throw.svg" width="20" alt="Signal throw event" title="Signal throw event"> <img src="icons/terminate-end.svg" width="20" alt="Terminate end event" title="Terminate end event"> | ⚙️ [Train overhaul](exercises/T3-A3/)<br><img src="icons/conditional-catch.svg" width="20" alt="Conditional event" title="Conditional event"> <img src="icons/event-subprocess.svg" width="20" alt="Event subprocess" title="Event subprocess"> |
+| 4 Pools and lanes | 🏭 [Ordering a ventilation unit](exercises/T4-A/)<br><img src="icons/pool.svg" width="20" alt="Pool" title="Pool"> <img src="icons/message-flow.svg" width="20" alt="Message flow" title="Message flow"> | ⚙️ [Requesting components](exercises/T4-A2/)<br><img src="icons/mi-pool.svg" width="20" alt="Multi-instance pool" title="Multi-instance pool"> <img src="icons/message-flow.svg" width="20" alt="Message flow" title="Message flow"> | 🚚 [Exporting sea freight](exercises/T4-A3/)<br><img src="icons/pool-lanes.svg" width="20" alt="Pool with lanes" title="Pool with lanes"> <img src="icons/message-flow.svg" width="20" alt="Message flow" title="Message flow"> |
+| 5 Data | 🏭 [Annual stocktaking](exercises/T5-A/)<br><img src="icons/data-input.svg" width="20" alt="Data input" title="Data input"> <img src="icons/data-output.svg" width="20" alt="Data output" title="Data output"> <img src="icons/data-store.svg" width="20" alt="Data store" title="Data store"> | 🏥 [Complaint about a medical device](exercises/T5-A2/)<br><img src="icons/data-object.svg" width="20" alt="Data object" title="Data object"> <img src="icons/subprocess.svg" width="20" alt="Subprocess" title="Subprocess"> | ⚙️ [Calibrating instruments](exercises/T5-A3/)<br><img src="icons/data-object.svg" width="20" alt="Data object" title="Data object"> <img src="icons/mi-parallel.svg" width="20" alt="Multi-instance" title="Multi-instance"> |
+| 6 Exceptions | 🏭 [Special valve](exercises/T6-A/)<br><img src="icons/escalation.svg" width="20" alt="Escalation event" title="Escalation event"> <img src="icons/error-boundary.svg" width="20" alt="Error boundary event" title="Error boundary event"> | 🏭 [Cancelled production order](exercises/T6-A2/)<br><img src="icons/compensation.svg" width="20" alt="Compensation event" title="Compensation event"> | 🚚 [Heavy transport](exercises/T6-A3/)<br><img src="icons/transaction.svg" width="20" alt="Transaction" title="Transaction"> <img src="icons/cancel.svg" width="20" alt="Cancel event" title="Cancel event"> |
 
 ## Structure
 
@@ -54,6 +39,7 @@ assessment/                  entry assessment: multiple-choice items, modelling 
 booklet/                     exercises-de.pdf, exercises-en.pdf
 index.csv                    one row per exercise
 tools/                       check.py, render_svg.py, build_release.py
+icons/                       BPMN icons used in this README
 GUIDELINES.md                modelling guideline for the sample solutions
 ```
 
