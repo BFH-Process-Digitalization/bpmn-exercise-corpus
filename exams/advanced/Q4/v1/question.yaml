@@ -1,0 +1,52 @@
+id: EA-Q4-1
+level: advanced
+question: Q4
+variant: 1
+points: 12
+time_minutes: 20
+sector: production
+title:
+  de: Sonderbauteil fertigen
+  en: Manufacturing a special part
+text:
+  de: |-
+    Ein Hersteller von Präzisionsteilen fertigt Sonderbauteile auf Bestellung. Ist ein Auftrag freigegeben, fertigt die
+    Produktion das Bauteil: Sie fräst das Bauteil und vermisst es danach. Sind die Masse eingehalten, ist das Bauteil
+    gefertigt. Andernfalls ist das Bauteil Ausschuss, und die Fertigung bricht ab; der Einkauf bestellt dann ein neues
+    Rohteil. Dauert die Fertigung länger als 2 Tage, informiert der Verkauf den Kunden über die Verzögerung; die Fertigung
+    läuft dabei weiter. Nach erfolgreicher Fertigung liefert der Versand das Bauteil aus. Modellieren Sie die Fertigung als
+    aufgeklappten Teilprozess.
+  en: |-
+    A manufacturer of precision parts makes special parts to order. When an order has been released, production
+    manufactures the part: it mills the part and then measures it. If the dimensions are within tolerance, the part is
+    manufactured. Otherwise the part is scrap and manufacturing is aborted; purchasing then orders a new blank. If
+    manufacturing takes longer than 2 days, sales informs the customer about the delay; manufacturing continues. After
+    successful manufacturing, shipping delivers the part. Model the manufacturing as an expanded subprocess.
+rubric:
+- points: 2
+  de: Aufgeklappter Teilprozess «Bauteil fertigen» mit Start, «Bauteil fräsen», «Bauteil vermessen» und Ende
+  en: Expanded subprocess "Manufacture part" with start, "Mill part", "Measure part" and end
+- points: 1
+  de: XOR-Split mit Frage «Masse eingehalten?» und Ausgängen ja/nein
+  en: XOR split with question "Dimensions within tolerance?" and yes/no flows
+- points: 2
+  de: Fehler-Endereignis «Ausschuss» im Teilprozess
+  en: Error end event "Scrap" inside the subprocess
+- points: 2
+  de: Fehler-Randereignis am Rand des Teilprozesses mit demselben Fehler
+  en: Error boundary event on the subprocess border catching the same error
+- points: 1
+  de: Fehlerbehandlung «Neues Rohteil bestellen» mit eigenem Endereignis
+  en: Error handling "Order new blank" with its own end event
+- points: 2
+  de: Nicht unterbrechendes Zeit-Randereignis «2 Tage» (gestrichelt)
+  en: Non-interrupting timer boundary event "2 days" (dashed)
+- points: 1
+  de: Paralleler Pfad «Kunden über Verzögerung informieren» mit eigenem Endereignis
+  en: Parallel path "Inform customer about delay" with its own end event
+- points: 1
+  de: 'Normaler Ablauf nach dem Teilprozess: «Bauteil ausliefern»'
+  en: 'Normal flow after the subprocess: "Deliver part"'
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

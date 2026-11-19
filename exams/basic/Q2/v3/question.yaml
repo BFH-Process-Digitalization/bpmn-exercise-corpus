@@ -1,0 +1,55 @@
+id: EB-Q2-3
+level: basic
+question: Q2
+variant: 3
+points: 8
+time_minutes: 12
+sector: production
+title:
+  de: Werkzeug nachschleifen
+  en: Regrinding a cutting tool
+text:
+  de: |-
+    Ein Werkzeughersteller schleift stumpfe Fräswerkzeuge seiner Kundschaft nach. Wird ein stumpfes Werkzeug angeliefert,
+    registriert die Annahme es, und die Schleiferei misst danach den Verschleiss. Ist ein Nachschleifen möglich, schleift
+    die Schleiferei das Werkzeug nach; andernfalls bestellt die Annahme ein Ersatzwerkzeug. Danach erstellt die
+    Qualitätsprüfung das Prüfprotokoll, während die Buchhaltung gleichzeitig die Leistung verrechnet. Sind beide Arbeiten
+    erledigt, liefert der Versand das Werkzeug aus. Damit ist der Werkzeugauftrag erledigt.
+  en: |-
+    A tool manufacturer regrinds its customers' blunt milling tools. When a blunt tool is delivered, goods-in registers it
+    and the grinding shop then measures the wear. If regrinding is possible, the grinding shop regrinds the tool; otherwise
+    goods-in orders a replacement tool. Quality inspection then creates the inspection report while accounting invoices the
+    service at the same time. When both are done, shipping delivers the tool. The tool order is then completed.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: Aktivität «Verschleissmessung» ist als Substantiv benannt (L1).
+  en: Activity "Wear measurement" is named with a noun (L1).
+  fix_de: 'Als Objekt und Verb benennen: «Verschleiss messen».'
+  fix_en: 'Name it as verb and object: "Measure wear".'
+- points: 2
+  de: Das XOR-Gateway hat keine Frage und unbeschriftete Ausgänge (L4).
+  en: The XOR split has no question and unlabelled outgoing flows (L4).
+  fix_de: Frage «Nachschleifen möglich?» und Ausgänge «ja»/«nein».
+  fix_en: Question "Regrinding possible?" and outgoing flows "yes"/"no".
+- points: 2
+  de: Die parallelen Pfade werden mit einem XOR-Gateway statt mit einem AND-Gateway zusammengeführt (G4).
+  en: The parallel paths are joined with an XOR gateway instead of an AND gateway (G4).
+  fix_de: AND-Join verwenden, damit beide Arbeiten abgeschlossen sind, bevor es weitergeht.
+  fix_en: Use an AND join so that both pieces of work are finished before the process continues.
+- points: 2
+  de: Nach «Werkzeug ausliefern» endet der Ablauf ohne Endereignis (G2).
+  en: After "Deliver tool" the process stops without an end event (G2).
+  fix_de: Endereignis «Werkzeugauftrag erledigt» ergänzen.
+  fix_en: Add the end event "Tool order completed".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

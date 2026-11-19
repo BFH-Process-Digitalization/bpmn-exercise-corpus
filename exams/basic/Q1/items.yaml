@@ -1,0 +1,767 @@
+level: basic
+question: Q1
+points: 8
+time_minutes: 8
+licence: CC-BY-4.0
+note: 8 slots, 5 variants per slot. One item per slot is drawn for an exam. One point per item; DE and EN have the same options in the same order.
+items:
+- id: EB-Q1-1-1
+  slot: 1
+  variant: 1
+  construct: activity label
+  de:
+    stem: Welche Bezeichnung passt nach üblichen Modellierungsregeln zu einer Aktivität?
+    options:
+    - Offertprüfung
+    - Offerte prüfen
+    - Offerte?
+    - Offerte geprüft
+  en:
+    stem: Which label follows common modelling rules for an activity?
+    options:
+    - Quote check
+    - Check quote
+    - Quote?
+    - Quote checked
+  key: 1
+- id: EB-Q1-1-2
+  slot: 1
+  variant: 2
+  construct: activity label
+  de:
+    stem: Welche Bezeichnung passt zu einer Aktivität?
+    options:
+    - Lieferschein drucken
+    - Lieferschein gedruckt
+    - Druck des Lieferscheins
+    - Lieferschein
+  en:
+    stem: Which label fits an activity?
+    options:
+    - Print delivery note
+    - Delivery note printed
+    - Printing of the delivery note
+    - Delivery note
+  key: 0
+- id: EB-Q1-1-3
+  slot: 1
+  variant: 3
+  construct: activity label
+  de:
+    stem: Welche Bezeichnung passt zu einer Aktivität?
+    options:
+    - Maschine warten
+    - Wartung der Maschine
+    - Wartung
+    - Maschine gewartet
+  en:
+    stem: Which label fits an activity?
+    options:
+    - Maintain machine
+    - Maintenance of the machine
+    - Maintenance
+    - Machine maintained
+  key: 0
+- id: EB-Q1-1-4
+  slot: 1
+  variant: 4
+  construct: activity label
+  de:
+    stem: Welche Bezeichnung passt zu einer Aktivität?
+    options:
+    - Patientin aufnehmen
+    - Patientin aufgenommen
+    - Patientenaufnahme?
+    - Aufnahme
+  en:
+    stem: Which label fits an activity?
+    options:
+    - Admit patient
+    - Patient admitted
+    - Patient admission?
+    - Admission
+  key: 0
+- id: EB-Q1-1-5
+  slot: 1
+  variant: 5
+  construct: activity label
+  de:
+    stem: Welche Bezeichnung passt zu einer Aktivität?
+    options:
+    - Bearbeitung
+    - Gesuch bearbeitet
+    - Gesuchsbearbeitung
+    - Gesuch bearbeiten
+  en:
+    stem: Which label fits an activity?
+    options:
+    - Processing
+    - Application processed
+    - Application processing
+    - Process application
+  key: 3
+- id: EB-Q1-2-1
+  slot: 2
+  variant: 1
+  construct: event label
+  de:
+    stem: Welche Bezeichnung passt nach üblichen Regeln zu einem Startereignis?
+    options:
+    - Bestellprüfung
+    - Bestellung prüfen
+    - Bestellung?
+    - Bestellung eingegangen
+  en:
+    stem: Which label follows common rules for a start event?
+    options:
+    - Order check
+    - Check order
+    - Order?
+    - Order received
+  key: 3
+- id: EB-Q1-2-2
+  slot: 2
+  variant: 2
+  construct: event label
+  de:
+    stem: Welche Bezeichnung passt zu einem Endereignis?
+    options:
+    - Auftrag abschliessen
+    - Abschluss?
+    - Auftrag abgeschlossen
+    - Abschluss des Auftrags
+  en:
+    stem: Which label fits an end event?
+    options:
+    - Complete order
+    - Completion?
+    - Order completed
+    - Completion of the order
+  key: 2
+- id: EB-Q1-2-3
+  slot: 2
+  variant: 3
+  construct: event label
+  de:
+    stem: Welche Bezeichnung passt zu einem Startereignis?
+    options:
+    - Störung gemeldet
+    - Störung?
+    - Störung melden
+    - Störungsmeldung prüfen
+  en:
+    stem: Which label fits a start event?
+    options:
+    - Fault reported
+    - Fault?
+    - Report fault
+    - Check fault report
+  key: 0
+- id: EB-Q1-2-4
+  slot: 2
+  variant: 4
+  construct: event label
+  de:
+    stem: Welche Bezeichnung passt zu einem Endereignis?
+    options:
+    - Einlagerung?
+    - Einlagerung der Ware
+    - Ware eingelagert
+    - Ware einlagern
+  en:
+    stem: Which label fits an end event?
+    options:
+    - Storage?
+    - Storage of the goods
+    - Goods stored
+    - Store goods
+  key: 2
+- id: EB-Q1-2-5
+  slot: 2
+  variant: 5
+  construct: event label
+  de:
+    stem: Warum sollten Start- und Endereignisse als Zustand benannt werden?
+    options:
+    - Weil Ereignisse immer eine Frage enthalten
+    - Weil sie beschreiben, was eingetreten ist, und nicht, was jemand tut
+    - Weil sie sonst nicht ausführbar sind
+    - Weil BPMN das verlangt, sonst ist das Modell ungültig
+  en:
+    stem: Why should start and end events be named as a state?
+    options:
+    - Because events always contain a question
+    - Because they describe what has happened, not what someone does
+    - Because otherwise they cannot be executed
+    - Because BPMN requires it, otherwise the model is invalid
+  key: 1
+- id: EB-Q1-3-1
+  slot: 3
+  variant: 1
+  construct: XOR vs AND
+  de:
+    stem: Nach «Bestellung prüfen» wird entweder geliefert oder abgelehnt. Welches Gateway passt?
+    options:
+    - Kein Gateway, zwei Sequenzflüsse genügen
+    - AND
+    - AND mit Bedingungen
+    - XOR
+  en:
+    stem: After "Check order" the order is either delivered or rejected. Which gateway fits?
+    options:
+    - No gateway, two sequence flows are enough
+    - AND
+    - AND with conditions
+    - XOR
+  key: 3
+- id: EB-Q1-3-2
+  slot: 3
+  variant: 2
+  construct: XOR vs AND
+  de:
+    stem: Rechnung und Lieferschein werden gleichzeitig erstellt, beide sind immer nötig. Welches Gateway passt?
+    options:
+    - Ereignisbasiertes Gateway
+    - XOR
+    - XOR mit «ja» und «nein»
+    - AND
+  en:
+    stem: The invoice and the delivery note are created at the same time and both are always needed. Which gateway fits?
+    options:
+    - Event-based gateway
+    - XOR
+    - XOR with "yes" and "no"
+    - AND
+  key: 3
+- id: EB-Q1-3-3
+  slot: 3
+  variant: 3
+  construct: XOR vs AND
+  de:
+    stem: Was bedeutet ein AND-Split?
+    options:
+    - Alle ausgehenden Pfade werden gestartet
+    - Der erste eintretende Pfad gewinnt
+    - Ein Pfad wird abhängig von einer Bedingung gewählt
+    - Genau ein Pfad wird gewählt
+  en:
+    stem: What does an AND split mean?
+    options:
+    - All outgoing paths are started
+    - The first path to occur wins
+    - One path is chosen depending on a condition
+    - Exactly one path is chosen
+  key: 0
+- id: EB-Q1-3-4
+  slot: 3
+  variant: 4
+  construct: XOR vs AND
+  de:
+    stem: Was bedeutet ein XOR-Split mit der Frage «Betrag über 5000 CHF?»?
+    options:
+    - Genau ein Pfad wird abhängig von der Antwort gewählt
+    - Der Prozess endet
+    - Beide Pfade laufen gleichzeitig
+    - Der Prozess wartet auf eine Nachricht
+  en:
+    stem: What does an XOR split with the question "Amount above CHF 5000?" mean?
+    options:
+    - Exactly one path is chosen depending on the answer
+    - The process ends
+    - Both paths run at the same time
+    - The process waits for a message
+  key: 0
+- id: EB-Q1-3-5
+  slot: 3
+  variant: 5
+  construct: XOR vs AND
+  de:
+    stem: Eine Maschine wird gereinigt und gleichzeitig wird das Ersatzteil bestellt. Wie modelliert man das?
+    options:
+    - Zwei Startereignisse
+    - AND-Split und AND-Join
+    - XOR-Split und AND-Join
+    - XOR-Split und XOR-Merge
+  en:
+    stem: A machine is cleaned while the spare part is ordered at the same time. How is this modelled?
+    options:
+    - Two start events
+    - AND split and AND join
+    - XOR split and AND join
+    - XOR split and XOR merge
+  key: 1
+- id: EB-Q1-4-1
+  slot: 4
+  variant: 1
+  construct: join semantics
+  de:
+    stem: Zwei Pfade nach einem XOR-Split werden wieder zusammengeführt. Welches Gateway passt als Merge?
+    options:
+    - AND
+    - XOR
+    - Keines, die Pfade enden einzeln
+    - Ereignisbasiertes Gateway
+  en:
+    stem: Two paths after an XOR split are brought together again. Which gateway fits as the merge?
+    options:
+    - AND
+    - XOR
+    - None, each path ends separately
+    - Event-based gateway
+  key: 1
+- id: EB-Q1-4-2
+  slot: 4
+  variant: 2
+  construct: join semantics
+  de:
+    stem: Was passiert, wenn zwei Pfade eines XOR-Splits mit einem AND-Join zusammengeführt werden?
+    options:
+    - Der Join wartet ewig auf den zweiten Pfad (Deadlock)
+    - Der Prozess endet sofort
+    - Der Prozess läuft doppelt weiter
+    - Nichts, das ist korrekt
+  en:
+    stem: What happens if the two paths of an XOR split are joined with an AND join?
+    options:
+    - The join waits forever for the second path (deadlock)
+    - The process ends immediately
+    - The process continues twice
+    - Nothing, this is correct
+  key: 0
+- id: EB-Q1-4-3
+  slot: 4
+  variant: 3
+  construct: join semantics
+  de:
+    stem: Was passiert, wenn zwei Pfade eines AND-Splits mit einem XOR-Merge zusammengeführt werden?
+    options:
+    - Der Prozess blockiert
+    - Nur der schnellere Pfad wird ausgeführt
+    - Nichts, das ist korrekt
+    - Der nachfolgende Ablauf wird zweimal ausgeführt
+  en:
+    stem: What happens if the two paths of an AND split are merged with an XOR merge?
+    options:
+    - The process is blocked
+    - Only the faster path is carried out
+    - Nothing, this is correct
+    - The following steps are carried out twice
+  key: 3
+- id: EB-Q1-4-4
+  slot: 4
+  variant: 4
+  construct: join semantics
+  de:
+    stem: Was macht ein AND-Join?
+    options:
+    - Er lässt den ersten ankommenden Pfad durch und verwirft den Rest
+    - Er wählt einen Pfad
+    - Er startet alle ausgehenden Pfade
+    - Er wartet, bis alle eingehenden Pfade angekommen sind
+  en:
+    stem: What does an AND join do?
+    options:
+    - It lets the first arriving path through and discards the rest
+    - It chooses one path
+    - It starts all outgoing paths
+    - It waits until all incoming paths have arrived
+  key: 3
+- id: EB-Q1-4-5
+  slot: 4
+  variant: 5
+  construct: join semantics
+  de:
+    stem: Welches Paar aus Split und Join ist korrekt?
+    options:
+    - AND-Split mit XOR-Merge
+    - AND-Split mit AND-Join
+    - XOR-Split mit AND-Join
+    - XOR-Split ohne Merge vor einer gemeinsamen Aktivität
+  en:
+    stem: Which pair of split and join is correct?
+    options:
+    - AND split with XOR merge
+    - AND split with AND join
+    - XOR split with AND join
+    - XOR split without a merge before a shared activity
+  key: 1
+- id: EB-Q1-5-1
+  slot: 5
+  variant: 1
+  construct: timer and message events
+  de:
+    stem: Der Prozess wartet, bis die Antwort eines Lieferanten eintrifft. Welches Element passt?
+    options:
+    - Nachrichten-Zwischenereignis (eintretend)
+    - Zeit-Zwischenereignis
+    - XOR-Gateway
+    - Endereignis
+  en:
+    stem: The process waits until a supplier's reply arrives. Which element fits?
+    options:
+    - Intermediate message catch event
+    - Intermediate timer event
+    - XOR gateway
+    - End event
+  key: 0
+- id: EB-Q1-5-2
+  slot: 5
+  variant: 2
+  construct: timer and message events
+  de:
+    stem: Der Prozess wartet 24 Stunden, bevor er weiterläuft. Welches Element passt?
+    options:
+    - Zeit-Zwischenereignis «24 Stunden»
+    - Nachrichten-Zwischenereignis
+    - Aktivität «24 Stunden warten»
+    - Startereignis
+  en:
+    stem: The process waits 24 hours before it continues. Which element fits?
+    options:
+    - Intermediate timer event "24 hours"
+    - Intermediate message event
+    - Activity "Wait 24 hours"
+    - Start event
+  key: 0
+- id: EB-Q1-5-3
+  slot: 5
+  variant: 3
+  construct: timer and message events
+  de:
+    stem: Ein Prozess beginnt jeden Montag um 7 Uhr. Welches Startereignis passt?
+    options:
+    - Nachrichten-Startereignis
+    - Zeit-Startereignis
+    - Leeres Startereignis
+    - Fehler-Startereignis
+  en:
+    stem: A process starts every Monday at 7 a.m. Which start event fits?
+    options:
+    - Message start event
+    - Timer start event
+    - None start event
+    - Error start event
+  key: 1
+- id: EB-Q1-5-4
+  slot: 5
+  variant: 4
+  construct: timer and message events
+  de:
+    stem: Ein Prozess beginnt, wenn die Bestellung einer Kundin eintrifft. Welches Startereignis passt am besten?
+    options:
+    - Endereignis
+    - Fehler-Startereignis
+    - Nachrichten-Startereignis
+    - Zeit-Startereignis
+  en:
+    stem: A process starts when a customer's order arrives. Which start event fits best?
+    options:
+    - End event
+    - Error start event
+    - Message start event
+    - Timer start event
+  key: 2
+- id: EB-Q1-5-5
+  slot: 5
+  variant: 5
+  construct: timer and message events
+  de:
+    stem: Wofür steht das Uhrsymbol in einem Zwischenereignis?
+    options:
+    - Für eine Nachricht
+    - Für einen Zeitpunkt oder eine Frist
+    - Für einen Fehler
+    - Für eine Bedingung
+  en:
+    stem: What does the clock symbol in an intermediate event stand for?
+    options:
+    - A message
+    - A point in time or a deadline
+    - An error
+    - A condition
+  key: 1
+- id: EB-Q1-6-1
+  slot: 6
+  variant: 1
+  construct: pool vs lane
+  de:
+    stem: Wie stellt man zwei Abteilungen derselben Firma dar?
+    options:
+    - Zwei Datenobjekte
+    - Zwei getrennte Diagramme
+    - Zwei Lanes in einem Pool
+    - Zwei Pools mit Nachrichtenfluss
+  en:
+    stem: How are two departments of the same company shown?
+    options:
+    - Two data objects
+    - Two separate diagrams
+    - Two lanes in one pool
+    - Two pools with message flow
+  key: 2
+- id: EB-Q1-6-2
+  slot: 6
+  variant: 2
+  construct: pool vs lane
+  de:
+    stem: Wie stellt man einen Lieferanten dar, dessen internen Ablauf man nicht kennt?
+    options:
+    - Als Aktivität
+    - Als zugeklappten Pool
+    - Als Lane im eigenen Pool
+    - Als Datenspeicher
+  en:
+    stem: How is a supplier shown whose internal process is unknown?
+    options:
+    - As an activity
+    - As a collapsed pool
+    - As a lane in the own pool
+    - As a data store
+  key: 1
+- id: EB-Q1-6-3
+  slot: 6
+  variant: 3
+  construct: pool vs lane
+  de:
+    stem: Was verbindet man zwischen zwei Lanes desselben Pools?
+    options:
+    - Nichts, Lanes dürfen nicht verbunden werden
+    - Assoziation
+    - Sequenzfluss
+    - Nachrichtenfluss
+  en:
+    stem: What connects activities in two lanes of the same pool?
+    options:
+    - Nothing, lanes must not be connected
+    - Association
+    - Sequence flow
+    - Message flow
+  key: 2
+- id: EB-Q1-6-4
+  slot: 6
+  variant: 4
+  construct: pool vs lane
+  de:
+    stem: Was verbindet man zwischen zwei Pools?
+    options:
+    - Datenassoziation
+    - Sequenzfluss
+    - Gateway
+    - Nachrichtenfluss
+  en:
+    stem: What connects two pools?
+    options:
+    - Data association
+    - Sequence flow
+    - Gateway
+    - Message flow
+  key: 3
+- id: EB-Q1-6-5
+  slot: 6
+  variant: 5
+  construct: pool vs lane
+  de:
+    stem: Wofür steht eine Lane?
+    options:
+    - Für ein eigenständiges Unternehmen
+    - Für eine Rolle oder Organisationseinheit innerhalb eines Teilnehmers
+    - Für ein IT-System, das Daten speichert
+    - Für einen Zeitabschnitt
+  en:
+    stem: What does a lane stand for?
+    options:
+    - An independent company
+    - A role or organisational unit within one participant
+    - An IT system that stores data
+    - A period of time
+  key: 1
+- id: EB-Q1-7-1
+  slot: 7
+  variant: 1
+  construct: data object vs data store
+  de:
+    stem: Eine Rechnung wird in einer Aktivität erstellt und in der nächsten geprüft. Welches Element passt?
+    options:
+    - Lane
+    - Datenobjekt
+    - Nachrichtenfluss
+    - Datenspeicher
+  en:
+    stem: An invoice is created in one activity and checked in the next. Which element fits?
+    options:
+    - Lane
+    - Data object
+    - Message flow
+    - Data store
+  key: 1
+- id: EB-Q1-7-2
+  slot: 7
+  variant: 2
+  construct: data object vs data store
+  de:
+    stem: Die Kundendatenbank besteht über den Prozess hinaus. Welches Element passt?
+    options:
+    - Datenspeicher
+    - Datenobjekt
+    - Textanmerkung
+    - Pool
+  en:
+    stem: The customer database persists beyond the process. Which element fits?
+    options:
+    - Data store
+    - Data object
+    - Text annotation
+    - Pool
+  key: 0
+- id: EB-Q1-7-3
+  slot: 7
+  variant: 3
+  construct: data object vs data store
+  de:
+    stem: Wie zeigt man, dass ein Auftrag nach einer Aktivität freigegeben ist?
+    options:
+    - Gateway «freigegeben»
+    - Datenspeicher «freigegeben»
+    - Datenobjekt «Auftrag» mit Zustand [freigegeben]
+    - Lane «freigegeben»
+  en:
+    stem: How is it shown that an order is approved after an activity?
+    options:
+    - Gateway "approved"
+    - Data store "approved"
+    - Data object "Order" with state [approved]
+    - Lane "approved"
+  key: 2
+- id: EB-Q1-7-4
+  slot: 7
+  variant: 4
+  construct: data object vs data store
+  de:
+    stem: Womit verbindet man ein Datenobjekt mit einer Aktivität?
+    options:
+    - Datenassoziation (gepunktete Linie)
+    - Sequenzfluss
+    - Gar nicht
+    - Nachrichtenfluss
+  en:
+    stem: How is a data object connected to an activity?
+    options:
+    - Data association (dotted line)
+    - Sequence flow
+    - Not at all
+    - Message flow
+  key: 0
+- id: EB-Q1-7-5
+  slot: 7
+  variant: 5
+  construct: data object vs data store
+  de:
+    stem: Welche Aussage über Datenobjekte ist richtig?
+    options:
+    - Sie steuern die Reihenfolge der Aktivitäten
+    - Sie müssen immer in einem eigenen Pool liegen
+    - Sie ersetzen Sequenzflüsse
+    - Sie bestehen nur während einer Prozessinstanz
+  en:
+    stem: Which statement about data objects is correct?
+    options:
+    - They control the order of the activities
+    - They always have to be placed in their own pool
+    - They replace sequence flows
+    - They exist only during one process instance
+  key: 3
+- id: EB-Q1-8-1
+  slot: 8
+  variant: 1
+  construct: error boundary event
+  de:
+    stem: Wo hängt man ein Fehler-Randereignis an, damit es einen Fehler aus einem Teilprozess abfängt?
+    options:
+    - An den Rand des Teilprozesses
+    - Mitten in einen Sequenzfluss
+    - An das Startereignis
+    - An die Aktivität nach dem Teilprozess
+  en:
+    stem: Where is an error boundary event attached to catch an error from a subprocess?
+    options:
+    - On the border of the subprocess
+    - In the middle of a sequence flow
+    - On the start event
+    - On the activity after the subprocess
+  key: 0
+- id: EB-Q1-8-2
+  slot: 8
+  variant: 2
+  construct: error boundary event
+  de:
+    stem: Was passiert, wenn ein Fehler-Randereignis an einer Aktivität ausgelöst wird?
+    options:
+    - Die Aktivität wird wiederholt
+    - Der ganze Prozess endet sofort
+    - Die Aktivität wird abgebrochen, und der Ablauf folgt dem Randereignis
+    - Die Aktivität läuft weiter
+  en:
+    stem: What happens when an error boundary event on an activity is triggered?
+    options:
+    - The activity is repeated
+    - The whole process ends immediately
+    - The activity is aborted and the flow follows the boundary event
+    - The activity continues
+  key: 2
+- id: EB-Q1-8-3
+  slot: 8
+  variant: 3
+  construct: error boundary event
+  de:
+    stem: Womit löst man innerhalb eines Teilprozesses einen Fehler aus?
+    options:
+    - Mit einem Fehler-Endereignis
+    - Mit einem leeren Endereignis
+    - Mit einem XOR-Gateway
+    - Mit einem Zeit-Zwischenereignis
+  en:
+    stem: How is an error thrown inside a subprocess?
+    options:
+    - With an error end event
+    - With a none end event
+    - With an XOR gateway
+    - With an intermediate timer event
+  key: 0
+- id: EB-Q1-8-4
+  slot: 8
+  variant: 4
+  construct: error boundary event
+  de:
+    stem: Eine Prüfung im Teilprozess schlägt fehl, und der Teilprozess soll abbrechen. Was ist richtig?
+    options:
+    - Fehler-Endereignis im Teilprozess und Fehler-Randereignis an seinem Rand
+    - Ein Nachrichtenfluss zum Teilprozess
+    - Zwei Startereignisse
+    - Leeres Endereignis und danach ein XOR-Gateway
+  en:
+    stem: A check inside a subprocess fails and the subprocess is to be aborted. What is correct?
+    options:
+    - Error end event inside the subprocess and error boundary event on its border
+    - A message flow to the subprocess
+    - Two start events
+    - None end event followed by an XOR gateway
+  key: 0
+- id: EB-Q1-8-5
+  slot: 8
+  variant: 5
+  construct: error boundary event
+  de:
+    stem: Welches Symbol zeigt ein Fehlerereignis?
+    options:
+    - Uhr
+    - Dreieck
+    - Blitz
+    - Briefumschlag
+  en:
+    stem: Which symbol shows an error event?
+    options:
+    - Clock
+    - Triangle
+    - Lightning bolt
+    - Envelope
+  key: 2

@@ -1,0 +1,56 @@
+id: EB-Q2-1
+level: basic
+question: Q2
+variant: 1
+points: 8
+time_minutes: 12
+sector: machinery
+title:
+  de: Rückgabe einer Baumaschine
+  en: Return of a construction machine
+text:
+  de: |-
+    Ein Vermieter von Baumaschinen nimmt zurückgegebene Maschinen entgegen. Wenn eine Maschine zurückgegeben wurde,
+    reinigt die Werkstatt sie und prüft sie danach auf Schäden. Wird ein Schaden festgestellt, erstellt die Werkstatt ein
+    Schadenprotokoll; andernfalls bestätigt sie die Schadenfreiheit. Danach erstellt die Disposition die Mietabrechnung,
+    während die Werkstatt die Maschine gleichzeitig zur Wartung einplant. Sind beide Arbeiten erledigt, gibt die
+    Disposition die Maschine wieder zur Vermietung frei. Damit ist die Rückgabe abgeschlossen.
+  en: |-
+    A construction machinery rental company takes back returned machines. When a machine has been returned, the workshop
+    cleans it and then inspects it for damage. If damage is found, the workshop creates a damage report; otherwise it
+    confirms that there is no damage. Dispatch then creates the rental invoice while the workshop schedules the machine for
+    maintenance at the same time. When both are done, dispatch releases the machine for rental again. This completes the
+    return.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: Aktivität «Schadenprüfung» ist als Substantiv benannt (L1).
+  en: Activity "Damage inspection" is named with a noun (L1).
+  fix_de: 'Als Objekt und Verb benennen: «Maschine auf Schäden prüfen».'
+  fix_en: 'Name it as verb and object: "Inspect machine for damage".'
+- points: 2
+  de: Das XOR-Gateway hat keine Frage und unbeschriftete Ausgänge (L4).
+  en: The XOR split has no question and unlabelled outgoing flows (L4).
+  fix_de: Frage «Schaden festgestellt?» und Ausgänge «ja»/«nein».
+  fix_en: Question "Damage found?" and outgoing flows "yes"/"no".
+- points: 2
+  de: Die parallelen Pfade werden mit einem XOR-Gateway statt mit einem AND-Gateway zusammengeführt (G4).
+  en: The parallel paths are joined with an XOR gateway instead of an AND gateway (G4).
+  fix_de: AND-Join verwenden, damit beide Arbeiten abgeschlossen sind, bevor es weitergeht.
+  fix_en: Use an AND join so that both pieces of work are finished before the process continues.
+- points: 2
+  de: Nach «Maschine zur Vermietung freigeben» endet der Ablauf ohne Endereignis (G2).
+  en: After "Release machine for rental" the process stops without an end event (G2).
+  fix_de: Endereignis «Rückgabe abgeschlossen» ergänzen.
+  fix_en: Add the end event "Return completed".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

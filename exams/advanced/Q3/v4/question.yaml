@@ -1,0 +1,52 @@
+id: EA-Q3-4
+level: advanced
+question: Q3
+variant: 4
+points: 12
+time_minutes: 20
+sector: public administration
+title:
+  de: Veranlagung mit Rückfrage
+  en: Tax assessment with a query
+text:
+  de: |-
+    Eine Steuerverwaltung veranlagt die Steuern von Privatpersonen. Der Ablauf beginnt, wenn die Steuererklärung
+    einer steuerpflichtigen Person eintrifft. Ein Steuerkommissär prüft die Steuererklärung und sendet der Person eine
+    Rückfrage mit der Bitte um Belege. Danach wartet er: Treffen die Belege ein, berechnet er die Veranlagung und sendet der
+    Person die Veranlagungsverfügung. Damit ist die Steuer veranlagt. Treffen innerhalb von 30 Tagen keine Belege ein,
+    veranlagt er nach Ermessen. Modellieren Sie den Ablauf der Steuerverwaltung als eigenen Pool; die steuerpflichtige
+    Person ist ein zugeklappter Pool. Benennen Sie alle Nachrichtenflüsse.
+  en: |-
+    A tax administration assesses the taxes of private individuals. The process starts when a taxpayer's tax return arrives.
+    A tax officer checks the tax return and sends the taxpayer a query asking for receipts. He then waits: if the receipts
+    arrive, he calculates the assessment and sends the taxpayer the assessment notice. The tax is then assessed. If no
+    receipts arrive within 30 days, he makes a discretionary assessment. Model the tax administration's process as its own
+    pool; the taxpayer is a collapsed pool. Name all message flows.
+rubric:
+- points: 2
+  de: Eigener Pool «Steuerverwaltung» und zugeklappter Pool «Steuerpflichtige Person»
+  en: Own pool "Tax administration" and collapsed pool "Taxpayer"
+- points: 1
+  de: Nachrichten-Startereignis «Steuererklärung erhalten»
+  en: Message start event "Tax return received"
+- points: 3
+  de: 'Vier Nachrichtenflüsse mit Richtung und Namen: «Steuererklärung», «Rückfrage», «Belege», «Veranlagungsverfügung»'
+  en: 'Four message flows with direction and name: "Tax return", "Query", "Receipts", "Assessment notice"'
+- points: 1
+  de: Nachrichtenflüsse nur zwischen den Pools, Sequenzflüsse nur im eigenen Pool
+  en: Message flows only between the pools, sequence flows only inside the own pool
+- points: 2
+  de: Ereignisbasiertes Gateway mit den beiden eintretenden Ereignissen
+  en: Event-based gateway followed by the two catching events
+- points: 1
+  de: Zeit-Zwischenereignis «30 Tage»
+  en: Intermediate timer event "30 days"
+- points: 1
+  de: Zwei Endereignisse mit den beiden Ergebnissen
+  en: Two end events with the two results
+- points: 1
+  de: Aktivitäten als Objekt und Verb benannt, Reihenfolge wie im Text
+  en: Activities named as verb and object, order as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

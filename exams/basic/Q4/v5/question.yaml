@@ -1,0 +1,50 @@
+id: EB-Q4-5
+level: basic
+question: Q4
+variant: 5
+points: 12
+time_minutes: 20
+sector: public administration
+title:
+  de: Bewilligung für eine Veranstaltung
+  en: Event permit
+text:
+  de: |-
+    Eine Gemeinde bewilligt Veranstaltungen auf öffentlichem Grund. Ist ein Gesuch eingegangen, registrieren die
+    Einwohnerdienste das Gesuch. Die Sicherheitsabteilung prüft danach das Sicherheitskonzept und verfasst dazu eine
+    Stellungnahme. Erteilt die Sicherheitsabteilung die Bewilligung nicht, begründet sie die Ablehnung, und das Gesuch ist
+    abgelehnt. Andernfalls berechnet die Finanzverwaltung die Gebühr und verbucht sie danach im Finanzsystem. Damit ist die
+    Bewilligung erteilt. Modellieren Sie den Ablauf im Pool «Gemeindeverwaltung» mit einer Lane pro Rolle. Stellen Sie die
+    Stellungnahme als Datenobjekt mit Zustand und das Finanzsystem als Datenspeicher dar.
+  en: |-
+    A municipality grants permits for events on public ground. When an application has been received, citizen services
+    registers it. Public safety then reviews the safety concept and writes a statement. If public safety does not grant the
+    permit, it justifies the refusal and the application is refused. Otherwise the finance department calculates the fee and
+    then posts it in the financial system. The permit is then granted. Model the process in the pool "Municipal
+    administration" with one lane per role. Show the statement as a data object with a state and the financial system as a
+    data store.
+rubric:
+- points: 2
+  de: Pool «Gemeindeverwaltung» mit den drei Lanes «Einwohnerdienste», «Sicherheitsabteilung», «Finanzverwaltung»
+  en: Pool "Municipal administration" with the three lanes "Citizen services", "Public safety", "Finance department"
+- points: 3
+  de: Jede Aktivität in der Lane der zuständigen Rolle
+  en: Every activity in the lane of the responsible role
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: XOR-Split mit Frage «Bewilligung erteilen?» und Ausgängen ja/nein
+  en: XOR split with question "Grant permit?" and yes/no flows
+- points: 1
+  de: Zwei Endereignisse für die zwei Ergebnisse
+  en: Two end events for the two results
+- points: 2
+  de: Datenobjekt «Stellungnahme» mit Zustand [verfasst], ausgehende Assoziation von «Sicherheitskonzept prüfen»
+  en: Data object "Statement" with state [written], output association from "Review safety concept"
+- points: 2
+  de: Datenspeicher «Finanzsystem» mit Assoziation von «Gebühr verbuchen»
+  en: Data store "Financial system" with association from "Post fee"
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

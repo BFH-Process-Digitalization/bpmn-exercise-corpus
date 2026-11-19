@@ -1,0 +1,50 @@
+id: EB-Q4-4
+level: basic
+question: Q4
+variant: 4
+points: 12
+time_minutes: 20
+sector: supply chain
+title:
+  de: Beschädigte Palette
+  en: Damaged pallet
+text:
+  de: |-
+    Ein Logistikdienstleister lagert Ware für Industriekunden. Meldet ein Lagermitarbeiter eine beschädigte Palette, sperrt
+    der Wareneingang die Palette. Die Qualitätssicherung begutachtet danach den Schaden und erstellt dazu einen
+    Schadenbericht. Ist die Ware nicht mehr verwendbar, gibt die Qualitätssicherung sie zur Entsorgung frei. Andernfalls
+    packt der Lagerbetrieb die Palette um und korrigiert danach den Bestand im Lagerverwaltungssystem. Damit ist die Ware
+    wieder verfügbar. Modellieren Sie den Ablauf im Pool «Logistikdienstleister» mit einer Lane pro Rolle. Stellen Sie den
+    Schadenbericht als Datenobjekt mit Zustand und das Lagerverwaltungssystem als Datenspeicher dar.
+  en: |-
+    A logistics service provider stores goods for industrial customers. When a warehouse employee reports a damaged pallet,
+    goods receipt blocks the pallet. Quality assurance then assesses the damage and creates a damage report. If the goods
+    can no longer be used, quality assurance releases them for disposal. Otherwise warehouse operations repacks the pallet
+    and then corrects the stock in the warehouse management system. The goods are then available again. Model the process
+    in the pool "Logistics service provider" with one lane per role. Show the damage report as a data object with a state
+    and the warehouse management system as a data store.
+rubric:
+- points: 2
+  de: Pool «Logistikdienstleister» mit den drei Lanes «Wareneingang», «Qualitätssicherung», «Lagerbetrieb»
+  en: Pool "Logistics service provider" with the three lanes "Goods receipt", "Quality assurance", "Warehouse operations"
+- points: 3
+  de: Jede Aktivität in der Lane der zuständigen Rolle
+  en: Every activity in the lane of the responsible role
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: XOR-Split mit Frage «Ware verwendbar?» und Ausgängen ja/nein
+  en: XOR split with question "Goods usable?" and yes/no flows
+- points: 1
+  de: Zwei Endereignisse für die zwei Ergebnisse
+  en: Two end events for the two results
+- points: 2
+  de: Datenobjekt «Schadenbericht» mit Zustand [erstellt], ausgehende Assoziation von «Schaden begutachten»
+  en: Data object "Damage report" with state [created], output association from "Assess damage"
+- points: 2
+  de: Datenspeicher «Lagerverwaltungssystem» mit Assoziation von «Bestand korrigieren»
+  en: Data store "Warehouse management system" with association from "Correct stock"
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

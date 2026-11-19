@@ -1,0 +1,51 @@
+id: EB-Q4-2
+level: basic
+question: Q4
+variant: 2
+points: 12
+time_minutes: 20
+sector: health
+title:
+  de: Anmeldung in der Tagesklinik
+  en: Admission to a day clinic
+text:
+  de: |-
+    Eine Tagesklinik führt ambulante Operationen durch. Ist eine Anmeldung zur Operation eingegangen, erfasst die Anmeldung
+    die Patientendaten. Die Anästhesie beurteilt danach das Narkoserisiko und füllt dabei das Narkoseprotokoll aus. Ist die
+    Patientin nicht ambulant operierbar, empfiehlt die Anästhesie eine stationäre Aufnahme, und die Patientin ist an die
+    Station verwiesen. Andernfalls legt die Operationsplanung den Operationstermin fest und aktualisiert danach den
+    Operationsplan im Klinikinformationssystem. Damit ist die Operation geplant. Modellieren Sie den Ablauf im Pool
+    «Tagesklinik» mit einer Lane pro Rolle. Stellen Sie das Narkoseprotokoll als Datenobjekt mit Zustand und das
+    Klinikinformationssystem als Datenspeicher dar.
+  en: |-
+    A day clinic carries out outpatient surgery. When a registration for surgery has been received, admissions records the
+    patient data. Anaesthesia then assesses the anaesthesia risk and completes the anaesthesia record. If the patient is not
+    suitable for day surgery, anaesthesia recommends inpatient admission and the patient is referred to the ward. Otherwise
+    surgery scheduling sets the surgery date and then updates the surgery schedule in the clinical information system. The
+    surgery is then scheduled. Model the process in the pool "Day clinic" with one lane per role. Show the anaesthesia
+    record as a data object with a state and the clinical information system as a data store.
+rubric:
+- points: 2
+  de: Pool «Tagesklinik» mit den drei Lanes «Anmeldung», «Anästhesie», «Operationsplanung»
+  en: Pool "Day clinic" with the three lanes "Admissions", "Anaesthesia", "Surgery scheduling"
+- points: 3
+  de: Jede Aktivität in der Lane der zuständigen Rolle
+  en: Every activity in the lane of the responsible role
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: XOR-Split mit Frage «Ambulant operierbar?» und Ausgängen ja/nein
+  en: XOR split with question "Suitable for day surgery?" and yes/no flows
+- points: 1
+  de: Zwei Endereignisse für die zwei Ergebnisse
+  en: Two end events for the two results
+- points: 2
+  de: Datenobjekt «Narkoseprotokoll» mit Zustand [ausgefüllt], ausgehende Assoziation von «Narkoserisiko beurteilen»
+  en: Data object "Anaesthesia record" with state [completed], output association from "Assess anaesthesia risk"
+- points: 2
+  de: Datenspeicher «Klinikinformationssystem» mit Assoziation von «Operationsplan aktualisieren»
+  en: Data store "Clinical information system" with association from "Update surgery schedule"
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

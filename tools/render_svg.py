@@ -37,6 +37,7 @@ def main() -> None:
     server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
     threading.Thread(target=server.serve_forever, daemon=True).start()
     files = sorted(CORPUS.glob("exercises/*/solution.*.bpmn")) + sorted(CORPUS.glob("assessment/*/solution.*.bpmn"))
+    files += sorted(CORPUS.glob("exams/*/Q*/v*/*.bpmn"))
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()

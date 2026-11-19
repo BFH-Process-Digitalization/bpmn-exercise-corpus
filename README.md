@@ -1,9 +1,10 @@
 # Open BPMN exercise corpus
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24341448.svg)](https://doi.org/10.5281/zenodo.24341448)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24315289.svg)](https://doi.org/10.5281/zenodo.24315289)
 
-36 BPMN 2.0 exercises in German and English, with sample solutions and an entry assessment. Six topics, each with
-three Basic and three Advanced exercises. Developed for the BPMN Tutor at Bern University of Applied Sciences (BFH).
+36 BPMN 2.0 exercises in German and English, with sample solutions, an entry assessment and two exams. Six topics,
+each with three Basic and three Advanced exercises. The Basic and Advanced exams have four questions in five
+variants each for rotation ([`exams/`](exams/README.md)). Developed for the BPMN Tutor at Bern University of Applied Sciences (BFH).
 
 ## Exercises
 
@@ -62,19 +63,21 @@ Each cell shows the exercise, its industry and the main BPMN elements of the sam
 ```
 exercises/T<topic>-<slot>/   exercise.yaml, exercise.de.md / .en.md, solution.de.bpmn / .en.bpmn, solution.de.svg / .en.svg
 assessment/                  entry assessment: multiple-choice items, modelling task, levelling rule
+exams/                       Basic and Advanced exams, 5 variants per question, exam and solution sheets
 booklet/                     exercises-de.pdf, exercises-en.pdf
 index.csv                    one row per exercise
-tools/                       check.py, render_svg.py, build_release.py
+tools/                       check.py, render_svg.py, build_release.py, build_exams.py
 icons/                       BPMN icons used in this README
 GUIDELINES.md                modelling guideline for the sample solutions
 ```
 
-`exercise.yaml` is the source; the other files are generated from it:
+`exercise.yaml` and `question.yaml` are the sources; the other files are generated from it:
 
 ```
 python tools/check.py
 python tools/render_svg.py
 python tools/build_release.py --pdf
+python tools/build_exams.py --pdf
 ```
 
 ## Licence
@@ -83,5 +86,5 @@ Content CC BY 4.0, tools MIT (`LICENSE`).
 
 ## Citation
 
-Maier, M., & Tekle Hailu, S. (2026). *Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an
-entry assessment (German and English)* (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24341448
+Maier, M., & Tekle Hailu, S. (2026). *Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises, entry assessment and exams with
+sample solutions (German and English)* (Version 1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24315289

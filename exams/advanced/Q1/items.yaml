@@ -1,0 +1,767 @@
+level: advanced
+question: Q1
+points: 8
+time_minutes: 8
+licence: CC-BY-4.0
+note: 8 slots, 5 variants per slot. One item per slot is drawn for an exam. One point per item; DE and EN have the same options in the same order.
+items:
+- id: EA-Q1-1-1
+  slot: 1
+  variant: 1
+  construct: loop vs multi-instance
+  de:
+    stem: Für jede Position einer Bestellung wird gleichzeitig die Verfügbarkeit geprüft. Welcher Marker passt?
+    options:
+    - Ad-hoc
+    - Schleife
+    - Sequenzielle Mehrfachinstanz
+    - Parallele Mehrfachinstanz
+  en:
+    stem: For every line of an order, availability is checked at the same time. Which marker fits?
+    options:
+    - Ad hoc
+    - Loop
+    - Sequential multi-instance
+    - Parallel multi-instance
+  key: 3
+- id: EA-Q1-1-2
+  slot: 1
+  variant: 2
+  construct: loop vs multi-instance
+  de:
+    stem: Ein Test wird wiederholt, bis er bestanden ist; die Anzahl Durchläufe ist vorher nicht bekannt. Welcher Marker passt?
+    options:
+    - Schleife
+    - Sequenzielle Mehrfachinstanz
+    - Kompensation
+    - Parallele Mehrfachinstanz
+  en:
+    stem: A test is repeated until it is passed; the number of runs is not known in advance. Which marker fits?
+    options:
+    - Loop
+    - Sequential multi-instance
+    - Compensation
+    - Parallel multi-instance
+  key: 0
+- id: EA-Q1-1-3
+  slot: 1
+  variant: 3
+  construct: loop vs multi-instance
+  de:
+    stem: Fünf Bewerbungen werden nacheinander von derselben Person geprüft. Welcher Marker passt?
+    options:
+    - Parallele Mehrfachinstanz
+    - Sequenzielle Mehrfachinstanz
+    - Ad-hoc
+    - Schleife
+  en:
+    stem: Five applications are reviewed one after the other by the same person. Which marker fits?
+    options:
+    - Parallel multi-instance
+    - Sequential multi-instance
+    - Ad hoc
+    - Loop
+  key: 1
+- id: EA-Q1-1-4
+  slot: 1
+  variant: 4
+  construct: loop vs multi-instance
+  de:
+    stem: Was unterscheidet eine Mehrfachinstanz von einer Schleife?
+    options:
+    - Bei der Mehrfachinstanz ist die Anzahl Instanzen beim Start bekannt
+    - Die Mehrfachinstanz braucht ein Gateway
+    - Es gibt keinen Unterschied
+    - Die Schleife läuft immer parallel
+  en:
+    stem: What distinguishes multi-instance from a loop?
+    options:
+    - With multi-instance the number of instances is known at the start
+    - Multi-instance needs a gateway
+    - There is no difference
+    - The loop always runs in parallel
+  key: 0
+- id: EA-Q1-1-5
+  slot: 1
+  variant: 5
+  construct: loop vs multi-instance
+  de:
+    stem: Wofür stehen drei senkrechte Striche unten in einer Aktivität?
+    options:
+    - Parallele Mehrfachinstanz
+    - Sequenzielle Mehrfachinstanz
+    - Teilprozess
+    - Schleife
+  en:
+    stem: What do three vertical bars at the bottom of an activity stand for?
+    options:
+    - Parallel multi-instance
+    - Sequential multi-instance
+    - Subprocess
+    - Loop
+  key: 0
+- id: EA-Q1-2-1
+  slot: 2
+  variant: 1
+  construct: OR gateway
+  de:
+    stem: Nach einer Prüfung sind ein Gutachten, eine Reparatur oder beides nötig. Welches Gateway passt?
+    options:
+    - XOR
+    - AND
+    - Ereignisbasiert
+    - OR
+  en:
+    stem: After an inspection, an expert report, a repair or both are needed. Which gateway fits?
+    options:
+    - XOR
+    - AND
+    - Event-based
+    - OR
+  key: 3
+- id: EA-Q1-2-2
+  slot: 2
+  variant: 2
+  construct: OR gateway
+  de:
+    stem: Wie führt man die Pfade nach einem OR-Split korrekt zusammen?
+    options:
+    - Mit einem AND-Join
+    - Mit einem OR-Join
+    - Mit einem ereignisbasierten Gateway
+    - Mit einem XOR-Merge
+  en:
+    stem: How are the paths after an OR split correctly joined?
+    options:
+    - With an AND join
+    - With an OR join
+    - With an event-based gateway
+    - With an XOR merge
+  key: 1
+- id: EA-Q1-2-3
+  slot: 2
+  variant: 3
+  construct: OR gateway
+  de:
+    stem: Was macht ein OR-Join?
+    options:
+    - Er wartet immer auf alle eingehenden Pfade
+    - Er startet alle Pfade
+    - Er wartet auf alle Pfade, die aktiviert wurden
+    - Er lässt nur den ersten Pfad durch
+  en:
+    stem: What does an OR join do?
+    options:
+    - It always waits for all incoming paths
+    - It starts all paths
+    - It waits for all paths that were activated
+    - It lets only the first path through
+  key: 2
+- id: EA-Q1-2-4
+  slot: 2
+  variant: 4
+  construct: OR gateway
+  de:
+    stem: Was bedeutet ein Standardfluss (Schrägstrich) an einem OR- oder XOR-Gateway?
+    options:
+    - Er ist ein Nachrichtenfluss
+    - Er beendet den Prozess
+    - Er wird immer zusätzlich ausgeführt
+    - Er wird genommen, wenn keine andere Bedingung zutrifft
+  en:
+    stem: What does a default flow (slash) on an OR or XOR gateway mean?
+    options:
+    - It is a message flow
+    - It ends the process
+    - It is always taken in addition
+    - It is taken if no other condition is true
+  key: 3
+- id: EA-Q1-2-5
+  slot: 2
+  variant: 5
+  construct: OR gateway
+  de:
+    stem: Ein OR-Split wird mit einem AND-Join geschlossen. Was kann passieren?
+    options:
+    - Nichts, das ist korrekt
+    - Der Join wartet ewig, wenn nicht alle Pfade aktiviert wurden
+    - Der nachfolgende Ablauf läuft doppelt
+    - Der Prozess endet sofort
+  en:
+    stem: An OR split is closed with an AND join. What can happen?
+    options:
+    - Nothing, this is correct
+    - The join waits forever if not all paths were activated
+    - The following steps run twice
+    - The process ends immediately
+  key: 1
+- id: EA-Q1-3-1
+  slot: 3
+  variant: 1
+  construct: event-based gateway
+  de:
+    stem: Der Prozess wartet entweder auf eine Zusage oder höchstens 10 Tage. Welches Gateway passt?
+    options:
+    - XOR mit Bedingungen
+    - OR
+    - Ereignisbasiertes Gateway
+    - AND
+  en:
+    stem: The process waits either for an acceptance or at most 10 days. Which gateway fits?
+    options:
+    - XOR with conditions
+    - OR
+    - Event-based gateway
+    - AND
+  key: 2
+- id: EA-Q1-3-2
+  slot: 3
+  variant: 2
+  construct: event-based gateway
+  de:
+    stem: Was darf direkt auf ein ereignisbasiertes Gateway folgen?
+    options:
+    - Endereignisse
+    - Eintretende Zwischenereignisse oder Empfangsaufgaben
+    - Beliebige Aktivitäten
+    - Weitere Gateways
+  en:
+    stem: What may directly follow an event-based gateway?
+    options:
+    - End events
+    - Intermediate catch events or receive tasks
+    - Any activities
+    - Further gateways
+  key: 1
+- id: EA-Q1-3-3
+  slot: 3
+  variant: 3
+  construct: event-based gateway
+  de:
+    stem: Wie entscheidet ein ereignisbasiertes Gateway?
+    options:
+    - Das zuerst eintretende Ereignis bestimmt den Pfad
+    - Nach einer Bedingung an den Ausgängen
+    - Zufällig
+    - Alle Pfade laufen gleichzeitig
+  en:
+    stem: How does an event-based gateway decide?
+    options:
+    - The event that occurs first determines the path
+    - By a condition on the outgoing flows
+    - At random
+    - All paths run at the same time
+  key: 0
+- id: EA-Q1-3-4
+  slot: 3
+  variant: 4
+  construct: event-based gateway
+  de:
+    stem: Warum braucht ein Warten auf eine Antwort meist zusätzlich ein Zeitereignis am ereignisbasierten Gateway?
+    options:
+    - Weil BPMN mindestens drei Ausgänge verlangt
+    - Damit der Prozess nicht ewig wartet, wenn keine Antwort kommt
+    - Damit die Antwort schneller eintrifft
+    - Weil Nachrichten sonst nicht erlaubt sind
+  en:
+    stem: Why does waiting for a reply usually also need a timer event at the event-based gateway?
+    options:
+    - Because BPMN requires at least three outgoing flows
+    - So that the process does not wait forever if no reply comes
+    - So that the reply arrives faster
+    - Because messages are otherwise not allowed
+  key: 1
+- id: EA-Q1-3-5
+  slot: 3
+  variant: 5
+  construct: event-based gateway
+  de:
+    stem: Wie werden die Ausgänge eines ereignisbasierten Gateways beschriftet?
+    options:
+    - Mit Nachrichtennamen am Gateway
+    - Mit Bedingungen
+    - Gar nicht; die Ereignisse danach tragen die Namen
+    - Mit «ja» und «nein»
+  en:
+    stem: How are the outgoing flows of an event-based gateway labelled?
+    options:
+    - With message names on the gateway
+    - With conditions
+    - Not at all; the events after it carry the names
+    - With "yes" and "no"
+  key: 2
+- id: EA-Q1-4-1
+  slot: 4
+  variant: 1
+  construct: interrupting vs non-interrupting
+  de:
+    stem: Nach 2 Stunden soll eine Erinnerung gesendet werden; die Aktivität läuft weiter. Welches Randereignis passt?
+    options:
+    - Fehler-Randereignis
+    - Unterbrechendes Zeit-Randereignis
+    - Nachrichten-Zwischenereignis im Sequenzfluss
+    - Nicht unterbrechendes Zeit-Randereignis
+  en:
+    stem: After 2 hours a reminder is to be sent; the activity continues. Which boundary event fits?
+    options:
+    - Error boundary event
+    - Interrupting timer boundary event
+    - Intermediate message event in the sequence flow
+    - Non-interrupting timer boundary event
+  key: 3
+- id: EA-Q1-4-2
+  slot: 4
+  variant: 2
+  construct: interrupting vs non-interrupting
+  de:
+    stem: Wie erkennt man ein nicht unterbrechendes Randereignis?
+    options:
+    - Am ausgefüllten Symbol
+    - An der Farbe
+    - Am gestrichelten Doppelrand
+    - Am dicken Rand
+  en:
+    stem: How is a non-interrupting boundary event recognised?
+    options:
+    - By its filled symbol
+    - By its colour
+    - By its dashed double border
+    - By its thick border
+  key: 2
+- id: EA-Q1-4-3
+  slot: 4
+  variant: 3
+  construct: interrupting vs non-interrupting
+  de:
+    stem: Nach 30 Minuten ohne Ergebnis soll die Aktivität abgebrochen werden. Welches Randereignis passt?
+    options:
+    - Nicht unterbrechendes Zeit-Randereignis
+    - Unterbrechendes Zeit-Randereignis
+    - Kompensations-Randereignis
+    - Signal-Zwischenereignis
+  en:
+    stem: After 30 minutes without a result the activity is to be aborted. Which boundary event fits?
+    options:
+    - Non-interrupting timer boundary event
+    - Interrupting timer boundary event
+    - Compensation boundary event
+    - Intermediate signal event
+  key: 1
+- id: EA-Q1-4-4
+  slot: 4
+  variant: 4
+  construct: interrupting vs non-interrupting
+  de:
+    stem: Was passiert bei einem unterbrechenden Randereignis mit der Aktivität?
+    options:
+    - Sie wird kompensiert
+    - Sie wird wiederholt
+    - Sie läuft weiter
+    - Sie wird abgebrochen
+  en:
+    stem: What happens to the activity when an interrupting boundary event occurs?
+    options:
+    - It is compensated
+    - It is repeated
+    - It continues
+    - It is aborted
+  key: 3
+- id: EA-Q1-4-5
+  slot: 4
+  variant: 5
+  construct: interrupting vs non-interrupting
+  de:
+    stem: Während einer Reparatur ruft die Kundin an; die Anfrage wird beantwortet, die Reparatur läuft weiter. Was passt?
+    options:
+    - Abbruch-Endereignis
+    - Unterbrechendes Nachrichten-Randereignis
+    - Nicht unterbrechendes Nachrichten-Randereignis
+    - Fehler-Randereignis
+  en:
+    stem: During a repair the customer calls; the query is answered and the repair continues. What fits?
+    options:
+    - Cancel end event
+    - Interrupting message boundary event
+    - Non-interrupting message boundary event
+    - Error boundary event
+  key: 2
+- id: EA-Q1-5-1
+  slot: 5
+  variant: 1
+  construct: message flow rules
+  de:
+    stem: Welche Verbindung ist in BPMN erlaubt?
+    options:
+    - Sequenzfluss zwischen zwei Pools
+    - Nachrichtenfluss zwischen zwei Lanes desselben Pools
+    - Nachrichtenfluss zwischen zwei Pools
+    - Sequenzfluss zu einem zugeklappten Pool
+  en:
+    stem: Which connection is allowed in BPMN?
+    options:
+    - Sequence flow between two pools
+    - Message flow between two lanes of the same pool
+    - Message flow between two pools
+    - Sequence flow to a collapsed pool
+  key: 2
+- id: EA-Q1-5-2
+  slot: 5
+  variant: 2
+  construct: message flow rules
+  de:
+    stem: Wo darf ein Nachrichtenfluss bei einem zugeklappten Pool enden?
+    options:
+    - Gar nicht
+    - An einem Gateway
+    - Nur an einer Aktivität im Pool
+    - Am Rand des zugeklappten Pools
+  en:
+    stem: Where may a message flow end at a collapsed pool?
+    options:
+    - Nowhere
+    - At a gateway
+    - Only at an activity inside the pool
+    - On the border of the collapsed pool
+  key: 3
+- id: EA-Q1-5-3
+  slot: 5
+  variant: 3
+  construct: message flow rules
+  de:
+    stem: Woran darf ein Nachrichtenfluss nicht angeschlossen werden?
+    options:
+    - An ein Gateway
+    - An einen zugeklappten Pool
+    - An ein Nachrichtenereignis
+    - An eine Sendeaufgabe
+  en:
+    stem: What must a message flow not be connected to?
+    options:
+    - A gateway
+    - A collapsed pool
+    - A message event
+    - A send task
+  key: 0
+- id: EA-Q1-5-4
+  slot: 5
+  variant: 4
+  construct: message flow rules
+  de:
+    stem: Ein Lieferant sendet eine Auftragsbestätigung an den eigenen Prozess. Wie wird das dargestellt?
+    options:
+    - Nachrichtenfluss vom Lieferanten-Pool zu einem Nachrichtenereignis oder einer Aktivität
+    - Datenassoziation
+    - Lane «Lieferant» mit Sequenzfluss
+    - Sequenzfluss vom Lieferanten-Pool
+  en:
+    stem: A supplier sends an order confirmation to the own process. How is this shown?
+    options:
+    - Message flow from the supplier pool to a message event or an activity
+    - Data association
+    - Lane "Supplier" with sequence flow
+    - Sequence flow from the supplier pool
+  key: 0
+- id: EA-Q1-5-5
+  slot: 5
+  variant: 5
+  construct: message flow rules
+  de:
+    stem: Was gilt für Sequenzflüsse?
+    options:
+    - Sie verbinden nur Datenobjekte
+    - Sie bleiben innerhalb eines Pools
+    - Sie sind gestrichelt
+    - Sie dürfen Pool-Grenzen überschreiten
+  en:
+    stem: What is true for sequence flows?
+    options:
+    - They only connect data objects
+    - They stay within one pool
+    - They are dashed
+    - They may cross pool borders
+  key: 1
+- id: EA-Q1-6-1
+  slot: 6
+  variant: 1
+  construct: signal, message and conditional
+  de:
+    stem: Eine Rückrufmeldung geht an alle Filialen gleichzeitig, ohne bestimmten Empfänger. Welches Ereignis passt?
+    options:
+    - Signal
+    - Eskalation
+    - Fehler
+    - Nachricht
+  en:
+    stem: A recall notice goes to all branches at the same time, without a specific recipient. Which event fits?
+    options:
+    - Signal
+    - Escalation
+    - Error
+    - Message
+  key: 0
+- id: EA-Q1-6-2
+  slot: 6
+  variant: 2
+  construct: signal, message and conditional
+  de:
+    stem: Was unterscheidet ein Signal von einer Nachricht?
+    options:
+    - Es gibt keinen Unterschied
+    - Ein Signal ist an alle gerichtet, die es abhören; eine Nachricht hat einen bestimmten Empfänger
+    - Signale gibt es nur innerhalb von Teilprozessen
+    - Ein Signal hat immer einen bestimmten Empfänger
+  en:
+    stem: What distinguishes a signal from a message?
+    options:
+    - There is no difference
+    - A signal is broadcast to everyone listening; a message has a specific recipient
+    - Signals only exist inside subprocesses
+    - A signal always has a specific recipient
+  key: 1
+- id: EA-Q1-6-3
+  slot: 6
+  variant: 3
+  construct: signal, message and conditional
+  de:
+    stem: Eine Kundin sendet ihre Bestellung an den Händler. Welches Ereignis passt beim Händler?
+    options:
+    - Eskalations-Startereignis
+    - Bedingungs-Startereignis
+    - Nachrichten-Startereignis
+    - Signal-Startereignis
+  en:
+    stem: A customer sends her order to the retailer. Which event fits at the retailer?
+    options:
+    - Escalation start event
+    - Conditional start event
+    - Message start event
+    - Signal start event
+  key: 2
+- id: EA-Q1-6-4
+  slot: 6
+  variant: 4
+  construct: signal, message and conditional
+  de:
+    stem: Ein Prozess soll starten, sobald der Lagerbestand unter 100 Stück fällt. Welches Startereignis passt?
+    options:
+    - Bedingung
+    - Nachricht
+    - Signal
+    - Zeit
+  en:
+    stem: A process is to start as soon as stock falls below 100 units. Which start event fits?
+    options:
+    - Conditional
+    - Message
+    - Signal
+    - Timer
+  key: 0
+- id: EA-Q1-6-5
+  slot: 6
+  variant: 5
+  construct: signal, message and conditional
+  de:
+    stem: Welches Symbol zeigt ein Signalereignis?
+    options:
+    - Uhr
+    - Pfeil nach oben
+    - Dreieck
+    - Briefumschlag
+  en:
+    stem: Which symbol shows a signal event?
+    options:
+    - Clock
+    - Upward arrow
+    - Triangle
+    - Envelope
+  key: 2
+- id: EA-Q1-7-1
+  slot: 7
+  variant: 1
+  construct: error, escalation and terminate
+  de:
+    stem: Ein Teilprozess meldet eine Terminverzögerung an den übergeordneten Prozess, läuft aber weiter. Welches Ereignis passt?
+    options:
+    - Terminierung
+    - Fehler
+    - Eskalation mit nicht unterbrechendem Randereignis
+    - Abbruch
+  en:
+    stem: A subprocess reports a delay to the parent process but continues. Which event fits?
+    options:
+    - Terminate
+    - Error
+    - Escalation with a non-interrupting boundary event
+    - Cancel
+  key: 2
+- id: EA-Q1-7-2
+  slot: 7
+  variant: 2
+  construct: error, escalation and terminate
+  de:
+    stem: Welche Aussage über Fehlerereignisse ist richtig?
+    options:
+    - Fehler gelten für alle Prozesse gleichzeitig
+    - Ein Fehler-Randereignis kann nicht unterbrechend sein
+    - Fehler werden mit Zwischenereignissen im Sequenzfluss ausgelöst
+    - Ein Fehler-Randereignis ist immer unterbrechend
+  en:
+    stem: Which statement about error events is correct?
+    options:
+    - Errors apply to all processes at the same time
+    - An error boundary event can be non-interrupting
+    - Errors are thrown with intermediate events in the sequence flow
+    - An error boundary event is always interrupting
+  key: 3
+- id: EA-Q1-7-3
+  slot: 7
+  variant: 3
+  construct: error, escalation and terminate
+  de:
+    stem: Wann verwendet man eine Eskalation statt eines Fehlers?
+    options:
+    - Wenn eine Nachricht an einen anderen Pool geht
+    - Wenn eine übergeordnete Stelle informiert werden muss, die Arbeit aber weitergehen kann
+    - Wenn die Arbeit nicht fortgesetzt werden kann
+    - Wenn eine Frist abläuft
+  en:
+    stem: When is an escalation used instead of an error?
+    options:
+    - When a message goes to another pool
+    - When a higher level must be informed but work can continue
+    - When the work cannot be continued
+    - When a deadline expires
+  key: 1
+- id: EA-Q1-7-4
+  slot: 7
+  variant: 4
+  construct: error, escalation and terminate
+  de:
+    stem: Welches Symbol zeigt ein Eskalationsereignis?
+    options:
+    - Blitz
+    - Dreieck
+    - Pfeil nach oben
+    - Kreuz
+  en:
+    stem: Which symbol shows an escalation event?
+    options:
+    - Lightning bolt
+    - Triangle
+    - Upward arrow
+    - Cross
+  key: 2
+- id: EA-Q1-7-5
+  slot: 7
+  variant: 5
+  construct: error, escalation and terminate
+  de:
+    stem: Was macht ein Terminierungs-Endereignis?
+    options:
+    - Es beendet sofort alle noch laufenden Pfade der Prozessinstanz
+    - Es beendet nur den eigenen Pfad
+    - Es löst einen Fehler aus
+    - Es startet den Prozess neu
+  en:
+    stem: What does a terminate end event do?
+    options:
+    - It immediately ends all still running paths of the process instance
+    - It ends only its own path
+    - It throws an error
+    - It restarts the process
+  key: 0
+- id: EA-Q1-8-1
+  slot: 8
+  variant: 1
+  construct: compensation and transaction
+  de:
+    stem: Eine bereits bezahlte Anzahlung muss bei Stornierung zurückerstattet werden. Was passt?
+    options:
+    - Signal
+    - Fehler-Randereignis
+    - Schleife
+    - Kompensations-Randereignis mit Kompensationsaktivität «Anzahlung zurückerstatten»
+  en:
+    stem: A down payment already made must be refunded on cancellation. What fits?
+    options:
+    - Signal
+    - Error boundary event
+    - Loop
+    - Compensation boundary event with the compensation activity "Refund down payment"
+  key: 3
+- id: EA-Q1-8-2
+  slot: 8
+  variant: 2
+  construct: compensation and transaction
+  de:
+    stem: Wie wird eine Kompensationsaktivität mit dem Randereignis verbunden?
+    options:
+    - Mit einem Nachrichtenfluss
+    - Mit einem Gateway
+    - Mit einer Assoziation
+    - Mit einem Sequenzfluss
+  en:
+    stem: How is a compensation activity connected to its boundary event?
+    options:
+    - With a message flow
+    - With a gateway
+    - With an association
+    - With a sequence flow
+  key: 2
+- id: EA-Q1-8-3
+  slot: 8
+  variant: 3
+  construct: compensation and transaction
+  de:
+    stem: Was bedeutet ein Transaktions-Teilprozess (Doppelrand)?
+    options:
+    - Er läuft in einem anderen Pool
+    - Entweder werden alle Schritte erfolgreich abgeschlossen oder alle bereits erledigten Schritte werden kompensiert
+    - Alle Aktivitäten werden parallel ausgeführt
+    - Er wird immer wiederholt
+  en:
+    stem: What does a transaction subprocess (double border) mean?
+    options:
+    - It runs in another pool
+    - Either all steps complete successfully or all completed steps are compensated
+    - All activities run in parallel
+    - It is always repeated
+  key: 1
+- id: EA-Q1-8-4
+  slot: 8
+  variant: 4
+  construct: compensation and transaction
+  de:
+    stem: Womit bricht man eine Transaktion ab?
+    options:
+    - Mit einem Zeit-Zwischenereignis
+    - Mit einem XOR-Gateway
+    - Mit einem leeren Endereignis
+    - Mit einem Abbruch-Endereignis in der Transaktion
+  en:
+    stem: How is a transaction cancelled?
+    options:
+    - With an intermediate timer event
+    - With an XOR gateway
+    - With a none end event
+    - With a cancel end event inside the transaction
+  key: 3
+- id: EA-Q1-8-5
+  slot: 8
+  variant: 5
+  construct: compensation and transaction
+  de:
+    stem: Wann wird eine Kompensationsaktivität ausgeführt?
+    options:
+    - Wenn ein Fehler im eigenen Pfad auftritt, auch ohne Kompensation
+    - Parallel zur zugehörigen Aktivität
+    - Immer nach der zugehörigen Aktivität
+    - Nur wenn eine Kompensation ausgelöst wird und die zugehörige Aktivität abgeschlossen ist
+  en:
+    stem: When is a compensation activity carried out?
+    options:
+    - When an error occurs in its own path, even without compensation
+    - In parallel with the associated activity
+    - Always after the associated activity
+    - Only if compensation is triggered and the associated activity has completed
+  key: 3

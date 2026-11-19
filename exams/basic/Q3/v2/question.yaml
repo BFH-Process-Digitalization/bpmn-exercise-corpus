@@ -1,0 +1,53 @@
+id: EB-Q3-2
+level: basic
+question: Q3
+variant: 2
+points: 12
+time_minutes: 20
+sector: production
+title:
+  de: Joghurtcharge freigeben
+  en: Releasing a yoghurt batch
+text:
+  de: |-
+    Eine Molkerei füllt Joghurt in Chargen ab. Ist eine Charge abgefüllt, zieht die Qualitätssicherung Proben. Handelt es sich
+    um eine Bio-Charge, prüft die Qualitätssicherung das Bio-Zertifikat des Milchlieferanten, und die Abfüllung druckt danach
+    Bio-Etiketten. Andernfalls druckt die Abfüllung Standardetiketten. Anschliessend stellt das Lager die Paletten bereit.
+    Die Paletten müssen danach 24 Stunden im Kühlraum lagern. Dann gibt die Qualitätssicherung die Charge im System frei,
+    während die Logistik gleichzeitig den Transport bestellt. Sind beide Arbeiten erledigt, verlädt das Lager die Paletten.
+    Damit ist die Charge ausgeliefert. Modellieren Sie den Ablauf. Rollen müssen nicht dargestellt werden.
+  en: |-
+    A dairy fills yoghurt in batches. When a batch has been filled, quality assurance takes samples. If it is an organic
+    batch, quality assurance checks the milk supplier's organic certificate and filling then prints organic labels.
+    Otherwise filling prints standard labels. The warehouse then prepares the pallets. The pallets must then be stored in the
+    cold room for 24 hours. After that quality assurance releases the batch in the system while logistics orders the
+    transport at the same time. When both are done, the warehouse loads the pallets. The batch is then shipped. Model the
+    process. Roles do not need to be shown.
+rubric:
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: Endereignis als Ergebnis benannt
+  en: End event named as the result
+- points: 1
+  de: Alle Aktivitäten als Objekt und Verb benannt
+  en: All activities named as verb and object
+- points: 2
+  de: XOR-Split mit Frage «Bio-Charge?» und Ausgängen ja/nein
+  en: XOR split with question "Organic batch?" and yes/no flows
+- points: 1
+  de: XOR-Merge vor dem weiteren Ablauf
+  en: XOR merge before the process continues
+- points: 2
+  de: Zwischenereignis (Zeit) «24 Stunden» an der richtigen Stelle
+  en: Intermediate timer event "24 hours" at the right place
+- points: 2
+  de: AND-Split und AND-Join um die beiden gleichzeitigen Arbeiten
+  en: AND split and AND join around the two concurrent tasks
+- points: 2
+  de: Reihenfolge aller Schritte wie im Text
+  en: Order of all steps as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

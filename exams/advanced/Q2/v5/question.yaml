@@ -1,0 +1,59 @@
+id: EA-Q2-5
+level: advanced
+question: Q2
+variant: 5
+points: 8
+time_minutes: 12
+sector: services
+title:
+  de: Laptops für eine Kundin ausrollen
+  en: Rolling out laptops for a client
+text:
+  de: |-
+    Ein IT-Dienstleister richtet Laptops für Firmenkundinnen ein. Ist ein Rollout freigegeben, richtet die Technik jeden
+    Laptop ein; mehrere Technikerinnen arbeiten dabei gleichzeitig. Danach entscheidet die Projektleitung, welche
+    Zusatzsoftware nötig ist: CAD-Software, Buchhaltungssoftware, oder beides. Ist die nötige Software installiert, liefert
+    die Technik die Geräte aus. Dauert die Auslieferung länger als 1 Tag, informiert die Projektleitung die Kundin über die
+    Verzögerung; die Auslieferung geht weiter. Danach sendet die Projektleitung das Abnahmeformular. Trifft die Abnahme ein,
+    stellt die Buchhaltung die Rechnung, und der Rollout ist abgerechnet. Trifft innerhalb von 10 Tagen keine Abnahme ein,
+    fragt die Projektleitung nach.
+  en: |-
+    An IT service provider sets up laptops for business clients. When a rollout has been approved, the technicians set up
+    every laptop; several technicians work at the same time. The project manager then decides which additional software is
+    needed: CAD software, accounting software, or both. When the required software has been installed, the technicians
+    deliver the devices. If delivery takes longer than 1 day, the project manager informs the client about the delay;
+    delivery continues. The project manager then sends the acceptance form. If the acceptance arrives, accounting issues the
+    invoice and the rollout is invoiced. If no acceptance arrives within 10 days, the project manager follows up.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: «Laptop einrichten» hat einen Schleifenmarker; laut Text laufen die Durchgänge gleichzeitig.
+  en: '"Set up laptop" has a loop marker; according to the text the instances run at the same time.'
+  fix_de: Marker für parallele Mehrfachinstanz (drei senkrechte Striche).
+  fix_en: Parallel multi-instance marker (three vertical bars).
+- points: 2
+  de: Das OR-Split wird mit einem AND-Join geschlossen; wird nur ein Pfad aktiviert, wartet der Join ewig (Deadlock).
+  en: The OR split is closed with an AND join; if only one path is activated, the join waits forever (deadlock).
+  fix_de: OR-Join verwenden.
+  fix_en: Use an OR join.
+- points: 2
+  de: Das Zeit-Randereignis «1 Tag» ist unterbrechend; laut Text läuft «Geräte ausliefern» weiter.
+  en: The timer boundary event "1 day" is interrupting; according to the text "Deliver devices" continues.
+  fix_de: Nicht unterbrechendes Zeit-Randereignis (gestrichelter Rand).
+  fix_en: Non-interrupting timer boundary event (dashed border).
+- points: 2
+  de: Nach dem ereignisbasierten Gateway folgt die Aktivität «10 Tage warten»; dort sind nur eintretende Ereignisse oder Empfangsaufgaben erlaubt.
+  en: The event-based gateway is followed by the activity "Wait 10 days"; only catching events or receive tasks are allowed there.
+  fix_de: Zeit-Zwischenereignis «10 Tage».
+  fix_en: Intermediate timer event "10 days".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

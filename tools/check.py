@@ -179,9 +179,32 @@ def main() -> int:
                 continue
             errors += check_text(f"{d.name}/{fname}", p.read_text(encoding="utf-8"))
             errors += [f"{d.name}/{e}" for e in check_model(p, lang)]
+    n_exam = 0
+    exams = ROOT.parent / "exams"
+    for f in sorted(exams.glob("*/Q1/items.yaml")):
+        errors += check_text(str(f.relative_to(exams)), f.read_text(encoding="utf-8"))
+        for it in yaml.safe_load(f.read_text(encoding="utf-8"))["items"]:
+            n_exam += 1
+            if len(it["de"]["options"]) != len(it["en"]["options"]) or not 0 <= it["key"] < len(it["de"]["options"]):
+                errors.append(f"{it['id']}: options or key inconsistent")
+    for f in sorted(exams.glob("*/Q*/v*/question.yaml")):
+        n_exam += 1
+        d, rel = f.parent, str(f.parent.relative_to(exams))
+        raw = f.read_text(encoding="utf-8")
+        meta = yaml.safe_load(raw)
+        errors += check_text(f"{rel}/question.yaml", raw)
+        parts = meta.get("rubric") or meta.get("faults") or []
+        if sum(x["points"] for x in parts) != meta.get("points"):
+            errors.append(f"{rel}: points do not add up")
+        for lang, fname in meta["solution"].items():
+            sol = d / fname
+            errors += check_text(f"{rel}/{fname}", sol.read_text(encoding="utf-8"))
+            errors += [f"{rel}/{e}" for e in check_model(sol, lang)]
+        for fname in (meta.get("model") or {}).values():
+            errors += check_text(f"{rel}/{fname}", (d / fname).read_text(encoding="utf-8"))
     for e in errors:
         print(e)
-    print(f"{len(folders)} exercises checked, {len(errors)} problems")
+    print(f"{len(folders)} exercises and {n_exam} exam items checked, {len(errors)} problems")
     return 1 if errors else 0
 
 

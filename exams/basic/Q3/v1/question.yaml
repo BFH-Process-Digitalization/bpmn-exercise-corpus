@@ -1,0 +1,53 @@
+id: EB-Q3-1
+level: basic
+question: Q3
+variant: 1
+points: 12
+time_minutes: 20
+sector: machinery
+title:
+  de: Liftmodernisierung offerieren
+  en: Quoting a lift modernisation
+text:
+  de: |-
+    Ein Hersteller von Aufzügen modernisiert bestehende Anlagen. Ist eine Anfrage für eine Modernisierung eingegangen, nimmt
+    ein Techniker den Lift vor Ort auf. Ist eine Anpassung des Schachts nötig, klärt die Konstruktion zuerst die Statik ab und
+    plant danach die Schachtanpassung. Andernfalls wählt der Verkauf ein Standardpaket. Anschliessend sendet der Verkauf die
+    Offerte und wartet, bis der Auftrag der Kundschaft eintrifft. Danach bestellt der Einkauf die Komponenten, während die
+    Montageleitung gleichzeitig die Montage terminiert. Sind beide Arbeiten erledigt, sendet der Verkauf die
+    Auftragsbestätigung. Damit ist der Auftrag bestätigt. Modellieren Sie den Ablauf. Rollen müssen nicht dargestellt werden.
+  en: |-
+    A lift manufacturer modernises existing installations. When an enquiry for a modernisation has been received, a
+    technician surveys the lift on site. If the shaft needs to be adapted, engineering first clarifies the structural
+    requirements and then plans the shaft adaptation. Otherwise sales selects a standard package. Sales then sends the quote
+    and waits until the customer's order arrives. After that purchasing orders the components while the installation manager
+    schedules the installation at the same time. When both are done, sales sends the order confirmation. The order is then
+    confirmed. Model the process. Roles do not need to be shown.
+rubric:
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: Endereignis als Ergebnis benannt
+  en: End event named as the result
+- points: 1
+  de: Alle Aktivitäten als Objekt und Verb benannt
+  en: All activities named as verb and object
+- points: 2
+  de: XOR-Split mit Frage «Schachtanpassung nötig?» und Ausgängen ja/nein
+  en: XOR split with question "Shaft adaptation needed?" and yes/no flows
+- points: 1
+  de: XOR-Merge vor dem weiteren Ablauf
+  en: XOR merge before the process continues
+- points: 2
+  de: Nachrichten-Zwischenereignis (eintretend) «Auftrag erhalten» an der richtigen Stelle
+  en: Intermediate message catch event "Order received" at the right place
+- points: 2
+  de: AND-Split und AND-Join um die beiden gleichzeitigen Arbeiten
+  en: AND split and AND join around the two concurrent tasks
+- points: 2
+  de: Reihenfolge aller Schritte wie im Text
+  en: Order of all steps as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

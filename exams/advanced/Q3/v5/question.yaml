@@ -1,0 +1,52 @@
+id: EA-Q3-5
+level: advanced
+question: Q3
+variant: 5
+points: 12
+time_minutes: 20
+sector: machinery
+title:
+  de: Störung an einer Werkzeugmaschine
+  en: Fault on a machine tool
+text:
+  de: |-
+    Ein Hersteller von Werkzeugmaschinen betreut die Maschinen seiner Kundschaft. Der Ablauf beginnt, wenn die
+    Störungsmeldung eines Kunden eintrifft. Der Service führt eine Fernwartung durch und sendet dem Kunden einen
+    Lösungsvorschlag mit Kosten. Danach wartet der Service: Trifft die Freigabe des Kunden ein, setzt er einen
+    Servicetechniker vor Ort ein und sendet danach den Servicebericht. Damit ist die Störung behoben. Trifft innerhalb von
+    48 Stunden keine Freigabe ein, schliesst der Service die Meldung. Modellieren Sie den Ablauf des Herstellers als eigenen
+    Pool; der Kunde ist ein zugeklappter Pool. Benennen Sie alle Nachrichtenflüsse.
+  en: |-
+    A machine tool manufacturer services its customers' machines. The process starts when a customer's fault report
+    arrives. Service carries out remote maintenance and sends the customer a proposed solution with costs. Service then
+    waits: if the customer's approval arrives, it sends a service technician on site and then sends the service report. The
+    fault is then fixed. If no approval arrives within 48 hours, service closes the report. Model the manufacturer's process
+    as its own pool; the customer is a collapsed pool. Name all message flows.
+rubric:
+- points: 2
+  de: Eigener Pool «Werkzeugmaschinenhersteller» und zugeklappter Pool «Kunde»
+  en: Own pool "Machine tool manufacturer" and collapsed pool "Customer"
+- points: 1
+  de: Nachrichten-Startereignis «Störungsmeldung erhalten»
+  en: Message start event "Fault report received"
+- points: 3
+  de: 'Vier Nachrichtenflüsse mit Richtung und Namen: «Störungsmeldung», «Lösungsvorschlag», «Freigabe», «Servicebericht»'
+  en: 'Four message flows with direction and name: "Fault report", "Proposed solution", "Approval", "Service report"'
+- points: 1
+  de: Nachrichtenflüsse nur zwischen den Pools, Sequenzflüsse nur im eigenen Pool
+  en: Message flows only between the pools, sequence flows only inside the own pool
+- points: 2
+  de: Ereignisbasiertes Gateway mit den beiden eintretenden Ereignissen
+  en: Event-based gateway followed by the two catching events
+- points: 1
+  de: Zeit-Zwischenereignis «48 Stunden»
+  en: Intermediate timer event "48 hours"
+- points: 1
+  de: Zwei Endereignisse mit den beiden Ergebnissen
+  en: Two end events with the two results
+- points: 1
+  de: Aktivitäten als Objekt und Verb benannt, Reihenfolge wie im Text
+  en: Activities named as verb and object, order as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

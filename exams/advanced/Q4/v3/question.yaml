@@ -1,0 +1,52 @@
+id: EA-Q4-3
+level: advanced
+question: Q4
+variant: 3
+points: 12
+time_minutes: 20
+sector: supply chain
+title:
+  de: Auftrag kommissionieren
+  en: Picking an order
+text:
+  de: |-
+    Ein Versandlager kommissioniert Bestellungen von Fachhändlern. Ist eine Bestellung freigegeben, kommissioniert das Lager
+    den Auftrag: Ein Mitarbeiter pickt die Artikel und scannt sie danach. Ist der Bestand ausreichend, ist der Auftrag
+    kommissioniert. Andernfalls liegt ein Fehlbestand vor, und die Kommissionierung bricht ab; die Disposition veranlasst
+    dann eine Teillieferung. Dauert die Kommissionierung länger als 4 Stunden, informiert der Kundendienst den Händler über
+    die Verzögerung; die Kommissionierung läuft dabei weiter. Nach erfolgreicher Kommissionierung verpackt das Lager die
+    Sendung. Modellieren Sie die Kommissionierung als aufgeklappten Teilprozess.
+  en: |-
+    A distribution warehouse picks orders from specialist retailers. When an order has been released, the warehouse picks
+    the order: an employee picks the items and then scans them. If the stock is sufficient, the order is picked. Otherwise
+    there is a stock shortage and picking is aborted; dispatch then arranges a partial delivery. If picking takes longer
+    than 4 hours, customer service informs the retailer about the delay; picking continues. After successful picking, the
+    warehouse packs the shipment. Model the picking as an expanded subprocess.
+rubric:
+- points: 2
+  de: Aufgeklappter Teilprozess «Auftrag kommissionieren» mit Start, «Artikel picken», «Artikel scannen» und Ende
+  en: Expanded subprocess "Pick order" with start, "Pick items", "Scan items" and end
+- points: 1
+  de: XOR-Split mit Frage «Bestand ausreichend?» und Ausgängen ja/nein
+  en: XOR split with question "Stock sufficient?" and yes/no flows
+- points: 2
+  de: Fehler-Endereignis «Fehlbestand» im Teilprozess
+  en: Error end event "Stock shortage" inside the subprocess
+- points: 2
+  de: Fehler-Randereignis am Rand des Teilprozesses mit demselben Fehler
+  en: Error boundary event on the subprocess border catching the same error
+- points: 1
+  de: Fehlerbehandlung «Teillieferung veranlassen» mit eigenem Endereignis
+  en: Error handling "Arrange partial delivery" with its own end event
+- points: 2
+  de: Nicht unterbrechendes Zeit-Randereignis «4 Stunden» (gestrichelt)
+  en: Non-interrupting timer boundary event "4 hours" (dashed)
+- points: 1
+  de: Paralleler Pfad «Händler über Verzögerung informieren» mit eigenem Endereignis
+  en: Parallel path "Inform retailer about delay" with its own end event
+- points: 1
+  de: 'Normaler Ablauf nach dem Teilprozess: «Sendung verpacken»'
+  en: 'Normal flow after the subprocess: "Pack shipment"'
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

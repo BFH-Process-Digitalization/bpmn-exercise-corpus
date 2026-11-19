@@ -1,0 +1,53 @@
+id: EA-Q4-4
+level: advanced
+question: Q4
+variant: 4
+points: 12
+time_minutes: 20
+sector: services
+title:
+  de: Datenmigration
+  en: Data migration
+text:
+  de: |-
+    Ein IT-Dienstleister migriert die Daten von Kundinnen auf ein neues System. Ist die Migration freigegeben, führt das
+    Projektteam die Migration durch: Es exportiert die Daten aus dem Altsystem und importiert sie danach in das neue System.
+    Ist der Abgleich erfolgreich, ist die Migration durchgeführt. Andernfalls ist die Migration fehlgeschlagen und bricht
+    ab; das Team reaktiviert dann das Altsystem. Dauert die Migration länger als 8 Stunden, informiert die Projektleitung die
+    Kundin über den Zwischenstand; die Migration läuft dabei weiter. Nach erfolgreicher Migration gibt das Team das neue
+    System frei. Modellieren Sie die Migration als aufgeklappten Teilprozess.
+  en: |-
+    An IT service provider migrates clients' data to a new system. When the migration has been approved, the project team
+    carries out the migration: it exports the data from the legacy system and then imports it into the new system. If the
+    reconciliation is successful, the migration is completed. Otherwise the migration has failed and is aborted; the team
+    then reactivates the legacy system. If the migration takes longer than 8 hours, the project manager informs the client
+    about the progress; the migration continues. After a successful migration, the team releases the new system. Model the
+    migration as an expanded subprocess.
+rubric:
+- points: 2
+  de: Aufgeklappter Teilprozess «Migration durchführen» mit Start, «Daten exportieren», «Daten importieren» und Ende
+  en: Expanded subprocess "Carry out migration" with start, "Export data", "Import data" and end
+- points: 1
+  de: XOR-Split mit Frage «Abgleich erfolgreich?» und Ausgängen ja/nein
+  en: XOR split with question "Reconciliation successful?" and yes/no flows
+- points: 2
+  de: Fehler-Endereignis «Migration fehlgeschlagen» im Teilprozess
+  en: Error end event "Migration failed" inside the subprocess
+- points: 2
+  de: Fehler-Randereignis am Rand des Teilprozesses mit demselben Fehler
+  en: Error boundary event on the subprocess border catching the same error
+- points: 1
+  de: Fehlerbehandlung «Altsystem reaktivieren» mit eigenem Endereignis
+  en: Error handling "Reactivate legacy system" with its own end event
+- points: 2
+  de: Nicht unterbrechendes Zeit-Randereignis «8 Stunden» (gestrichelt)
+  en: Non-interrupting timer boundary event "8 hours" (dashed)
+- points: 1
+  de: Paralleler Pfad «Kundin über Zwischenstand informieren» mit eigenem Endereignis
+  en: Parallel path "Inform client about progress" with its own end event
+- points: 1
+  de: 'Normaler Ablauf nach dem Teilprozess: «Neues System freigeben»'
+  en: 'Normal flow after the subprocess: "Release new system"'
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

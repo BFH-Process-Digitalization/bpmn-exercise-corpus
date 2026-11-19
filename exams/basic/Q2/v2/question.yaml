@@ -1,0 +1,55 @@
+id: EB-Q2-2
+level: basic
+question: Q2
+variant: 2
+points: 8
+time_minutes: 12
+sector: health
+title:
+  de: Pflegeauftrag planen
+  en: Planning a home care order
+text:
+  de: |-
+    Eine Organisation für Pflege zu Hause erhält ärztliche Verordnungen. Ist eine Verordnung eingegangen, erfasst die
+    Disposition sie, und eine Pflegefachfrau klärt danach den Pflegebedarf ab. Ist eine Wundversorgung nötig, bestellt sie
+    Wundmaterial; andernfalls stellt sie Standardmaterial bereit. Anschliessend erstellt die Disposition den Einsatzplan,
+    während die Administration gleichzeitig die Kostengutsprache bei der Krankenkasse beantragt. Sind beide Arbeiten
+    erledigt, informiert die Disposition die Klientin. Damit ist die Pflege geplant.
+  en: |-
+    A home care organisation receives medical prescriptions. When a prescription has been received, dispatch records it and
+    a nurse then assesses the care needs. If wound care is needed, she orders wound care supplies; otherwise she provides
+    standard supplies. Dispatch then creates the visit schedule while administration applies for cost approval from the
+    health insurer at the same time. When both are done, dispatch informs the client. The care is then planned.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: Aktivität «Pflegebedarf» ist als Substantiv benannt (L1).
+  en: Activity "Care needs" is named with a noun (L1).
+  fix_de: 'Als Objekt und Verb benennen: «Pflegebedarf abklären».'
+  fix_en: 'Name it as verb and object: "Assess care needs".'
+- points: 2
+  de: Das XOR-Gateway hat keine Frage und unbeschriftete Ausgänge (L4).
+  en: The XOR split has no question and unlabelled outgoing flows (L4).
+  fix_de: Frage «Wundversorgung nötig?» und Ausgänge «ja»/«nein».
+  fix_en: Question "Wound care needed?" and outgoing flows "yes"/"no".
+- points: 2
+  de: Die parallelen Pfade werden mit einem XOR-Gateway statt mit einem AND-Gateway zusammengeführt (G4).
+  en: The parallel paths are joined with an XOR gateway instead of an AND gateway (G4).
+  fix_de: AND-Join verwenden, damit beide Arbeiten abgeschlossen sind, bevor es weitergeht.
+  fix_en: Use an AND join so that both pieces of work are finished before the process continues.
+- points: 2
+  de: Nach «Klientin informieren» endet der Ablauf ohne Endereignis (G2).
+  en: After "Inform client" the process stops without an end event (G2).
+  fix_de: Endereignis «Pflege geplant» ergänzen.
+  fix_en: Add the end event "Care planned".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

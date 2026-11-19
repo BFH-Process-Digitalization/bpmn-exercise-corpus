@@ -1,0 +1,53 @@
+id: EA-Q3-2
+level: advanced
+question: Q3
+variant: 2
+points: 12
+time_minutes: 20
+sector: health
+title:
+  de: Laboranalyse für eine Arztpraxis
+  en: Laboratory analysis for a medical practice
+text:
+  de: |-
+    Ein medizinisches Labor analysiert Proben für Arztpraxen. Der Ablauf beginnt, wenn ein Laborauftrag einer Arztpraxis
+    eintrifft. Das Labor analysiert die Probe und sendet den Befund an die Praxis. Die Probe wird danach aufbewahrt: Trifft
+    ein Zusatzauftrag der Praxis ein, führt das Labor die Zusatzanalyse durch und sendet den Zusatzbefund. Damit ist der
+    Auftrag erweitert abgeschlossen. Trifft innerhalb von 7 Tagen kein Zusatzauftrag ein, entsorgt das Labor die Probe.
+    Modellieren Sie den Ablauf des Labors als eigenen Pool; die Arztpraxis ist ein zugeklappter Pool. Benennen Sie alle
+    Nachrichtenflüsse.
+  en: |-
+    A medical laboratory analyses samples for medical practices. The process starts when a laboratory order from a practice
+    arrives. The laboratory analyses the sample and sends the findings to the practice. The sample is then kept: if an
+    additional order from the practice arrives, the laboratory carries out the additional analysis and sends the additional
+    findings. The extended order is then completed. If no additional order arrives within 7 days, the laboratory disposes of
+    the sample. Model the laboratory's process as its own pool; the medical practice is a collapsed pool. Name all message
+    flows.
+rubric:
+- points: 2
+  de: Eigener Pool «Medizinisches Labor» und zugeklappter Pool «Arztpraxis»
+  en: Own pool "Medical laboratory" and collapsed pool "Medical practice"
+- points: 1
+  de: Nachrichten-Startereignis «Laborauftrag erhalten»
+  en: Message start event "Laboratory order received"
+- points: 3
+  de: 'Vier Nachrichtenflüsse mit Richtung und Namen: «Laborauftrag», «Befund», «Zusatzauftrag», «Zusatzbefund»'
+  en: 'Four message flows with direction and name: "Laboratory order", "Findings", "Additional order", "Additional findings"'
+- points: 1
+  de: Nachrichtenflüsse nur zwischen den Pools, Sequenzflüsse nur im eigenen Pool
+  en: Message flows only between the pools, sequence flows only inside the own pool
+- points: 2
+  de: Ereignisbasiertes Gateway mit den beiden eintretenden Ereignissen
+  en: Event-based gateway followed by the two catching events
+- points: 1
+  de: Zeit-Zwischenereignis «7 Tage»
+  en: Intermediate timer event "7 days"
+- points: 1
+  de: Zwei Endereignisse mit den beiden Ergebnissen
+  en: Two end events with the two results
+- points: 1
+  de: Aktivitäten als Objekt und Verb benannt, Reihenfolge wie im Text
+  en: Activities named as verb and object, order as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

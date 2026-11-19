@@ -1,0 +1,52 @@
+id: EA-Q4-2
+level: advanced
+question: Q4
+variant: 2
+points: 12
+time_minutes: 20
+sector: health
+title:
+  de: Infusion in der Spitalapotheke
+  en: Preparing an infusion in a hospital pharmacy
+text:
+  de: |-
+    Eine Spitalapotheke stellt Infusionen für die Stationen her. Ist eine Verordnung freigegeben, stellt die Apotheke die
+    Infusion her: Sie wiegt den Wirkstoff ab und prüft danach die Lösung. Ist die Lösung klar, ist die Infusion hergestellt.
+    Andernfalls ist die Lösung verunreinigt, und die Herstellung bricht ab; die Apotheke verwirft dann den Ansatz. Dauert
+    die Herstellung länger als 3 Stunden, informiert die Apotheke die Station über die Verzögerung; die Herstellung läuft
+    dabei weiter. Nach erfolgreicher Herstellung liefert der Transportdienst die Infusion aus. Modellieren Sie die
+    Herstellung als aufgeklappten Teilprozess.
+  en: |-
+    A hospital pharmacy prepares infusions for the wards. When a prescription has been approved, the pharmacy prepares the
+    infusion: it weighs the active ingredient and then checks the solution. If the solution is clear, the infusion is
+    prepared. Otherwise the solution is contaminated and preparation is aborted; the pharmacy then discards the batch. If
+    preparation takes longer than 3 hours, the pharmacy informs the ward about the delay; preparation continues. After
+    successful preparation, the transport service delivers the infusion. Model the preparation as an expanded subprocess.
+rubric:
+- points: 2
+  de: Aufgeklappter Teilprozess «Infusion herstellen» mit Start, «Wirkstoff abwiegen», «Lösung prüfen» und Ende
+  en: Expanded subprocess "Prepare infusion" with start, "Weigh active ingredient", "Check solution" and end
+- points: 1
+  de: XOR-Split mit Frage «Lösung klar?» und Ausgängen ja/nein
+  en: XOR split with question "Solution clear?" and yes/no flows
+- points: 2
+  de: Fehler-Endereignis «Lösung verunreinigt» im Teilprozess
+  en: Error end event "Solution contaminated" inside the subprocess
+- points: 2
+  de: Fehler-Randereignis am Rand des Teilprozesses mit demselben Fehler
+  en: Error boundary event on the subprocess border catching the same error
+- points: 1
+  de: Fehlerbehandlung «Ansatz verwerfen» mit eigenem Endereignis
+  en: Error handling "Discard batch" with its own end event
+- points: 2
+  de: Nicht unterbrechendes Zeit-Randereignis «3 Stunden» (gestrichelt)
+  en: Non-interrupting timer boundary event "3 hours" (dashed)
+- points: 1
+  de: Paralleler Pfad «Station über Verzögerung informieren» mit eigenem Endereignis
+  en: Parallel path "Inform ward about delay" with its own end event
+- points: 1
+  de: 'Normaler Ablauf nach dem Teilprozess: «Infusion ausliefern»'
+  en: 'Normal flow after the subprocess: "Deliver infusion"'
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

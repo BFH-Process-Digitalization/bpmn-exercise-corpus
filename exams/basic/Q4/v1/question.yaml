@@ -1,0 +1,50 @@
+id: EB-Q4-1
+level: basic
+question: Q4
+variant: 1
+points: 12
+time_minutes: 20
+sector: production
+title:
+  de: Technische Änderung
+  en: Engineering change
+text:
+  de: |-
+    Bei einem Hersteller von Messgeräten kann die Produktion Änderungen an Bauteilen anregen. Ist ein Änderungswunsch gemeldet,
+    erfasst die Produktion den Änderungsantrag. Die Konstruktion bewertet danach die Änderung und hält das Ergebnis in einer
+    Bewertung fest. Genehmigt die Konstruktion die Änderung nicht, lehnt sie den Antrag ab, und die Änderung ist abgelehnt.
+    Genehmigt sie die Änderung, passt die technische Dokumentation die Zeichnung an und gibt sie danach im Zeichnungsarchiv
+    frei. Damit ist die Änderung umgesetzt. Modellieren Sie den Ablauf im Pool «Gerätehersteller» mit einer Lane pro Rolle.
+    Stellen Sie die Bewertung als Datenobjekt mit Zustand und das Zeichnungsarchiv als Datenspeicher dar.
+  en: |-
+    At a manufacturer of measuring instruments, production can propose changes to components. When a change request has been
+    reported, production records the change request. Engineering then assesses the change and records the result in an
+    assessment. If engineering does not approve the change, it rejects the request and the change is rejected. If it approves
+    the change, technical documentation updates the drawing and then releases it in the drawing archive. The change is then
+    implemented. Model the process in the pool "Instrument manufacturer" with one lane per role. Show the assessment as a
+    data object with a state and the drawing archive as a data store.
+rubric:
+- points: 2
+  de: Pool «Gerätehersteller» mit den drei Lanes «Produktion», «Konstruktion», «Technische Dokumentation»
+  en: Pool "Instrument manufacturer" with the three lanes "Production", "Engineering", "Technical documentation"
+- points: 3
+  de: Jede Aktivität in der Lane der zuständigen Rolle
+  en: Every activity in the lane of the responsible role
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: XOR-Split mit Frage «Änderung genehmigt?» und Ausgängen ja/nein
+  en: XOR split with question "Change approved?" and yes/no flows
+- points: 1
+  de: Zwei Endereignisse für die zwei Ergebnisse
+  en: Two end events for the two results
+- points: 2
+  de: Datenobjekt «Bewertung» mit Zustand [erstellt], ausgehende Assoziation von «Änderung bewerten»
+  en: Data object "Assessment" with state [created], output association from "Assess change"
+- points: 2
+  de: Datenspeicher «Zeichnungsarchiv» mit Assoziation von «Zeichnung freigeben»
+  en: Data store "Drawing archive" with association from "Release drawing"
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

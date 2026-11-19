@@ -1,0 +1,55 @@
+id: EB-Q3-3
+level: basic
+question: Q3
+variant: 3
+points: 12
+time_minutes: 20
+sector: supply chain
+title:
+  de: Importcontainer verzollen
+  en: Clearing an import container
+text:
+  de: |-
+    Ein Speditionsunternehmen organisiert die Verzollung von Importcontainern. Ist ein Container angekommen, prüft die
+    Zollabteilung die Frachtpapiere. Ordnet der Zoll eine Beschau an, bringt die Disposition den Container zur Beschau, und
+    die Zollabteilung begleitet danach die Beschau. Andernfalls schliesst die Zollabteilung die Zollanmeldung direkt ab.
+    Anschliessend bezahlt die Buchhaltung die Zollabgaben, und die Zollabteilung wartet, bis die Freigabe des Zolls eintrifft.
+    Danach disponiert die Disposition einen Lastwagen, während der Kundendienst gleichzeitig den Empfänger avisiert. Sind
+    beide Arbeiten erledigt, liefert der Fahrer den Container aus. Damit ist der Container zugestellt. Modellieren Sie den
+    Ablauf. Rollen müssen nicht dargestellt werden.
+  en: |-
+    A freight forwarder organises customs clearance for import containers. When a container has arrived, the customs
+    department checks the shipping documents. If customs orders an inspection, dispatch brings the container to the
+    inspection and the customs department then attends the inspection. Otherwise the customs department completes the customs
+    declaration directly. Accounting then pays the customs duties and the customs department waits until the release from
+    customs arrives. After that dispatch schedules a truck while customer service notifies the consignee at the same time.
+    When both are done, the driver delivers the container. The container is then delivered. Model the process. Roles do not
+    need to be shown.
+rubric:
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: Endereignis als Ergebnis benannt
+  en: End event named as the result
+- points: 1
+  de: Alle Aktivitäten als Objekt und Verb benannt
+  en: All activities named as verb and object
+- points: 2
+  de: XOR-Split mit Frage «Beschau angeordnet?» und Ausgängen ja/nein
+  en: XOR split with question "Inspection ordered?" and yes/no flows
+- points: 1
+  de: XOR-Merge vor dem weiteren Ablauf
+  en: XOR merge before the process continues
+- points: 2
+  de: Nachrichten-Zwischenereignis (eintretend) «Zollfreigabe erhalten» an der richtigen Stelle
+  en: Intermediate message catch event "Customs release received" at the right place
+- points: 2
+  de: AND-Split und AND-Join um die beiden gleichzeitigen Arbeiten
+  en: AND split and AND join around the two concurrent tasks
+- points: 2
+  de: Reihenfolge aller Schritte wie im Text
+  en: Order of all steps as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

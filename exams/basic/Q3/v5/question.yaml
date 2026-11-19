@@ -1,0 +1,53 @@
+id: EB-Q3-5
+level: basic
+question: Q3
+variant: 5
+points: 12
+time_minutes: 20
+sector: health
+title:
+  de: Untersuchung in der Radiologie
+  en: Radiology examination
+text:
+  de: |-
+    Eine radiologische Praxis erhält Zuweisungen von Hausärztinnen. Ist eine Zuweisung eingegangen, prüft das Sekretariat
+    sie. Ist ein Kontrastmittel nötig, fordert das Sekretariat die Nierenwerte bei der Hausärztin an und sendet danach den
+    Aufklärungsbogen an die Patientin. Andernfalls sendet es ein Merkblatt. Anschliessend vereinbart das Sekretariat den
+    Termin. Einen Tag vor dem Termin erinnert das Sekretariat die Patientin, während die Fachperson Radiologie gleichzeitig
+    den Untersuchungsraum vorbereitet. Sind beide Arbeiten erledigt, führt die Fachperson Radiologie die Untersuchung durch.
+    Damit ist die Untersuchung durchgeführt. Modellieren Sie den Ablauf. Rollen müssen nicht dargestellt werden.
+  en: |-
+    A radiology practice receives referrals from general practitioners. When a referral has been received, the front office
+    checks it. If a contrast agent is needed, the front office requests the kidney values from the general practitioner and
+    then sends the consent form to the patient. Otherwise it sends an information sheet. The front office then arranges the
+    appointment. One day before the appointment, the front office reminds the patient while the radiographer prepares the
+    examination room at the same time. When both are done, the radiographer carries out the examination. The examination is
+    then completed. Model the process. Roles do not need to be shown.
+rubric:
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: Endereignis als Ergebnis benannt
+  en: End event named as the result
+- points: 1
+  de: Alle Aktivitäten als Objekt und Verb benannt
+  en: All activities named as verb and object
+- points: 2
+  de: XOR-Split mit Frage «Kontrastmittel nötig?» und Ausgängen ja/nein
+  en: XOR split with question "Contrast agent needed?" and yes/no flows
+- points: 1
+  de: XOR-Merge vor dem weiteren Ablauf
+  en: XOR merge before the process continues
+- points: 2
+  de: Zwischenereignis (Zeit) «1 Tag vor dem Termin» an der richtigen Stelle
+  en: Intermediate timer event "1 day before the appointment" at the right place
+- points: 2
+  de: AND-Split und AND-Join um die beiden gleichzeitigen Arbeiten
+  en: AND split and AND join around the two concurrent tasks
+- points: 2
+  de: Reihenfolge aller Schritte wie im Text
+  en: Order of all steps as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

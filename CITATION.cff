@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this corpus, please cite it as below."
-title: "Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises with sample solutions and an entry assessment (German and English)"
+title: "Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises, entry assessment and exams with sample solutions (German and English)"
 type: dataset
 authors:
   - family-names: Maier
@@ -9,10 +9,10 @@ authors:
   - family-names: Tekle Hailu
     given-names: Selamawit
     affiliation: Bern University of Applied Sciences (BFH)
-version: 1.0.0
-doi: 10.5281/zenodo.24341448
+version: 1.1.0
+doi: 10.5281/zenodo.24315289
 repository-code: "https://github.com/BFH-Process-Digitalization/bpmn-exercise-corpus"
-date-released: 2026-11-18
+date-released: 2026-11-19
 license: CC-BY-4.0
 keywords:
   - BPMN
@@ -21,3 +21,4 @@ keywords:
   - exercises
   - sample solutions
   - assessment
+  - exams

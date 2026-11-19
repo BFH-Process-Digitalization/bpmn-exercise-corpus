@@ -1,0 +1,50 @@
+id: EB-Q4-3
+level: basic
+question: Q4
+variant: 3
+points: 12
+time_minutes: 20
+sector: services
+title:
+  de: Neues Mandat im Treuhandbüro
+  en: New client at an accounting firm
+text:
+  de: |-
+    Ein Treuhandbüro übernimmt die Buchhaltung von kleinen Unternehmen. Ist eine Mandatsanfrage eingegangen, fordert das
+    Sekretariat die Unterlagen an. Die Mandatsleitung prüft danach die Identität der Kundschaft und hält das Ergebnis in einem
+    Prüfprotokoll fest. Nimmt die Mandatsleitung das Mandat nicht an, verfasst sie eine Absage, und das Mandat ist abgelehnt.
+    Andernfalls eröffnet die Buchhaltung ein Kundenkonto und richtet danach den Kontenplan im Buchhaltungssystem ein. Damit
+    ist das Mandat eröffnet. Modellieren Sie den Ablauf im Pool «Treuhandbüro» mit einer Lane pro Rolle. Stellen Sie das
+    Prüfprotokoll als Datenobjekt mit Zustand und das Buchhaltungssystem als Datenspeicher dar.
+  en: |-
+    An accounting firm keeps the books of small companies. When a client enquiry has been received, the office requests the
+    documents. The client manager then verifies the client's identity and records the result in a verification record. If
+    the client manager does not accept the engagement, she writes a rejection and the engagement is declined. Otherwise
+    accounting opens a client account and then sets up the chart of accounts in the accounting system. The engagement is
+    then opened. Model the process in the pool "Accounting firm" with one lane per role. Show the verification record as a
+    data object with a state and the accounting system as a data store.
+rubric:
+- points: 2
+  de: Pool «Treuhandbüro» mit den drei Lanes «Sekretariat», «Mandatsleitung», «Buchhaltung»
+  en: Pool "Accounting firm" with the three lanes "Office", "Client manager", "Accounting"
+- points: 3
+  de: Jede Aktivität in der Lane der zuständigen Rolle
+  en: Every activity in the lane of the responsible role
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: XOR-Split mit Frage «Mandat annehmen?» und Ausgängen ja/nein
+  en: XOR split with question "Accept engagement?" and yes/no flows
+- points: 1
+  de: Zwei Endereignisse für die zwei Ergebnisse
+  en: Two end events for the two results
+- points: 2
+  de: Datenobjekt «Prüfprotokoll» mit Zustand [abgeschlossen], ausgehende Assoziation von «Identität prüfen»
+  en: Data object "Verification record" with state [completed], output association from "Verify identity"
+- points: 2
+  de: Datenspeicher «Buchhaltungssystem» mit Assoziation von «Kontenplan einrichten»
+  en: Data store "Accounting system" with association from "Set up chart of accounts"
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

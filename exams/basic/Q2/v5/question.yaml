@@ -1,0 +1,56 @@
+id: EB-Q2-5
+level: basic
+question: Q2
+variant: 5
+points: 8
+time_minutes: 12
+sector: public administration
+title:
+  de: Anwohnerparkkarte
+  en: Resident parking permit
+text:
+  de: |-
+    Eine Gemeinde stellt Parkkarten für die blaue Zone aus. Ist ein Gesuch eingegangen, erfasst die Einwohnerkontrolle es
+    und prüft danach den Wohnsitz. Wohnt die gesuchstellende Person in der Zone, stellt die Einwohnerkontrolle eine
+    Anwohnerkarte aus; andernfalls bietet sie eine Tageskarte an. Danach stellt die Finanzverwaltung die Gebühr in Rechnung,
+    während die Gemeindepolizei gleichzeitig ihre Kontrollliste aktualisiert. Sind beide Arbeiten erledigt, versendet die
+    Einwohnerkontrolle den Entscheid. Damit ist das Gesuch erledigt.
+  en: |-
+    A municipality issues parking permits for its short-stay parking zone. When an application has been received, the
+    residents' office records it and then checks the applicant's residence. If the applicant lives in the zone, the
+    residents' office issues a resident permit; otherwise it offers a day permit. The finance department then invoices the
+    fee while the municipal police update their enforcement list at the same time. When both are done, the residents'
+    office sends the decision. The application is then settled.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: Aktivität «Wohnsitzprüfung» ist als Substantiv benannt (L1).
+  en: Activity "Residence check" is named with a noun (L1).
+  fix_de: 'Als Objekt und Verb benennen: «Wohnsitz prüfen».'
+  fix_en: 'Name it as verb and object: "Check residence".'
+- points: 2
+  de: Das XOR-Gateway hat keine Frage und unbeschriftete Ausgänge (L4).
+  en: The XOR split has no question and unlabelled outgoing flows (L4).
+  fix_de: Frage «Wohnsitz in der Zone?» und Ausgänge «ja»/«nein».
+  fix_en: Question "Resident in the zone?" and outgoing flows "yes"/"no".
+- points: 2
+  de: Die parallelen Pfade werden mit einem XOR-Gateway statt mit einem AND-Gateway zusammengeführt (G4).
+  en: The parallel paths are joined with an XOR gateway instead of an AND gateway (G4).
+  fix_de: AND-Join verwenden, damit beide Arbeiten abgeschlossen sind, bevor es weitergeht.
+  fix_en: Use an AND join so that both pieces of work are finished before the process continues.
+- points: 2
+  de: Nach «Entscheid versenden» endet der Ablauf ohne Endereignis (G2).
+  en: After "Send decision" the process stops without an end event (G2).
+  fix_de: Endereignis «Gesuch erledigt» ergänzen.
+  fix_en: Add the end event "Application settled".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

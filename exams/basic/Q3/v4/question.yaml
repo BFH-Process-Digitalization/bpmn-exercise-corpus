@@ -1,0 +1,52 @@
+id: EB-Q3-4
+level: basic
+question: Q3
+variant: 4
+points: 12
+time_minutes: 20
+sector: services
+title:
+  de: Gruppenbuchung im Hotel
+  en: Hotel group booking
+text:
+  de: |-
+    Ein Hotel nimmt Buchungen von Reisegruppen an. Ist eine Gruppenanfrage eingegangen, prüft die Reservation die
+    Verfügbarkeit. Reisen mehr als 20 Personen an, berechnet die Reservation einen Gruppenrabatt und lässt ihn danach von der
+    Direktion freigeben. Andernfalls wendet sie den Normaltarif an. Anschliessend sendet die Reservation das Angebot. Sieben
+    Tage vor der Anreise fordert die Reservation die Zimmerliste an, während die Hauswirtschaft gleichzeitig das
+    Reinigungsteam einplant. Sind beide Arbeiten erledigt, teilt die Reservation die Zimmer zu. Damit ist die Gruppe
+    vorbereitet. Modellieren Sie den Ablauf. Rollen müssen nicht dargestellt werden.
+  en: |-
+    A hotel accepts bookings from tour groups. When a group enquiry has been received, reservations checks availability. If
+    more than 20 guests are travelling, reservations calculates a group discount and then has it approved by the management.
+    Otherwise it applies the standard rate. Reservations then sends the offer. Seven days before arrival, reservations
+    requests the rooming list while housekeeping schedules the cleaning team at the same time. When both are done,
+    reservations assigns the rooms. The group is then prepared. Model the process. Roles do not need to be shown.
+rubric:
+- points: 1
+  de: Startereignis als Zustand benannt
+  en: Start event named as a state
+- points: 1
+  de: Endereignis als Ergebnis benannt
+  en: End event named as the result
+- points: 1
+  de: Alle Aktivitäten als Objekt und Verb benannt
+  en: All activities named as verb and object
+- points: 2
+  de: XOR-Split mit Frage «Mehr als 20 Personen?» und Ausgängen ja/nein
+  en: XOR split with question "More than 20 guests?" and yes/no flows
+- points: 1
+  de: XOR-Merge vor dem weiteren Ablauf
+  en: XOR merge before the process continues
+- points: 2
+  de: Zwischenereignis (Zeit) «7 Tage vor Anreise» an der richtigen Stelle
+  en: Intermediate timer event "7 days before arrival" at the right place
+- points: 2
+  de: AND-Split und AND-Join um die beiden gleichzeitigen Arbeiten
+  en: AND split and AND join around the two concurrent tasks
+- points: 2
+  de: Reihenfolge aller Schritte wie im Text
+  en: Order of all steps as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

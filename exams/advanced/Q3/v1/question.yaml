@@ -1,0 +1,53 @@
+id: EA-Q3-1
+level: advanced
+question: Q3
+variant: 1
+points: 12
+time_minutes: 20
+sector: services
+title:
+  de: Fachübersetzung
+  en: Specialist translation
+text:
+  de: |-
+    Ein Übersetzungsbüro übersetzt technische Dokumentationen. Der Ablauf beginnt, wenn der Auftrag einer Kundin eintrifft.
+    Ein Übersetzer übersetzt den Text, und das Büro sendet die Übersetzung der Kundin zur Prüfung. Danach wartet das Büro:
+    Treffen Korrekturen der Kundin ein, arbeitet der Übersetzer die Korrekturen ein, und das Büro sendet ihr die Endfassung.
+    Damit ist der Auftrag abgeschlossen. Treffen innerhalb von 5 Arbeitstagen keine Korrekturen ein, verbucht das Büro die
+    Übersetzung als abgenommen. Modellieren Sie den Ablauf des Übersetzungsbüros als eigenen Pool; die Kundin ist ein
+    zugeklappter Pool. Benennen Sie alle Nachrichtenflüsse.
+  en: |-
+    A translation agency translates technical documentation. The process starts when a client's order arrives. A
+    translator translates the text and the agency sends the translation to the client for review. The agency then waits:
+    if the client's corrections arrive, the translator incorporates the corrections and the agency sends her the final
+    version. The order is then completed. If no corrections arrive within 5 working days, the agency records the translation
+    as accepted. Model the translation agency's process as its own pool; the client is a collapsed pool. Name all message
+    flows.
+rubric:
+- points: 2
+  de: Eigener Pool «Übersetzungsbüro» und zugeklappter Pool «Kundin»
+  en: Own pool "Translation agency" and collapsed pool "Client"
+- points: 1
+  de: Nachrichten-Startereignis «Auftrag erhalten»
+  en: Message start event "Order received"
+- points: 3
+  de: 'Vier Nachrichtenflüsse mit Richtung und Namen: «Auftrag», «Übersetzung», «Korrekturen», «Endfassung»'
+  en: 'Four message flows with direction and name: "Order", "Translation", "Corrections", "Final version"'
+- points: 1
+  de: Nachrichtenflüsse nur zwischen den Pools, Sequenzflüsse nur im eigenen Pool
+  en: Message flows only between the pools, sequence flows only inside the own pool
+- points: 2
+  de: Ereignisbasiertes Gateway mit den beiden eintretenden Ereignissen
+  en: Event-based gateway followed by the two catching events
+- points: 1
+  de: Zeit-Zwischenereignis «5 Arbeitstage»
+  en: Intermediate timer event "5 working days"
+- points: 1
+  de: Zwei Endereignisse mit den beiden Ergebnissen
+  en: Two end events with the two results
+- points: 1
+  de: Aktivitäten als Objekt und Verb benannt, Reihenfolge wie im Text
+  en: Activities named as verb and object, order as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

@@ -1,0 +1,59 @@
+id: EA-Q2-2
+level: advanced
+question: Q2
+variant: 2
+points: 8
+time_minutes: 12
+sector: public administration
+title:
+  de: Beschaffung von Schulmobiliar
+  en: Procuring school furniture
+text:
+  de: |-
+    Eine Gemeinde beschafft neues Mobiliar für ihre Schulen. Sind die Angebote eingegangen, prüft die Beschaffungsstelle
+    jedes Angebot; die Angebote werden gleichzeitig von verschiedenen Personen geprüft. Danach entscheidet die
+    Beschaffungsstelle, welche Abklärungen nötig sind: Sie holt Referenzen ein, sie prüft Muster, oder beides. Sind alle
+    nötigen Abklärungen erledigt, erstellt sie den Vergabeantrag. Dauert das Erstellen länger als 3 Tage, informiert sie die
+    Schulleitung über die Verzögerung; die Arbeit am Antrag geht weiter. Danach sendet die Beschaffungsstelle den
+    Vergabeantrag an den Gemeinderat. Trifft der Entscheid ein, erteilt sie den Zuschlag. Trifft innerhalb von 14 Tagen kein
+    Entscheid ein, mahnt sie den Entscheid an.
+  en: |-
+    A municipality procures new furniture for its schools. When the bids have been received, the procurement office reviews
+    every bid; the bids are reviewed by different people at the same time. The procurement office then decides which
+    clarifications are needed: it obtains references, it inspects samples, or both. When all required clarifications are
+    done, it prepares the award proposal. If preparing it takes longer than 3 days, it informs the school management about
+    the delay; work on the proposal continues. The procurement office then sends the award proposal to the municipal
+    council. If the decision arrives, it awards the contract. If no decision arrives within 14 days, it sends a reminder.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: «Angebot prüfen» hat einen Schleifenmarker; laut Text laufen die Durchgänge gleichzeitig.
+  en: '"Review bid" has a loop marker; according to the text the instances run at the same time.'
+  fix_de: Marker für parallele Mehrfachinstanz (drei senkrechte Striche).
+  fix_en: Parallel multi-instance marker (three vertical bars).
+- points: 2
+  de: Das OR-Split wird mit einem AND-Join geschlossen; wird nur ein Pfad aktiviert, wartet der Join ewig (Deadlock).
+  en: The OR split is closed with an AND join; if only one path is activated, the join waits forever (deadlock).
+  fix_de: OR-Join verwenden.
+  fix_en: Use an OR join.
+- points: 2
+  de: Das Zeit-Randereignis «3 Tage» ist unterbrechend; laut Text läuft «Vergabeantrag erstellen» weiter.
+  en: The timer boundary event "3 days" is interrupting; according to the text "Prepare award proposal" continues.
+  fix_de: Nicht unterbrechendes Zeit-Randereignis (gestrichelter Rand).
+  fix_en: Non-interrupting timer boundary event (dashed border).
+- points: 2
+  de: Nach dem ereignisbasierten Gateway folgt die Aktivität «14 Tage warten»; dort sind nur eintretende Ereignisse oder Empfangsaufgaben erlaubt.
+  en: The event-based gateway is followed by the activity "Wait 14 days"; only catching events or receive tasks are allowed there.
+  fix_de: Zeit-Zwischenereignis «14 Tage».
+  fix_en: Intermediate timer event "14 days".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

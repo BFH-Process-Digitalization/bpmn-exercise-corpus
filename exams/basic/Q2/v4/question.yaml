@@ -1,0 +1,55 @@
+id: EB-Q2-4
+level: basic
+question: Q2
+variant: 4
+points: 8
+time_minutes: 12
+sector: supply chain
+title:
+  de: Retoure im Onlinehandel
+  en: Handling an online return
+text:
+  de: |-
+    Das Logistikzentrum eines Onlinehändlers bearbeitet Rücksendungen. Ist eine Retoure eingetroffen, öffnet ein
+    Mitarbeiter das Paket und prüft danach den Artikel. Ist der Artikel wiederverkaufbar, lagert er ihn wieder ein;
+    andernfalls entsorgt er ihn. Danach löst der Kundendienst die Gutschrift aus, während die Lagerverwaltung gleichzeitig
+    den Bestand aktualisiert. Sind beide Arbeiten erledigt, benachrichtigt der Kundendienst die Kundin. Damit ist die
+    Retoure abgeschlossen.
+  en: |-
+    The logistics centre of an online retailer handles returns. When a return has arrived, an employee opens the parcel and
+    then inspects the item. If the item can be resold, he restocks it; otherwise he disposes of it. Customer service then
+    issues the credit note while inventory control updates the stock at the same time. When both are done, customer service
+    notifies the customer. The return is then completed.
+task:
+  de: Das Modell enthält genau vier Fehler gegenüber dem Text und den Modellierungsregeln. Markieren Sie jeden Fehler, benennen Sie ihn und korrigieren Sie ihn.
+  en: The model contains exactly four errors with respect to the text and the modelling rules. Mark each error, name it and correct it.
+model:
+  de: model.de.bpmn
+  en: model.en.bpmn
+faults:
+- points: 2
+  de: Aktivität «Artikelprüfung» ist als Substantiv benannt (L1).
+  en: Activity "Item inspection" is named with a noun (L1).
+  fix_de: 'Als Objekt und Verb benennen: «Artikel prüfen».'
+  fix_en: 'Name it as verb and object: "Inspect item".'
+- points: 2
+  de: Das XOR-Gateway hat keine Frage und unbeschriftete Ausgänge (L4).
+  en: The XOR split has no question and unlabelled outgoing flows (L4).
+  fix_de: Frage «Artikel wiederverkaufbar?» und Ausgänge «ja»/«nein».
+  fix_en: Question "Item resellable?" and outgoing flows "yes"/"no".
+- points: 2
+  de: Die parallelen Pfade werden mit einem XOR-Gateway statt mit einem AND-Gateway zusammengeführt (G4).
+  en: The parallel paths are joined with an XOR gateway instead of an AND gateway (G4).
+  fix_de: AND-Join verwenden, damit beide Arbeiten abgeschlossen sind, bevor es weitergeht.
+  fix_en: Use an AND join so that both pieces of work are finished before the process continues.
+- points: 2
+  de: Nach «Kundin benachrichtigen» endet der Ablauf ohne Endereignis (G2).
+  en: After "Notify customer" the process stops without an end event (G2).
+  fix_de: Endereignis «Retoure abgeschlossen» ergänzen.
+  fix_en: Add the end event "Return completed".
+scoring:
+  de: Pro Fehler 1 Punkt für das Erkennen und Benennen, 1 Punkt für die richtige Korrektur.
+  en: Per error 1 point for finding and naming it, 1 point for the correct fix.
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn

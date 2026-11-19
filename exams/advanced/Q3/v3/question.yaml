@@ -1,0 +1,52 @@
+id: EA-Q3-3
+level: advanced
+question: Q3
+variant: 3
+points: 12
+time_minutes: 20
+sector: supply chain
+title:
+  de: Abholung bei einem Verlader
+  en: Pick-up from a shipper
+text:
+  de: |-
+    Ein Speditionsunternehmen holt Ware bei Industriebetrieben ab. Der Ablauf beginnt, wenn der Transportauftrag eines
+    Verladers eintrifft. Die Disposition reserviert Laderaum und schlägt dem Verlader einen Abholtermin vor. Danach wartet
+    sie: Trifft die Terminbestätigung des Verladers ein, disponiert sie einen Fahrer und sendet dem Verlader die
+    Abholbestätigung. Damit ist die Abholung geplant. Trifft innerhalb von 24 Stunden keine Bestätigung ein, gibt die
+    Disposition den reservierten Laderaum wieder frei. Modellieren Sie den Ablauf der Spedition als eigenen Pool; der
+    Verlader ist ein zugeklappter Pool. Benennen Sie alle Nachrichtenflüsse.
+  en: |-
+    A freight forwarder picks up goods from industrial companies. The process starts when a shipper's transport order
+    arrives. Dispatch reserves cargo space and proposes a pick-up date to the shipper. It then waits: if the shipper's date
+    confirmation arrives, dispatch assigns a driver and sends the pick-up confirmation to the shipper. The pick-up is then
+    planned. If no confirmation arrives within 24 hours, dispatch releases the reserved cargo space again. Model the freight
+    forwarder's process as its own pool; the shipper is a collapsed pool. Name all message flows.
+rubric:
+- points: 2
+  de: Eigener Pool «Spedition» und zugeklappter Pool «Verlader»
+  en: Own pool "Freight forwarder" and collapsed pool "Shipper"
+- points: 1
+  de: Nachrichten-Startereignis «Transportauftrag erhalten»
+  en: Message start event "Transport order received"
+- points: 3
+  de: 'Vier Nachrichtenflüsse mit Richtung und Namen: «Transportauftrag», «Terminvorschlag», «Terminbestätigung», «Abholbestätigung»'
+  en: 'Four message flows with direction and name: "Transport order", "Proposed date", "Date confirmation", "Pick-up confirmation"'
+- points: 1
+  de: Nachrichtenflüsse nur zwischen den Pools, Sequenzflüsse nur im eigenen Pool
+  en: Message flows only between the pools, sequence flows only inside the own pool
+- points: 2
+  de: Ereignisbasiertes Gateway mit den beiden eintretenden Ereignissen
+  en: Event-based gateway followed by the two catching events
+- points: 1
+  de: Zeit-Zwischenereignis «24 Stunden»
+  en: Intermediate timer event "24 hours"
+- points: 1
+  de: Zwei Endereignisse mit den beiden Ergebnissen
+  en: Two end events with the two results
+- points: 1
+  de: Aktivitäten als Objekt und Verb benannt, Reihenfolge wie im Text
+  en: Activities named as verb and object, order as in the text
+solution:
+  de: solution.de.bpmn
+  en: solution.en.bpmn
