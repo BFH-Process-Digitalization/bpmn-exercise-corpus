@@ -1,6 +1,6 @@
 # Open BPMN exercise corpus
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24315289.svg)](https://doi.org/10.5281/zenodo.24315289)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24363972.svg)](https://doi.org/10.5281/zenodo.24363972)
 
 36 BPMN 2.0 exercises in German and English, with sample solutions, an entry assessment and two exams. Six topics,
 each with three Basic and three Advanced exercises. The Basic and Advanced exams have four questions in five
@@ -87,4 +87,4 @@ Content CC BY 4.0, tools MIT (`LICENSE`).
 ## Citation
 
 Maier, M., & Tekle Hailu, S. (2026). *Open BPMN Exercise Corpus: 36 BPMN 2.0 exercises, entry assessment and exams with
-sample solutions (German and English)* (Version 1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24315289
+sample solutions (German and English)* (Version 1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24363972
